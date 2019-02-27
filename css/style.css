@@ -266,7 +266,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 640px;
+  width: 80%;
   padding: 20px 10px;
   margin: 0 auto;
 }
@@ -434,10 +434,6 @@ Small Device Styles
   padding: 0;
   width: 100%;
   height: auto;
-}
-#main_content{
-  width: 70%;
-  margin:10px auto;
 }
 #footer_wrap{
   margin: 0;
