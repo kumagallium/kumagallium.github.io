@@ -444,3 +444,17 @@ Small Device Styles
   width: 70%;
   margin:10px auto;
 }
+
+#copyright{
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  padding: 20px;
+}
+.text{
+  padding-left: 20px;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
