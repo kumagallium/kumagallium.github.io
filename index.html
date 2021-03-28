@@ -82,7 +82,32 @@
                     >Close</v-btn>
                     </v-toolbar>
                     <v-card-text class="py-5" v-if="Object.keys(contents).indexOf(selectedblock.name)>-1">
-                      <v-row v-for="cat of Array.from(new Set(contents[selectedblock.name].map(cnt=>cnt.category)))">
+                      <v-expansion-panels
+                        flat
+                        multiple
+                        accordion
+                        flat
+                        :value="[...Array(Array.from(new Set(contents[selectedblock.name].map(cnt=>cnt.category))).length)].map((_, i) => i)"
+                        v-if="(selectedblock.name == 'Presentations')||(selectedblock.name == 'Profile')"
+                      >
+                        <v-expansion-panel
+                          v-for="cat of Array.from(new Set(contents[selectedblock.name].map(cnt=>cnt.category)))"
+                        >
+                          <v-expansion-panel-header class="text-h6 pa-0" style="color:grey;">
+                            {{cat}}
+                          </v-expansion-panel-header>
+                          <v-expansion-panel-content>
+                            <v-card flat color="grey lighten-4" class="my-2 py-2 px-4" v-for="(content,index) in contents[selectedblock.name].filter(cnt=>cnt.category == cat)">
+                              <v-card-text class="pa-0" style="color:black;">
+                                  <span v-if="(selectedblock.name != 'Profile')&&(selectedblock.name != 'Contact')&&(selectedblock.name != 'Works')">{{index+1}}. </span>
+                                  <span v-html="content.text.replace('熊谷将也','<b>熊谷将也</b>').replace('熊谷 将也','<b>熊谷 将也</b>').replace('M. Kumagai','<b>M. Kumagai</b>').replace('Masaya Kumagai','<b>Masaya Kumagai</b>')"></span>
+                              </v-card-text>
+                            </v-card>
+                          </v-expansion-panel-content>
+                        </v-expansion-panel>
+                      </v-expansion-panels>
+
+                      <v-row v-else v-for="cat of Array.from(new Set(contents[selectedblock.name].map(cnt=>cnt.category)))">
                         <v-col cols="12" v-if="cat != undefined">
                           <div class="text-h6">{{cat}}</div>
                         </v-col>
