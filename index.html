@@ -20,23 +20,23 @@
     <div id="app">
       <v-app style="background-color:black;">
         <v-main style="background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),url('./images/periodictable.jpg');">
-          <v-container fluid class="pa-10" style="height:100%;">
-            <v-row style="height:100px;" justify="center" align-content="center">
-              <v-col cols="12" class="pt-10 pb-0">
-                <v-card flat color="rgba(255, 255, 255, 0)" class="text-h3" width="100%" style="text-align: center;color:#fff;">
+          <v-container fluid class="pa-sm-10 pa-7" style="height:100%;">
+            <v-row justify="center" align-content="center">
+              <v-col cols="12" class="pt-sm-10 pt-0 pb-0 mt-sm-0 mt-3 mb-sm-10 mb-0">
+                <v-card flat color="rgba(255, 255, 255, 0)" class="text-md-h3 text-h5" width="100%" style="text-align: center;color:#fff;">
                   熊谷 将也
                 </v-card>
               </v-col>
             </v-row>
-            <v-row style="height:100px;" class="mt-0" justify="center" align-content="center">
-              <v-col cols="12" class="pt-0 pb-5">
-                <v-card flat color="rgba(255, 255, 255, 0)" class="text-h4" width="100%" style="text-align: center;color:#fff;">
+            <v-row class="mt-0" justify="center" align-content="center">
+              <v-col cols="12" class="pt-0 pb-sm-5 pb-0 mt-2 mb-sm-2 mb-0">
+                <v-card flat color="rgba(255, 255, 255, 0)" class="text-md-h4 text-h6" width="100%" style="text-align: center;color:#fff;">
                   KUMAGAI Masaya
                 </v-card>
               </v-col>
             </v-row>
-            <v-row style="height:calc(100% - 200px);" justify="center" align-content="center">
-              <v-col cols="7" class="pa-0">
+            <v-row justify="center" align-content="center">
+              <v-col cols="8" sm="7" class="pa-0 mt-12">
                 <v-card flat color="rgba(255, 255, 255, 0)">
                   <v-row>
                     <v-col cols="6" md="3" class="pa-0" v-for="block of blocks">
@@ -46,7 +46,10 @@
                             <v-card-text style="height:100%;" class="">
                               <v-row style="height:100%;" class="my-0" justify="center" align-content="center">
                                 <v-col class="" style="text-align: center;">
-                                  <div class="text-md-h5 text-sm-h6" style="height:100%;color:#fff;">{{block.name}}</div>
+                                  <div><v-icon dark>{{block.icon}}</v-icon></div>
+                                  <div class="text-md-h5 text-sm-h6" style="height:100%;color:#fff;">
+                                    {{block.name}}
+                                  </div>
                                 </v-col>
                               </v-row>
                             </v-card-text>
@@ -115,14 +118,14 @@
           data() {
               return {
                 blocks:[
-                  {"name":"Profile","color":"#004D40"},
-                  {"name":"Papers","color":"#1A237E"},
-                  {"name":"Presentations","color":"#FF8F00"},
-                  {"name":"Awards","color":"#E57373"},
-                  {"name":"Works","color":"#5D4037"},
-                  {"name":"Articles","color":"#546E7A"},
-                  {"name":"Others","color":"#BA68C8"},
-                  {"name":"Contact","color":"#00838F"}
+                  {"name":"Profile","icon":"mdi-account","color":"#004D40"},
+                  {"name":"Papers","icon":"mdi-file-document-outline","color":"#1A237E"},
+                  {"name":"Presentations","icon":"mdi-message-image","color":"#FF8F00"},
+                  {"name":"Awards","icon":"mdi-license","color":"#E57373"},
+                  {"name":"Works","icon":"mdi-laptop","color":"#5D4037"},
+                  {"name":"Articles","icon":"mdi-book-open-variant","color":"#546E7A"},
+                  {"name":"Others","icon":"mdi-hammer-wrench","color":"#BA68C8"},
+                  {"name":"Contact","icon":"mdi-email","color":"#00838F"}
                 ],
                 selectedblock:{},
                 contents: {
