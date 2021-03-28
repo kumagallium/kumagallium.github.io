@@ -36,7 +36,7 @@
               </v-col>
             </v-row>
             <v-row justify="center" align-content="center">
-              <v-col cols="8" sm="7" class="pa-0 mt-sm-12 mt-7">
+              <v-col cols="11" sm="7" class="pa-0 mt-sm-12 mt-7">
                 <v-card flat color="rgba(255, 255, 255, 0)">
                   <v-row>
                     <v-col cols="6" md="3" class="pa-0" v-for="block of blocks">
@@ -47,7 +47,7 @@
                               <v-row style="height:100%;" class="my-0" justify="center" align-content="center">
                                 <v-col class="" style="text-align: center;">
                                   <div><v-icon dark>{{block.icon}}</v-icon></div>
-                                  <div class="text-md-h5 text-sm-h6" style="height:100%;color:#fff;">
+                                  <div class="text-xsOnly-overline" style="height:100%;color:#fff;letter-spacing:0.1666666667em;font-size:16px;font-weight:400;">
                                     {{block.name}}
                                   </div>
                                 </v-col>
@@ -135,7 +135,6 @@
 
     </div>
     <style>
-      
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
