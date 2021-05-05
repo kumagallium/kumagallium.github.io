@@ -81,23 +81,23 @@
                       @click="overlayflow = false"
                     >Close</v-btn>
                     </v-toolbar>
-                    <v-card-text class="py-5" v-if="Object.keys(contents).indexOf(selectedblock.name)>-1">
+                    <v-card-text class="py-5" v-if="Object.keys(contents_notion).indexOf(selectedblock.name)>-1">
                       <v-expansion-panels
                         flat
                         multiple
                         accordion
                         flat
-                        :value="[...Array(Array.from(new Set(contents[selectedblock.name].map(cnt=>cnt.category))).length)].map((_, i) => i)"
+                        :value="[...Array(Array.from(new Set(contents_notion[selectedblock.name].map(cnt=>cnt.category))).length)].map((_, i) => i)"
                         v-if="(selectedblock.name == 'Presentations')||(selectedblock.name == 'Profile')"
                       >
                         <v-expansion-panel
-                          v-for="cat of Array.from(new Set(contents[selectedblock.name].map(cnt=>cnt.category)))"
+                          v-for="cat of Array.from(new Set(contents_notion[selectedblock.name].map(cnt=>cnt.category)))"
                         >
                           <v-expansion-panel-header class="text-h6 pa-0" style="color:grey;">
                             {{cat}}
                           </v-expansion-panel-header>
                           <v-expansion-panel-content>
-                            <v-card flat :color="selectedblock.color+'11'" class="my-2 py-2 px-4" v-for="(content,index) in contents[selectedblock.name].filter(cnt=>cnt.category == cat)">
+                            <v-card flat :color="selectedblock.color+'11'" class="my-2 py-2 px-4" v-for="(content,index) in contents_notion[selectedblock.name].filter(cnt=>cnt.category == cat)">
                               <v-card-text class="pa-0" style="color:black;">
                                   <span v-if="(selectedblock.name != 'Profile')&&(selectedblock.name != 'Contact')&&(selectedblock.name != 'Works')">{{index+1}}. </span>
                                   <span v-html="content.text.replace('熊谷将也','<b>熊谷将也</b>').replace('熊谷 将也','<b>熊谷 将也</b>').replace('M. Kumagai','<b>M. Kumagai</b>').replace('Masaya Kumagai','<b>Masaya Kumagai</b>')"></span>
@@ -107,11 +107,11 @@
                         </v-expansion-panel>
                       </v-expansion-panels>
 
-                      <v-row v-else v-for="cat of Array.from(new Set(contents[selectedblock.name].map(cnt=>cnt.category)))">
+                      <v-row v-else v-for="cat of Array.from(new Set(contents_notion[selectedblock.name].map(cnt=>cnt.category)))">
                         <v-col cols="12" v-if="cat != undefined">
                           <div class="text-h6">{{cat}}</div>
                         </v-col>
-                        <v-col cols="12" class="py-2" v-for="(content,index) in contents[selectedblock.name].filter(cnt=>cnt.category == cat)">
+                        <v-col cols="12" class="py-2" v-for="(content,index) in contents_notion[selectedblock.name].filter(cnt=>cnt.category == cat)">
                           <v-card flat :color="selectedblock.color+'10'" class="py-2 px-4">
                             <v-card-text class="pa-0" style="color:black;">
                                 <span v-if="(selectedblock.name != 'Profile')&&(selectedblock.name != 'Contact')&&(selectedblock.name != 'Works')">{{index+1}}. </span>
@@ -144,7 +144,7 @@
     <script>
       new Vue({
           el: '#app',
-          vuetify: new Vuetify(), 
+          vuetify: new Vuetify(),
           data() {
               return {
                 blocks:[
@@ -158,475 +158,212 @@
                   {"name":"Contact","icon":"mdi-email","color":"#00838F"}
                 ],
                 selectedblock:{},
-                contents: {
-                  "Profile":[
-                    {
-                      "category":"所属",
-                      "first":true,
-                      text: `<ul style="margin:0px;">
-                        <li>2017年6月〜
-                          <ul style="margin:0px;">
-                            <li><a href="https://research.sakura.ad.jp/about/">さくらインターネット研究所 研究員</a></li>
-                            <li><a href="https://aip.riken.jp/labs/goalorient_tech/mol_inf/?lang=ja">理化学研究所　客員研究員</a></li>
-                          </ul>
-                        </li>
-                        <li>2020年4月〜
-                          <ul style="margin:0px;">
-                            <li><a href="http://www.energy.kyoto-u.ac.jp/jp/socio-environmental/">京都大学 特定助教</a></li>
-                          </ul>
-                        </li>
-                      </ul>`,
-                    },
-                    {
-                      "category":"略歴",
-                      "first":true,
-                      text: `<div>
-                        　2005~2010年国立舞鶴工業高等専門学校（舞鶴高専）にて, プログラムや回路を学び, 頭でイメージできた電子工作は, 大抵作れる技術力を身に着ける. 2006年10月NHK高専ロボコン近畿大会に出場し, 特別賞受賞. 2009年, 回路部品に使用される無機材料に興味があり材料工学の研究をはじめ, 同年8月に国内学会口頭発表を経験. 2010~2012年, 舞鶴高専専攻科に進学し, 材料工学および情報工学の両分野での研究, 学会発表を経験. 2010年11月（大学学部３年相当）, 査読あり国際学会での発表を経験.
-                        </div>
-                        </br>
-                        <div>
-                        　2012~2017年大阪大学大学院 工学研究科において, 無機材料工学を専門として博士課程まで進み, 2017年3月に博士号（工学）を取得. 研究活動とは別に, 自分の不足しているWeb開発技術を向上するため, 趣味のWebサイトや学内ベンチャー企業のWebシステムを開発. Web開発をきっかけに, 材料工学と組み合わせたマテリアルズ・インフォマティクス研究を紹介され, 博士論文の研究とは別に進める.
-                        </div>
-                        </br>
-                        <div>
-                        　2017年4月, 自身のインフラの技術が不足していることを感じ, さくらインターネット株式会社に入社. 同年6月, さくらインターネット研究所に配属されると同時に, 同社パラレルキャリア制度を利用し, 理化学研究所 革新知能統合研究センターの客員研究員として, マテリアルズ・インフォマティクス研究に従事. 機械学習を共通の要素技術として, 材料工学および情報工学の知識を双方に生かした学際的研究に主眼を置く. マテリアルズ・インフォマティクス研究が評価され, 2019年7月国際会議International Conference on Thermoelectrics (ICT2019)でポスター賞を受賞, 同年9月日本熱電学会学術講演会で優秀ポスター賞を受賞.
-                        　2020年4月, クロスアポイントメント制度を利用して京都大学の特定助教に着任（さくらインターネット株式会社60%, 京都大学40%）.
-                        </div>`,
-                    },
-                    {
-                      "category":"Researchmap",
-                      text: '<a href="https://researchmap.jp/mkumagai" target="_blank">熊谷 将也</a>',
-                    },
-                    {
-                      "category":"Publons",
-                      text: '<a href="https://publons.com/researcher/1877781/masaya-kumagai/">masaya-kumagai</a>',
-                    },
-                    {
-                      "category":"経歴",
-                      "first":true,
-                      text: `<ul style="margin:0px;">
-                        <li>2020年4月〜 <a href="http://www.energy.kyoto-u.ac.jp/jp/socio-environmental/">京都大学 複合原子力科学研究所附属安全原子力システム研究センター （兼　大学院エネルギー科学研究科）</a> 特定助教 就任</li>
-                        <li>2017年6月〜 <a href="https://aip.riken.jp/labs/goalorient_tech/mol_inf/?lang=ja">理化学研究所 革新知能統合研究センター 目的指向基盤技術研究グループ 分子情報科学チーム</a> 客員研究員 就任</li>
-                        <li>2017年6月〜 <a href="https://research.sakura.ad.jp/about/">さくらインターネット株式会社 さくらインターネット研究所</a> 研究員 就任</li>
-                        <li>2017年4月〜 さくらインターネット株式会社 入社</li>
-                        <li>2017年3月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 博士課程 修了</li>
-                        <li>2015年4月 日本学術振興会 特別研究員（DC2）</li>
-                        <li>2014年4月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 博士課程 入学</li>
-                        <li>2014年3月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 修士課程 修了</li>
-                        <li>2012年4月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 修士課程 入学</li>
-                        <li>2012年3月 国立舞鶴工業高等専門学校 専攻科 電気・制御システム工学専攻 卒業</li>
-                        <li>2010年4月 国立舞鶴工業高等専門学校 専攻科 電気・制御システム工学専攻 入学</li>
-                        <li>2010年3月 国立舞鶴工業高等専門学校 電子制御工学科 卒業</li>
-                        <li>2005年4月 国立舞鶴工業高等専門学校 電子制御工学科 入学</li>
-                      </ul>`,
-                    },
-                  ],
-                  "Papers":[
-                    {
-                      "first":false,
-                      text: 'Y. Katsura, M. Kumagai, T. Kodani, M. Kaneshige, Y. Ando, S. Gunji, Y. Imai, H. Ouchi, K. Tobita, K. Kimura, K. Tsuda, <a href="https://www.tandfonline.com/doi/full/10.1080/14686996.2019.1603885">Data-driven analysis of electron relaxation times in PbTe-type thermoelectric materials</a>, Science and Technology of Advanced Materials 20 (2019) 511-520.',
-                    },
-                    {
-                      "first":false,
-                      text: 'K. Kurosaki, M. Susuki, H. Ishii, M. Kumagai, K. Anada, Y. Murakami, Y. Ohishi, H. Muta, S. Yamanaka, <a href="https://www.nature.com/articles/s41598-017-11774-0">High wettability of liquid caesium iodine with solid uranium dioxide. </a>, Scientific Reports 7 (2017)',
-                    },
-                    {
-                      "first":false,
-                      text: '桂 ゆかり, 熊谷 将也, 郡司 咲子, 今井 庸二, 木村 薫, <a href="https://www.jstage.jst.go.jp/article/jjspm/64/8/64_467/_pdf/-char/ja">実験的熱電特性のデータベース化に向けた論文データ収集WebシステムStarry dataの開発</a>, 粉体及び粉末冶金 64巻 8号 (2017) 467-470.',
-                    },
-                    {
-                      "first":true,
-                      text: '熊谷 将也, 黒﨑 健, 大石 佑治, 牟田 浩明, 山中 伸介, <a href="https://www.jstage.jst.go.jp/article/jinstmet/81/2/81_J2016053/_pdf">擬ギャップ系材料Al5Co2の電子構造および熱電特性</a>, 日本金属学会誌 81巻 2号（2017）55-59.',
-                    },
-                    {
-                      "first":false,
-                      text: 'F. Nakamori, Y. Ohishi, M. Kumagai, H. Muta, K. Kurosaki, K. Fukumoto, S. Yamanaka, <a href="https://www.jstage.jst.go.jp/article/taesj/15/4/15_J16.005/_article/-char/ja/">Mechanical and thermal properties of Fe2B</a>, Transactions of the Atomic Energy Society of Japan 15 (2016).',
-                    },
-                    {
-                      "first":true,
-                      text: 'M. Kumagai, K. Kurosaki, Y. Ohishi, H. Muta, S. Yamanaka, <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/pssb.201552650">Reduction of lattice thermal conductivity of pseudogap intermetallic compound Al3V</a>, Physica Status Solidi (B) Basic Research 253 (2016) 469–472.',
-                    },
-                    {
-                      "first":true,
-                      text: 'M. Kumagai, K. Kurosaki, N. Uchida, Y. Ohishi, H. Muta, S. Yamanaka, <a href="https://link.springer.com/article/10.1007%2Fs11664-014-3592-5">Synthesis and Characterization of Melt-Spun Metastable Al6Ge5</a>, Journal of Electronic Materials 44 (2015) 948–952.',
-                    },
-                    {
-                      "first":false,
-                      text: '黒﨑 健, 梅田 亮, 熊谷 将也, 大石 佑治, 牟田 浩明, 山中 伸介, <a href="https://www.jstage.jst.go.jp/article/jinstmet/79/11/79_JA201502/_pdf/-char/ja">単ロール液体急冷法を用いて作製したRuAl2の微細構造と熱伝導率</a>,日本金属学会誌，79巻 11号 (2015) 73-576.',
-                    },
-                    {
-                      "first":true,
-                      text: 'M. Kumagai, K. Kurosaki, Y. Ohishi, H. Muta, S. Yamanaka, <a href="https://www.jstage.jst.go.jp/article/matertrans/55/8/55_E-M2014821/_article">Effect of ball-milling conditions on thermoelectric properties of polycrystalline CuGaTe2</a>, Materials transactions 55 (2012)1215–1218.',
-                    },
-                    {
-                      "first":false,
-                      text: 'S. Kiyohara, M. Kumagai, Y. Taguchi, Y. Omata, Y. Kurashima, H. Takikawa, Diamond nanopit arrays fabricated by room-temperature nanoimprinting using diamond molds, in Materials Research Society Symposium Proceedings (2011), vol. 1282, pp. 117–122',
-                    }
-                    
-                  ],
-                  "Presentations":[
-                    {
-                      "category":"国際会議 / 口頭発表",
-                      "first":false,
-                      text: 'Y. Katsura, M. Kumagai, M. Kaneshige, Y. Ando, S. Gunji, R. Sato, T. Kodani, R. Ni, Y. Imai, H. Ouchi, K. Kimura, K. Tsuda, "Starrydata: an open database for experimental data extracted from published plot images", The 38th International Conference on Thermoelectrics (ICT2019), (Oral, Gyongju, Korea, 2019/6/30-7/4).',
-                    },
-                    {
-                      "category":"国際会議 / 口頭発表",
-                      "first":false,
-                      text: 'Yukari Katsura, Masaya Kumagai, Riku Sato, Takushi Kodani, Mitsunori Kaneshige, Yuki Ando, Sakiko Gunji, Yoji Imai, Hideyasu Ouchi, Kazuki Tobita, Kaoru Kimura, Koji Tsura, "Materials informatics of thermoelectric materials using big literature data", TMS2019 148th Annual meeting and exhibition, Henry B. González Convention Center (Oral, San Antonio, TX, USA, 2019/3/12-15).',
-                    },
-                    {
-                      "category":"国際会議 / ポスター発表",
-                      "first":false,
-                      text: 'Yukari Katsura, Masaya Kumagai, Mitsunori Kaneshige, Yuki Ando, Sakiko Gunji, Yoji Imai, Riku Sato, Takushi Kodani, Hideyasu Ouchi, Kazuki Tobita, Kaoru Kimura, Koji Tsuda , "Starrydata: a plot mining web system for experimental materials informatics, "PRESTO International symposium on materials informatics, Poster, Tokyo Japan, 2019/2/8-10.',
-                    },
-                    {
-                      "category":"国際会議 / 口頭発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Yukari Katsura, Mitsunori Kaneshige, Takushi Kodani, Hideyasu Ouchi, Sakiko Gunji, Yuki Ando, Yoji Imai, Kaoru Kimura, Koji Tsuda, A web application "Starrydata" for collecting and sharing plot data on published papers, Oral, France, July 1-5, 2018.',
-                    },
-                    {
-                      "category":"国際会議 / 口頭発表",
-                      "first":false,
-                      text: 'Takushi Kodani, Yukari Katsura, Masaya Kumagai, Yuki Ando, Yoji Imai, Sakiko Gunji, Kaoru Kimura,　Development of high-performance thermoelectric materials guided by large-scale experimental data, 37th International Conference on Thermoelectrics, Congress Center (Oral, Caen, France, 2018/7/1-5).',
-                    },
-                    {
-                      "category":"国際会議 / 口頭発表",
-                      "first":false,
-                      text: 'Yukari Katsura, Takushi Kodani, Koichi Kitahara, Masaya Kumagai, Yoji Imai, Sakiko Gunji, Hideyasu Ouchi, Kazuki Tobita, Naoki Sato, Kaoru Kimura, Data-driven evaluation of effective relaxation times for real thermoelectric materials", The 36th International Conference on Thermoelectrics (ICT2017), Oral (Pasadena Convention Center, Pasadena, CA, USA, 2017.7.30-8.3).',
-                    },
-                    {
-                      "category":"国際会議 / 口頭発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Al-based compounds as low-toxicity thermoelectric materials, 9th Pacific Rim International Conference on Advanced Materials and Processing, Oral, Kyoto Japan, August 1 - 5, 2016.',
-                    },
-                    {
-                      "category":"国際会議 / 口頭発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, 11th International Conference on Ceramic Materials and Components for Energy and Environmental Applications, Electronic structure and thermoelectric properties of the novel pseudogap system Al3V, Oral, Vancouver Canada, June 14 - 19, 2015.',
-                    },
-                    {
-                      "category":"国際会議 / ポスター発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Yukari Katsura, Mitsunori Kaneshige, Takushi Kodani, Hideyasu Ouchi, Sakiko Gunji, Yuki Ando, Yoji Imai, Kaoru Kimura, Koji Tsuda, A web application "Starrydata" for collecting and sharing plot data on published papers, Oral, France, July 1-5, 2018.',
-                    },
-                    {
-                      "category":"国際会議 / ポスター発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Yukari Katsura, Riku Sato, Mitsunori Kaneshige, Takushi Kodani, Yuki Ando, Sakiko Gunji, Yoji Imai, Hideyasu Ouchi, Kaoru Kimura, Koji Tsuda, Data-driven materials design from large-scale experimental data, Poster, France, July 1-5, 2018.',
-                    },
-                    {
-                      "category":"国際会議 / ポスター発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Electronic structure and thermoelectric properties of pseudogap intermetallic compound Al5Co2, The Minerals, Metals and Materials Society 2017, Poster, SanDiego California USA, February 26 - March 2, 2017.',
-                    },
-                    {
-                      "category":"国際会議 / ポスター発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, International Conference on Thermoelectric Materials Science 2015, Formation of dense dislocation arrays by liquid phase compaction in Si-Al system, Poster, Nagoya University, November 9 - 11, 2015.',
-                    },
-                    {
-                      "category":"国際会議 / ポスター発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Electronic structure and thermoelectric properties of melt-spun metastable Al6Ge5, 1st Symposium for the Promotion of Applied Research Collaboration in Asia, Poster, Taipei Taiwan, February 8 - 11, 2015.',
-                    },
-                    {
-                      "category":"国際会議 / ポスター発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, 34th International Conference on Thermoelectrics, Effect of Ti or Nb substitution for the V site on the thermoelectric properties of Al3V, Poster, Dresden Germany, June 28 - July 2, 2015.',
-                    },
-                    {
-                      "category":"国際会議 / ポスター発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, 33rd International Conference on Thermoelectrics, Synthesis and characterization of metastable phase Al6Ge5 prepared by melt-spinning, Poster, Nashville Tennessee USA, July 6 - 10, 2014.',
-                    },
-                    {
-                      "category":"国際会議 / ポスター発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, 32nd International Conference on Thermoelectrics, Effect of ball-milling conditions on thermoelectric properties of polycrystalline CuGaTe2, Poster, Kobe Japan, June 30 - July 4, 2013.',
-                    },
-                    {
-                      "category":"国際会議 / ポスター発表",
-                      "first":true,
-                      text: 'Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Enhancement of the Thermoelectric and Mechanical Properties of Zn4Sb3 by Nanostructuring, The 5th Japan-China-Korea Graduate Student Forum, Poster, Tsukuba Japan, September 21-24, 2012.',
-                    },
-                    {
-                      "category":"国際会議 / ポスター発表",
-                      "first":false,
-                      text: 'S. Kiyohara, M. Kumagai, Y. Taguchi, Y. Sugiyama, Y. Omata, Y. Kurashima H. Takikawa, Diamond Nanodot Arrays Fabricated by Room-Temperature Curing Nanoimprinting using Diamond Molds, 2010 Materials Research Society Fall Meeting, Hynes Covention Center and Sheraton Boston Hotel, Boston, Massachusetts, USA, Novembe 29, 2010.',
-                    },
-                    //国内学会 / 口頭発表
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":true,
-                      text: '熊谷 将也, 松本 亮介, 疎構造学習およびグラフ畳み込みニューラルネットワークによる異常検知, 情報処理学会 第81回全国大会, 福岡大学 七隈キャンパス, 2019年3月16日. [<a href="./papers/ipsj81-m-kumagai.pdf">paper</a>(<a href="#copyright">※</a>),<a href="https://speakerdeck.com/kumagallium/anomaly-detection-by-the-method-combined-with-sparse-structure-learn-ing-and-graph-convolutional-neural-network">slide</a>]',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":true,
-                      text: '熊谷 将也, 松本 亮介, 侵入検知システムのためのグラフ構造に基づいた機械学習および可視化, 第44回インターネットと運用技術研究発表会（IOT44）, ホテルグランドエクシブ鳴門＆ザ・ロッジ, 2019年3月8日.[<a href="./papers/iot44-m-kumagai.pdf">paper</a>(<a href="#copyright">※</a>),<a href="https://speakerdeck.com/kumagallium/graph-based-machine-learning-and-visualization-for-intrusion-detection-system">slide</a>]',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":true,
-                      text: '熊谷 将也, 桂 ゆかり, 佐藤 陸, 金重 光典, 小谷 拓史, 大内 秀恭, 郡司 咲子, 安藤 有希, 今井 庸二, 木村 薫, 津田 宏治, 論文内実験データ収集・共有WebシステムStarrydataの開発, 東北大学, 2018年9月13〜15日.',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":true,
-                      text: '熊谷将也, 小谷拓史, 桂ゆかり, 大内秀恭, 郡司咲子, 安藤有希, 今井庸二, 木村薫, 津田宏治, 論文内グラフデータを収集・共有できるWEBシステムの開発, 第65回応用物理学会, 早稲田大学, 2018年3月17日.',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":true,
-                      text: '熊谷 将也, 黒崎 健, 大石 佑治, 牟田 弘明, 山中 伸介, 新規擬ギャップ系材料 Al3Vの創製および熱電特性の評価, 第12回日本熱電学会学術講演会, 九州大学筑紫地区総合研究棟（C-Cube）, 2015年9月7,8日.',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":true,
-                      text: '熊谷 将也, 黒崎 健, 内田 紀行, 大石 佑治, 牟田 弘明, 山中 伸介, 単ロール液体急冷法による準安定材料 Al6Ge5 の創製および熱電特性の評価, 第 11 回日本熱電学会学術講演会, 独立行政法人物質・材料研究機構　千現',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":true,
-                      text: '熊谷 将也, 黒﨑 健, 首藤 将彰, 大石 佑治, 牟田 浩明, 山中 伸介, 粒径制御による高性能熱電変換材料 CuGaTe2 の中低温域熱電性能の向上, 日本金属学会2013年春季大会, 東京理科大学神楽坂キャンパス, 2013年3月27～29日.',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":true,
-                      text: '熊谷 将也, 片山 英昭, 池野 成高, 池本 幸平, 中田 健一, <a href="https://ipsj.ixsq.nii.ac.jp/ej/?action=repository_uri&item_id=150909&file_id=1&file_no=1">複合類似度法の辞書データが低品質文字認識に与える影響</a>, 第10回情報科学技術フォーラム（FIT2011）, 函館大学, 2011年9月7-9日.',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: 'Yukari Katsura, Masaya Kumagai, Mitsunori Kaneshige, Yuki Ando, Sakiko Gunji, Yoji Imai, Riku Sato, Takushi Kodani, Hideyasu Ouchi, Kazuki Tobita, Kaoru Kimura, Koji Tsuda, "論文からの実験データ収集 Web システムStarrydataの開発と熱電材料研究への応用", MaDISシンポジウム 2019 AIで加速する材料開発とデータプラットフォーム戦略, 東京ビッグサイト会議棟 (口頭, 東京都港区, 2019/1/30).',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '桂ゆかり, 熊谷将也, 小谷拓史,佐藤陸,金重光則, 安藤有希,郡司咲子,今井庸二,木村薫,津田宏治, "熱電材料の大規模実験データを用いたMaterials Informatics", 第39回日本熱物性シンポジウム, 愛知県産業労働センター ウインクあいち11階 (口頭, 愛知県名古屋市, 2018/11/13-15).',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '桂ゆかり, 熊谷将也, 安藤有希, 郡司咲子, 今井庸二, 木村薫, "論文からの熱電特性データベース構築プロジェクトの課題と展望", 第15回日本熱電学会学術講演会（TSJ2018）, 東北大学 青葉山キャンパス (口頭, 宮城県仙台市, 2018/9/13-15).',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '佐藤陸, 小谷拓史, 桂ゆかり, 熊谷将也,今井庸二, 郡司咲子, 木村薫, "ニューラルネットワークに基づく PbTe系熱電材料の特性予測", 第15回日本熱電学会学術講演会（TSJ2018）, 東北大学 青葉山キャンパス (口頭, 宮城県仙台市, 2018/9/13-15).',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '小谷拓史，桂ゆかり，熊谷将也, 安藤有希, 郡司咲子, 今井庸二, 木村薫, "実験値データベースと第一原理計算による高性能PbTe系熱電変換材料の探索", 第15回日本熱電学会学術講演会（TSJ2018）, 東北大学 青葉山キャンパス (口頭, 宮城県仙台市, 2018/9/13-15).',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: "Yukari Katsura, Masaya Kumagai, Mitsunori Kaneshige, Takushi Kodani, Hideyasu Ouchi, Sakiko Gunji, Yuki Ando, Yoji Imai, Kaoru Kimura and Koji Tsuda, 'Starrydata2: 論文中のグラフからの材料特性データ収集システム a web system for materials data collection from published plots,'Japan Open Science Summit, 学術総合センター（東京・一ツ橋） (口頭, 東京都千代田区, 2018/6/18-19).",
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '佐藤陸, 小谷拓史, 桂ゆかり, 熊谷将也, 今井庸二, 郡司咲子, 木村薫, "ニューラルネットワークに基づくPbTe系熱電材料の特性予測", 第65回応用物理学会春季学術講演会 (2018).',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '小谷拓史, 桂ゆかり, 熊谷将也,今井庸二, 郡司咲子, 木村薫, "実験値データベースの応用による高性能SnTe熱電変換材料の開発", 第65回応用物理学会春季学術講演会 (2018).',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '桂 ゆかり, 熊谷 将也, 小谷拓史, 郡司 咲子, 今井 庸二, 大内 秀恭, 飛田 一樹, 木村 薫, "熱電特性実験データの大規模収集とマテリアルズインフォマティクスへの応用", 第38回日本熱物性シンポジウム OS9-I (産業技術総合研究所, つくば, 2017.11.8)',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '桂 ゆかり, 小谷 拓史, 北原 功一, 熊谷 将也, 郡司 咲子, 今井 庸二, 大内 秀恭, 木村 薫, "熱電材料の大規模文献データと第一原理計算に基づく電子緩和時間の推定", 第14回日本熱電学会学術講演会, S2A3 (大阪大学豊中キャンパス, 2017.9.11-13)',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '桂 ゆかり, 小谷 拓史, 熊谷 将也, 郡司 咲子, 今井 庸二, 木村薫, "熱電特性グラフデータの収集による実験値マテリアルズインフォマティクス", 第78回応用物理学会秋季学術講演会,  5a-S21-7（福岡国際会議場, 2017.9.5-8）',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '桂 ゆかり, 熊谷 将也, 今井 庸二, 郡司 咲子, 木村 薫, "熱電特性の実験値のデータベース化に向けたデータ収集web システムの開発", 粉体粉末冶金協会 平成28年度秋季大会(第118回講演大会), 東北大学青葉山キャンパス, 2016.11.9-11.',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '桂ゆかり, 熊谷将也, 郡司咲子, 今井庸二, 小谷拓史, 木村薫,  "熱電特性の実験値データベース作成に向けた文献データ収集システムの構築", 第13回日本熱電学会学術講演会,  S5B-5 (口頭, 東京理科大学葛飾キャンパス, 2016年9月5-7日).',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '池野成高，熊谷将也，片山英昭, 細線化によるフォントに依存しない文字認識, 第６６回	電気関係学会関西連合大会, 口頭,  兵庫県立大学・姫路書写キャンパス, 2011年10月29,30日.',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '池本幸平，熊谷将也，片山英昭, 複数の低品質要因を持つ辞書の文字認識への影響, 第６６回	電気関係学会関西連合大会, 口頭, 兵庫県立大学・姫路書写キャンパス, 2011年10月29,30日.',
-                    },
-                    {
-                      "category":"国内学会 / 口頭発表",
-                      "first":false,
-                      text: '中田健一，熊谷将也，片山英昭, 文字認識における各箇所の重要性の定量化, 第６６回	電気関係学会関西連合大会, 口頭, 兵庫県立大学・姫路書写キャンパス, 2011年10月29,30日.',
-                    },
-                    //国内学会 / ポスター発表
-                    {
-                      "category":"国内学会 / ポスター発表",
-                      "first":true,
-                      text: 'M. Kumagai, Y. Katsura, R. Sato, Y. Ando, S. Gunji, Y. Imai, T. Kodani, K. Kimura and K. Tsuda, Data-Driven Design of Thermoelectric Materials with Experimental Data on Starrydata, NIMS WEEK 2019, 東京国際フォーラム, 2019年10月30日.',
-                    },
-                    {
-                      "category":"国内学会 / ポスター発表",
-                      "first":true,
-                      text: '熊谷 将也, 桂 ゆかり, 佐藤 陸, 安藤 有希, 郡司 咲子, 今井 庸二, 小谷 拓史, 木村 薫, 津田 宏治, 大規模論文データの機械学習による実験的熱電特性の予測, 第16回日本熱電学会学術講演会, ポスター, 名古屋工業大学, 2019年9月.',
-                    },
-                    {
-                      "category":"国内学会 / ポスター発表",
-                      "first":true,
-                      text: '熊谷 将也, 黒崎 健, 大石 佑治, 牟田 弘明, 山中 伸介, 新規擬ギャップ系材料 Al5Co2の創製および熱電特性の評価, 第13回日本熱電学会学術講演会, 東京理科大学葛飾キャンパス, 2016年9月5～7日.',
-                    },
-                    {
-                      "category":"国内学会 / ポスター発表",
-                      "first":true,
-                      text: '熊谷 将也, 清原 修二, 田口 佳男, 杉山 嘉也, 小俣 有紀子, 倉島 優一, 滝川 浩史, 柏木 大幸, ダイヤモンドモールド室温硬化インプリントによるダイヤモンドナノドットアレイの作製, 第30回表面科学学術講演会・第51回真空に関する連合講演会, 大阪大学 コンベンションセンター, 2010年11月4-6日.',
-                    },
-                    {
-                      "category":"国内学会 / ポスター発表",
-                      "first":true,
-                      text: '熊谷将也, 清原修二, 滝川浩史, 倉島優一, 田口佳男, 杉山嘉也, 小俣有紀子, ダイヤモンド室温ナノインプリント法によるポリシロキサンのナノマスクパターン形成, 2010年度精密工学会関西地方定期学術講演会，2010年5月28日.',
-                    },
-                    {
-                      "category":"国内学会 / ポスター発表",
-                      "first":true,
-                      text: '熊谷将也, 柏木大幸, 清原修二, 滝川浩史, 田口佳男, 杉山嘉也, 小俣有紀子, インプリント用ダイヤモンドナノモールドの作製, 日本高専学会第15回年会講演会, 2009年8月28日',
-                    },
-                    {
-                      "category":"国内学会 / ポスター発表",
-                      "first":false,
-                      text: '荒木慎司，熊谷将也，清原修二，田口佳男，杉山嘉也，小俣有紀子，倉島優一，柏木大幸，ダイヤモンドモールド室温ナノインプリント法によるダイヤモンド エミッタアレイの作製とその評価，平成21年度高専連携教育研究プロジェクト成果発表会，2010年8月20日.',
-                    },
-                  ],
-                
-                  "Awards":[
-                    {
-                      "first":true,
-                      text: '<a href="http://www.thermoelectrics.jp/commendation.html">第16回日本熱電学会学術講演会 優秀ポスター賞</a>, 熊谷 将也，桂 ゆかり，佐藤 陸， 安藤 有希，郡司 咲子，今井 庸二，小谷 拓史，木村 薫，津田 宏治, 大規模論文データの機械学習による実験的熱電特性の予測, 2019年9月.',
-                    },
-                    {
-                      "first":true,
-                      text: '<a href="http://www.its.org/biblio/poster-award-25">ICT2019 Poster Award</a>, Masaya Kumagai, Yukari Katsura, Riku Sato, Ruonan Ni, Takushi Kodani, Hideyasu Ouchi, Sakiko Gunji, Yuki Ando, Yoji Imai, Kaoru Kimura, Koji Tsuda, Thermoelectric Material Design by Materials Informatics using Enormous Experimental Data on Starrydata, 2019.',
-                    },
-                    {
-                      "first":false,
-                      text: '<a href="http://s-ken.com/common/images/rc06/indexs.html">第19回NHK高専ロボコン近畿大会 特別賞(ソリッドワークス)</a>, 舞鶴高専 S研（慣性ロータ機構のプログラマーとして参加）',
-                    },
-                  ],
-                  
-                  "Articles":[
-                    {
-                      "category":"学会誌・商業誌等解説",
-                      "first":true,
-                      text: '熊谷将也, Starrydataに収録されている化学組成の共起元素マッピング, 日本熱電学会誌 第17巻 第1号（表紙の図）,2020年8月',
-                    },
-                    {
-                      "category":"学会誌・商業誌等解説",
-                      "first":true,
-                      text: '熊谷将也, <a href="">実験値Materials Informaticsの実現に向けたWebシステム開発・機械学習応用とその経緯</a>, 日本熱電学会誌 第16巻 第3号 特集：羽ばたけ若手（優秀講演賞・優秀ポスター賞各小受賞者）,2020年4月',
-                    },
-                    {
-                      "category":"学会誌・商業誌等解説",
-                      "first":true,
-                      text: '熊谷将也, <a href="http://www.thermoelectrics.jp/zata/gakkaisimokuzi/Vol16-No2.pdf">実験データ収集WebシステムStarrydataの開発と機械学習を利用した熱電材料の探索・設計</a>, 日本熱電学会誌 第16巻 第2号 特集：羽ばたけ若手（ICT/ACT2019 各賞受賞者）,2019年12月',
-                    },
-                    {
-                      "category":"インタビュー",
-                      "first":true,
-                      text: 'ASCII.jp <a href="https://ascii.jp/elem/000/004/011/4011771/">材料工学から情報工学への挑戦、さくらのパラレルキャリア研究者</a>, 2020年5月',
-                    },
-                    {
-                      "category":"インタビュー",
-                      "first":true,
-                      text: '2枚目の名刺 Webマガジン <a href="https://magazine.nimaime.or.jp/parallelcareer_new_graduate/">【新卒パラレルワーカー座談会】僕らがパラレルワークから学んだこと</a>, 2019年4月',
-                    },
-                    {
-                      "category":"インタビュー",
-                      "first":true,
-                      text: '日経産業新聞 My STEP up, 2018年6月22日掲載',
-                    },
-                    {
-                      "category":"インタビュー",
-                      "first":true,
-                      text: 'PR Table <a href="https://www.pr-table.com/sakura-ad/stories/768">就職しても好きなことを継続――パラレルキャリアに挑む新卒エンジニアの6ヶ月</a>, 2017年11月',
-                    },
-                  ],
-                  
-                  "Others":[
-                    {
-                      "category":"電子工作",
-                      "first":true,
-                      text: '<a href="https://www.youtube.com/watch?v=i3ZOyNfX4RE">3Dバーサライター</a>, 2009年度高専祭S-Pro作品, マイコンプログラム（AVR）および全体の電子回路を担当',
-                    },
-                    {
-                      "category":"電子工作",
-                      "first":true,
-                      text: '<a href="http://s-ken.com/common/images/rc06/indexs.html">閑雲野鶴</a>, 第19回NHK高専ロボコン近畿大会, 慣性ロータ機構のプログラムを担当',
-                    },
-                    {
-                      "category":"歌",
-                      "first":true,
-                      text: '<a href="https://youtu.be/Qv-Ld_-B8i0">太陽</a>, 高専時代(2008~2011)のバンド"Unruly hair", ボーカルを担当',
-                    },
-                    {
-                      "category":"歌",
-                      "first":true,
-                      text: '<a href="https://youtu.be/GQ6fkxgG-e8">恋心</a>, 高専時代(2008~2011)のバンド"Unruly hair", 作詞作曲およびボーカルを担当',
-                    },
-                    {
-                      "category":"歌",
-                      "first":true,
-                      text: '<a href="https://youtu.be/gd9W2HnrC9s ">雨</a>, 高専時代(2008~2011)のバンド"Unruly hair", 作詞作曲およびボーカルを担当',
-                    },
-                  ],
-                  "Contact":[
-                    {
-                      "category":"Mail",
-                      text: 'E-mail: mk.offce (at) gmail.com',
-                    },
-                    {
-                      "category":"Twitter",
-                      text: '<a href="https://twitter.com/kumagallium" target="_blank">@kumagallium</a>',
-                    },
-                  ],
-                  "Works":[
-                    {
-                      "category":"Starrydata2",
-                      text: '<a href="https://www.starrydata2.org/" target="_blank">https://www.starrydata2.org/</a>',
-                    },
-                    {
-                      "category":"E4M",
-                      text: '<a href="https://e4m.jp/" target="_blank">https://e4m.jp/</a>',
-                    },
-                    {
-                      "category":"Blog",
-                      text: '<a href="https://kumagallium.hatenablog.com/" target="_blank">クマガリウムぶろぐ</a>',
-                    },
-                    {
-                      "category":"Qiita",
-                      text: '<a href="https://qiita.com/M_Kumagai" target="_blank">M_Kumagai</a>',
-                    },
-                  ],
+                contents_notion:{
+                  "Profile":[],
+                  "Papers":[],
+                  "Presentations":[],
+                  "Awards":[],
+                  "Articles":[],
+                  "Others":[],
+                  "Contact":[],
+                  "Works":[]
                 },
                 overlayflow:false
               }
           },
           mounted () {
+            //Profile
+            const profiletableid = '5e5bcbaefd8843c1a2fe1979776d3a21'
+            axios.get('https://notion-api.splitbee.io/v1/table/' + profiletableid)
+              .then(response => {
+                let profile = []
+                for(var data of response.data){
+                  let text = data["Text"]
+
+                  profile.push({category: data["Category"],text: text})
+                }
+                this.contents_notion["Profile"] = profile
+              })
+
+            //Papers
+            const papertableid = 'eac0998cf09b4446a85659aeb64f3815'
+            axios.get('https://notion-api.splitbee.io/v1/table/' + papertableid)
+              .then(response => {
+                let papers = []
+                for(var data of response.data){
+                  let text = ""
+                  if(Object.keys(data).indexOf("Author") > 0){
+                    text += data["Author"]
+                  }
+                  if(Object.keys(data).indexOf("URL") > 0){
+                    text += ", " + "<a href="+ data["URL"] +">" + data["Title"] + "</a>"
+                  }
+                  else{
+                    text += ", " + data["Title"]
+                  }
+                  if(Object.keys(data).indexOf("Journal") > 0){
+                    text += ", " + data["Journal"]
+                  }
+                  if(Object.keys(data).indexOf("Volume") > 0){
+                    text += ", " + data["Volume"]
+                  }
+                  if(Object.keys(data).indexOf("Issue") > 0){
+                    text += ", " + data["Issue"]
+                  }
+                  if(Object.keys(data).indexOf("Year") > 0){
+                    text += ", " + data["Year"]
+                  }
+                  if(Object.keys(data).indexOf("Pages") > 0){
+                    text += ", " + data["Pages"]
+                  }
+
+                  papers.push({fitst: data["First"],text: text})
+                }
+                this.contents_notion["Papers"] = papers
+              })
+
+              
+            //Presentations
+            const presentationtableid = '4bd20b5d236447fbae8c7583f495ca49'
+            axios.get('https://notion-api.splitbee.io/v1/table/' + presentationtableid)
+              .then(response => {
+                let presentations = []
+                for(var data of response.data){
+                  let text = ""
+                  if(Object.keys(data).indexOf("Author") > 0){
+                    text += data["Author"]
+                  }
+                  if(Object.keys(data).indexOf("URL") > 0){
+                    text += ", " + "<a href="+ data["URL"] +">" + data["Title"] + "</a>"
+                  }
+                  else{
+                    text += ", " + data["Title"]
+                  }
+                  if(Object.keys(data).indexOf("Event") > 0){
+                    text += ", " + data["Event"]
+                  }
+                  if(Object.keys(data).indexOf("Type") > 0){
+                    text += ", " + data["Type"]
+                  }
+                  if(Object.keys(data).indexOf("Country") > 0){
+                    text += ", " + data["Country"]
+                  }
+                  if(Object.keys(data).indexOf("Year") > 0){
+                    text += ", " + data["Year"]
+                  }
+
+                  presentations.push({category: data["Category"], fitst: data["First"],text: text})
+                }
+                this.contents_notion["Presentations"] = presentations
+              })
+
+            //Awards
+            const awardtableid = '64ec4bb42dce4414b48c9b2a87b8e844'
+            axios.get('https://notion-api.splitbee.io/v1/table/' + awardtableid)
+              .then(response => {
+                let awards = []
+                for(var data of response.data){
+                  let text = ""
+                  if(Object.keys(data).indexOf("URL") > 0){
+                    text += "<a href="+ data["URL"] +">" + data["Award"] + "</a>"
+                  }
+                  else{
+                    text += data["Award"]
+                  }
+                  if(Object.keys(data).indexOf("Author") > 0){
+                    text += ", " + data["Author"]
+                  }
+                  if(Object.keys(data).indexOf("Title") > 0){
+                    text += ", " + data["Title"]
+                  }
+                  if(Object.keys(data).indexOf("Year") > 0){
+                    text += ", " + data["Year"]
+                  }
+
+                  awards.push({fitst: data["First"],text: text})
+                }
+                this.contents_notion["Awards"] = awards
+              })
+
+            //Articles
+            const articletableid = 'edb728c24a6a4746bf723c9d0e1f62eb'
+            axios.get('https://notion-api.splitbee.io/v1/table/' + articletableid)
+              .then(response => {
+                let articles = []
+                for(var data of response.data){
+                  let text = ""
+                  if(Object.keys(data).indexOf("URL") > 0){
+                    text += "<a href="+ data["URL"] +">" + data["Title"] + "</a>"
+                  }
+                  else{
+                    text += data["Title"]
+                  }
+                  if(Object.keys(data).indexOf("Medium") > 0){
+                    text += ", " + data["Medium"]
+                  }
+                  if(Object.keys(data).indexOf("Year") > 0){
+                    text += ", " + data["Year"]
+                  }
+
+                  articles.push({category: data["Category"],text: text})
+                }
+                this.contents_notion["Articles"] = articles
+              })
+
+            //Contact
+            const contacttableid = '60c6db629ddd4796b736baf05fcabb60'
+            axios.get('https://notion-api.splitbee.io/v1/table/' + contacttableid)
+              .then(response => {
+                let contact = []
+                for(var data of response.data){
+                  let text = data["Text"]
+
+                  contact.push({category: data["Category"],text: text})
+                }
+                this.contents_notion["Contact"] = contact
+              })
+              
+
+            //Others
+            const othertableid = '0569a73404cd481393c7a9dcfef7b886'
+            axios.get('https://notion-api.splitbee.io/v1/table/' + othertableid)
+              .then(response => {
+                let others = []
+                for(var data of response.data){
+                  let text = ""
+                  if(Object.keys(data).indexOf("URL") > 0){
+                    text += "<a href="+ data["URL"] +">" + data["Title"] + "</a>"
+                  }
+                  else{
+                    text += data["Title"]
+                  }
+                  if(Object.keys(data).indexOf("Comment") > 0){
+                    text += ", " + data["Comment"]
+                  }
+
+                  others.push({category: data["Category"],text: text})
+                }
+                this.contents_notion["Others"] = others
+              })
+
+            //Works
+            const worktableid = '932a4ee5be0a467e92a0f130ca562223'
+            axios.get('https://notion-api.splitbee.io/v1/table/' + worktableid)
+              .then(response => {
+                let works = []
+                for(var data of response.data){
+                  let text = ""
+                  if(Object.keys(data).indexOf("URL") > 0){
+                    text += "<a href="+ data["URL"] +">" + data["Name"] + "</a>"
+                  }
+                  else{
+                    text += data["Name"]
+                  }
+
+                  works.push({category: data["Category"],text: text})
+                }
+                this.contents_notion["Works"] = works
+              })
           },
           methods: {
               
