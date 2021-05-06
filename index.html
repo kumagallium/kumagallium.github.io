@@ -191,7 +191,13 @@
             axios.get('https://notion-api.splitbee.io/v1/table/' + papertableid)
               .then(response => {
                 let papers = []
-                for(var data of response.data){
+                let res_tmp = response.data
+                res_tmp.sort(function(a,b){
+                    if(a["Year"] > b["Year"]) return -1;
+                    if(a["Year"] < b["Year"]) return 1;
+                    return 0;
+                });
+                for(var data of res_tmp){
                   let text = ""
                   if(Object.keys(data).indexOf("Author") > 0){
                     text += data["Author"]
@@ -229,7 +235,13 @@
             axios.get('https://notion-api.splitbee.io/v1/table/' + presentationtableid)
               .then(response => {
                 let presentations = []
-                for(var data of response.data){
+                let res_tmp = response.data
+                res_tmp.sort(function(a,b){
+                    if(a["Year"] > b["Year"]) return -1;
+                    if(a["Year"] < b["Year"]) return 1;
+                    return 0;
+                });
+                for(var data of res_tmp){
                   let text = ""
                   if(Object.keys(data).indexOf("Author") > 0){
                     text += data["Author"]
@@ -263,7 +275,13 @@
             axios.get('https://notion-api.splitbee.io/v1/table/' + awardtableid)
               .then(response => {
                 let awards = []
-                for(var data of response.data){
+                let res_tmp = response.data
+                res_tmp.sort(function(a,b){
+                    if(a["Year"] > b["Year"]) return -1;
+                    if(a["Year"] < b["Year"]) return 1;
+                    return 0;
+                });
+                for(var data of res_tmp){
                   let text = ""
                   if(Object.keys(data).indexOf("URL") > 0){
                     text += "<a href="+ data["URL"] +">" + data["Award"] + "</a>"
@@ -291,7 +309,13 @@
             axios.get('https://notion-api.splitbee.io/v1/table/' + articletableid)
               .then(response => {
                 let articles = []
-                for(var data of response.data){
+                let res_tmp = response.data
+                res_tmp.sort(function(a,b){
+                    if(a["Year"] > b["Year"]) return -1;
+                    if(a["Year"] < b["Year"]) return 1;
+                    return 0;
+                });
+                for(var data of res_tmp){
                   let text = ""
                   if(Object.keys(data).indexOf("URL") > 0){
                     text += "<a href="+ data["URL"] +">" + data["Title"] + "</a>"
