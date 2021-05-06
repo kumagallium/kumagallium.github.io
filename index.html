@@ -243,6 +243,9 @@
                 });
                 for(var data of res_tmp){
                   let text = ""
+                  if(Object.keys(data).indexOf("Invited") > 0){
+                    text += "<b>(Invited)</b> "
+                  }
                   if(Object.keys(data).indexOf("Author") > 0){
                     text += data["Author"]
                   }
