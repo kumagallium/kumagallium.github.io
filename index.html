@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
-    <title>熊谷将也の研究業績</title>
+    <title>研究業績</title>
   </head>
 
   <body>
@@ -25,14 +25,14 @@
             <v-row justify="center" align-content="center">
               <v-col cols="12" class="pt-sm-10 pt-0 pb-0 mt-sm-0 mt-2 mb-sm-5 mb-0">
                 <v-card flat color="rgba(255, 255, 255, 0)" class="text-md-h4 text-h5" width="100%" style="text-align: center;color:#fff;">
-                  熊谷 将也
+                  {{name}}
                 </v-card>
               </v-col>
             </v-row>
             <v-row class="mt-0" justify="center" align-content="center">
               <v-col cols="12" class="pt-0 pb-sm-5 pb-0 mt-sm-0 mt-2 mb-sm-2 mb-0">
                 <v-card flat color="rgba(255, 255, 255, 0)" class="text-md-h5 text-h6" width="100%" style="text-align: center;color:#f5f5f5;">
-                  KUMAGAI Masaya
+                  {{name_en}}
                 </v-card>
               </v-col>
             </v-row>
@@ -148,9 +148,11 @@
           vuetify: new Vuetify(),
           data() {
               return {
+                name:"熊谷 将也",
+                name_en:"KUMAGAI Masaya",
                 blocks:[
                   {"name":"Profile","icon":"mdi-account","color":"#004D40"},
-                  {"name":"Papers","icon":"mdi-file-document-outline","color":"#1A237E"},
+                  {"name":"Publications ","icon":"mdi-file-document-outline","color":"#1A237E"},
                   {"name":"Presentations","icon":"mdi-message-image","color":"#FF8F00"},
                   {"name":"Awards","icon":"mdi-license","color":"#E57373"},
                   {"name":"Works","icon":"mdi-laptop","color":"#5D4037"},
@@ -161,7 +163,7 @@
                 selectedblock:{},
                 contents_notion:{
                   "Profile":[],
-                  "Papers":[],
+                  "Publications ":[],
                   "Presentations":[],
                   "Awards":[],
                   "Articles":[],
@@ -186,7 +188,7 @@
                 this.contents_notion["Profile"] = profile
               })
 
-            //Papers
+            //Publications 
             const papertableid = 'eac0998cf09b4446a85659aeb64f3815'
             axios.get('https://notion-api.splitbee.io/v1/table/' + papertableid)
               .then(response => {
@@ -226,7 +228,7 @@
 
                   papers.push({fitst: data["First"],text: text})
                 }
-                this.contents_notion["Papers"] = papers
+                this.contents_notion["Publications "] = papers
               })
 
               
