@@ -89,13 +89,13 @@
                         accordion
                         flat
                         :value="[...Array(Array.from(new Set(contents_notion[selectedblock.name].map(cnt=>cnt.category))).length)].map((_, i) => i)"
-                        v-if="(selectedblock.name == 'Presentations')||(selectedblock.name == 'Profile')"
+                        v-if="(selectedblock.name == 'Presentations')||(selectedblock.name == 'Profile')||(selectedblock.name == 'Articles')"
                       >
                         <v-expansion-panel
                           v-for="cat of Array.from(new Set(contents_notion[selectedblock.name].map(cnt=>cnt.category)))"
                         >
                           <v-expansion-panel-header class="text-h6 pa-0" style="color:grey;">
-                            {{cat}}
+                            {{cat}} [{{contents_notion[selectedblock.name].filter(cnt=>cnt.category == cat).length}}]
                           </v-expansion-panel-header>
                           <v-expansion-panel-content>
                             <v-card flat :color="selectedblock.color+'11'" class="my-2 py-2 px-4" v-for="(content,index) in contents_notion[selectedblock.name].filter(cnt=>cnt.category == cat)">
