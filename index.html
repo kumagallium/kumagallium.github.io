@@ -205,7 +205,7 @@
                     text += data["Author"]
                   }
                   if(Object.keys(data).indexOf("URL") > 0){
-                    text += ", " + "<a href="+ data["URL"] +">" + data["Title"] + "</a>"
+                    text += ", " + "<a href="+ data["URL"] +" target='_blank'>" + data["Title"] + "</a>"
                   }
                   else{
                     text += ", " + data["Title"]
@@ -252,7 +252,7 @@
                     text += data["Author"]
                   }
                   if(Object.keys(data).indexOf("URL") > 0){
-                    text += ", " + "<a href="+ data["URL"] +">" + data["Title"] + "</a>"
+                    text += ", " + "<a href="+ data["URL"] +" target='_blank'>" + data["Title"] + "</a>"
                   }
                   else{
                     text += ", " + data["Title"]
@@ -289,7 +289,7 @@
                 for(var data of res_tmp){
                   let text = ""
                   if(Object.keys(data).indexOf("URL") > 0){
-                    text += "<a href="+ data["URL"] +">" + data["Award"] + "</a>"
+                    text += "<a href="+ data["URL"] +" target='_blank'>" + data["Award"] + "</a>"
                   }
                   else{
                     text += data["Award"]
@@ -323,7 +323,7 @@
                 for(var data of res_tmp){
                   let text = ""
                   if(Object.keys(data).indexOf("URL") > 0){
-                    text += "<a href="+ data["URL"] +">" + data["Title"] + "</a>"
+                    text += "<a href="+ data["URL"] +" target='_blank'>" + data["Title"] + "</a>"
                   }
                   else{
                     text += data["Title"]
@@ -362,7 +362,7 @@
                 for(var data of response.data){
                   let text = ""
                   if(Object.keys(data).indexOf("URL") > 0){
-                    text += "<a href="+ data["URL"] +">" + data["Title"] + "</a>"
+                    text += "<a href="+ data["URL"] +" target='_blank'>" + data["Title"] + "</a>"
                   }
                   else{
                     text += data["Title"]
@@ -384,7 +384,7 @@
                 for(var data of response.data){
                   let text = ""
                   if(Object.keys(data).indexOf("URL") > 0){
-                    text += "<a href="+ data["URL"] +">" + data["Name"] + "</a>"
+                    text += "<a href="+ data["URL"] +" target='_blank'>" + data["Name"] + "</a>"
                   }
                   else{
                     text += data["Name"]
