@@ -1,0 +1,706 @@
+{
+  "Profile": [
+    {
+      "category": "略歴",
+      "text": "<div>　2005~2010年国立舞鶴工業高等専門学校（舞鶴高専）にて, プログラムや回路を学び, 頭でイメージできた電子工作は, 大抵作れる技術力を身に着ける. 2006年10月NHK高専ロボコン近畿大会に出場し, 特別賞受賞. 2009年, 回路部品に使用される無機材料に興味があり材料工学の研究をはじめ, 同年8月に国内学会口頭発表を経験. 2010~2012年, 舞鶴高専専攻科に進学し, 材料工学および情報工学の両分野での研究, 学会発表を経験. 2010年11月（大学学部３年相当）, 査読あり国際学会での発表を経験.\n</div>\n</br>\n<div>　2012~2017年大阪大学大学院 工学研究科において, 無機材料工学を専門として博士課程まで進み, 2017年3月に博士号（工学）を取得. 研究活動とは別に, 自分の不足しているWeb開発技術を向上するため, 趣味のWebサイトや学内ベンチャー企業のWebシステムを開発. Web開発をきっかけに, 材料工学と組み合わせたマテリアルズ・インフォマティクス研究を紹介され, 博士論文の研究とは別に進める.\n</div>\n</br>\n<div>　2017年4月, 自身のインフラの技術が不足していることを感じ, さくらインターネット株式会社に入社. 同年6月, さくらインターネット研究所に配属されると同時に, 同社パラレルキャリア制度を利用し, 理化学研究所 革新知能統合研究センターの客員研究員として, マテリアルズ・インフォマティクス研究に従事. 機械学習を共通の要素技術として, 材料工学および情報工学の知識を双方に生かした学際的研究に主眼を置く. マテリアルズ・インフォマティクス研究が評価され, 2019年7月国際会議International Conference on Thermoelectrics (ICT2019)でポスター賞を受賞, 同年9月日本熱電学会学術講演会で優秀ポスター賞を受賞.　2020年4月~2024年3月, クロスアポイントメント制度を利用して京都大学の特定助教として従事（さくらインターネット株式会社60%, 京都大学40%）.2024年4月 京都大学の非常勤研究員に着任.\n</div>"
+    },
+    {
+      "category": "所属",
+      "text": "2017年6月〜\n<a href=\"https://research.sakura.ad.jp/about/\" target='_blank'>さくらインターネット研究所 研究員</a></li>"
+    },
+    {
+      "category": "所属",
+      "text": "2017年6月〜\n<a href=\"https://aip.riken.jp/labs/goalorient_tech/mol_inf/?lang=ja\" target='_blank'>理化学研究所 客員研究員</a>"
+    },
+    {
+      "category": "所属",
+      "text": "2020年4月〜2024年3月\n<a href=\"http://www.energy.kyoto-u.ac.jp/jp/socio-environmental/\" target='_blank'>京都大学 特定助教</a>"
+    },
+    {
+      "category": "所属",
+      "text": "2020年6月〜\n大阪大学 招へい研究員"
+    },
+    {
+      "category": "所属",
+      "text": "2024年4月〜\n<a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>京都大学 非常勤研究員</a>"
+    },
+    {
+      "category": "経歴",
+      "text": "<ul style=\"margin:0px;\">\n<li>2024年4月 <a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>京都大学 複合原子力科学研究所附属安全原子力システム研究センター</a> 非常勤研究員</li>\n<li>2020年4月〜2024年3月 <a href=\"http://www.energy.kyoto-u.ac.jp/jp/socio-environmental/\" target='_blank'>京都大学 複合原子力科学研究所附属安全原子力システム研究センター （兼　大学院エネルギー科学研究科）</a> 特定助教</li>\n<li>2017年6月〜 <a href=\"https://aip.riken.jp/labs/goalorient_tech/mol_inf/?lang=ja\" target='_blank'>理化学研究所 革新知能統合研究センター 目的指向基盤技術研究グループ 分子情報科学チーム</a> 客員研究員 就任</li>\n<li>2017年6月〜 <a href=\"https://research.sakura.ad.jp/about/\" target='_blank'>さくらインターネット株式会社 さくらインターネット研究所</a> 研究員 就任</li>\n<li>2017年4月〜 さくらインターネット株式会社 入社</li>\n<li>2017年3月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 博士課程 修了</li>\n<li>2015年4月 日本学術振興会 特別研究員（DC2）</li>\n<li>2014年4月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 博士課程 入学</li>\n<li>2014年3月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 修士課程 修了</li>\n<li>2012年4月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 修士課程 入学</li>\n<li>2012年3月 国立舞鶴工業高等専門学校 専攻科 電気・制御システム工学専攻 卒業</li>\n<li>2010年4月 国立舞鶴工業高等専門学校 専攻科 電気・制御システム工学専攻 入学</li>\n<li>2010年3月 国立舞鶴工業高等専門学校 電子制御工学科 卒業</li>\n<li>2005年4月 国立舞鶴工業高等専門学校 電子制御工学科 入学</li>\n</ul>"
+    },
+    {
+      "category": "リンク",
+      "text": "<a href=\"https://researchmap.jp/mkumagai\" target=’_blank’>researchmap</a>"
+    },
+    {
+      "category": "リンク",
+      "text": "<a href=\"https://publons.com/researcher/1877781/masaya-kumagai/\" target='_blank'>Publons</a>"
+    },
+    {
+      "category": "リンク",
+      "text": "<a href=\"https://speakerdeck.com/kumagallium\" target='_blank'>Speaker Deck</a>"
+    },
+    {
+      "category": "リンク",
+      "text": "<a href=\"https://kumagallium.hatenablog.com/\" target='_blank'>研究ブログ</a>"
+    }
+  ],
+  "Publications ": [
+    {
+      "fitst": false,
+      "text": "Hirofumi Tsuruta, Masaya Kumagai, <a href=https://www.sakura.ad.jp/corporate/information/newsreleases/2025/11/10/1968221796/ target='_blank'>MatPROV: A Provenance Graph Dataset of Material Synthesis Extracted from Scientific Literature</a>, NeurIPS, 2025"
+    },
+    {
+      "fitst": false,
+      "text": "Yukari Katsura, Masaya Kumagai, Tomoya Mato, Yu Takada, Yuki Ando, Erina Fujita,Fumikazu Hosono, Eiji Koyama, Farhan Mudasar, Ton Nu Thanh Phuong, Naoto Saito, Yoshihiro Sakamoto, Atsumi Tanaka, Dewi Yana, Kaoru Kimura, Koji Tsuda and Masahiko Demura, <a href=https://www-tandfonline-com.kyoto-u.idm.oclc.org/doi/full/10.1080/27660400.2025.2506976?scroll=top&needAccess=true#abstract target='_blank'>Starrydata: from published plots to shared materials data</a>, Science and Technology of Advanced Materials: Methods, 5, 1, 2025"
+    },
+    {
+      "fitst": false,
+      "text": "Yifan Sun, Hirofumi Tsuruta, Masaya Kumagai, Ken Kurosaki, <a href=https://www.tandfonline.com/doi/full/10.1080/00223131.2025.2522354 target='_blank'>YouTube-based topic modeling and large language model sentiment analysis of Japanese online discourse on nuclear energy</a>, Journal of Nuclear Science and Technology, 62, 11, 2025, 1038"
+    },
+    {
+      "fitst": false,
+      "text": "Y. Sun, Y. Miyawaki, M. Kumagai, S. Fujieda, H. Muta, K. Kurosaki, Y. Ohishi, <a href=https://www.sciencedirect.com/science/article/abs/pii/S0022311524001508?via%3Dihub target='_blank'>Thermophysical characterization of UFe3B2 and USiNi: An experimental study</a>, Journal of Nuclear Materials, 595, 2024, 155048"
+    },
+    {
+      "fitst": false,
+      "text": "H. Tsuruta, Y. Katsura, M. Kumagai, <a href=https://arxiv.org/abs/2310.06852 target='_blank'>DeepCrysTet: A Deep Learning Approach Using Tetrahedral Mesh for Predicting Properties of Crystalline Materials</a>, International Conference on Machine Learning and Applications (ICMLA), 2023"
+    },
+    {
+      "fitst": false,
+      "text": "S. Iwasaki, M. Hoshino, H. Morito, M. Kumagai, Y. Katsura, J. Nishii, M. Fujioka, <a href=https://www.sciencedirect.com/science/article/abs/pii/S1293255823002005?via%3Dihub target='_blank'>Effect of intergranular connectivity of NaAlB14 on Na+ extraction</a>, Solid State Sciences, 144, 2023, 107308"
+    },
+    {
+      "fitst": false,
+      "text": "B. Ryu, J. Chung, M. Kumagai, T. Mato, Y. Ando, S. Gunji, A. Tanaka, D. Yana, M. Fujimoto, Y. Imai, Y. Katsura, and S. Park, <a href=https://www.sciencedirect.com/science/article/pii/S2589004223005710 target='_blank'>Best thermoelectric efficiency of ever-explored materials</a>, iScience, 26, 4, 2023"
+    },
+    {
+      "fitst": false,
+      "text": "M. Fujioka, M. Hoshino, S. Iwasaki, H. Morito, M. Kumagai, Y. Katsura, K. Zagarzusem, M. Ono and J. Nishii, <a href=https://pubs.acs.org/doi/10.1021/acs.chemmater.3c00318 target='_blank'>High-Pressure Diffusion Control: Na Extraction from NaAlB14</a>, Chem. Mater. American Chemical Society (ACS), 2023"
+    },
+    {
+      "fitst": false,
+      "text": "Y. Sun, M. Kumagai, M. Jin, E. Sato, M. Aoki, Y. Ohishi, K. Kurosaki, <a href=https://www.tandfonline.com/doi/abs/10.1080/00223131.2023.2269974?src= target='_blank'>A multiclass classification model for predicting the thermal conductivity of uranium compounds</a>, J. Nucl. Sci. Technol., 61, 6, 2023, 778-788"
+    },
+    {
+      "fitst": true,
+      "text": "M. Kumagai, Y. Ando, A. Tanaka, K. Tsuda, Y. Katsura, K. Kurosaki, <a href=https://www.tandfonline.com/doi/full/10.1080/27660400.2022.2109447 target='_blank'>Effects of data bias on machine-learning–based\nmaterial discovery using experimental property\ndata</a>, Science and Technology of Advanced Materials: Methods, 2, 1, 2022, 302-309"
+    },
+    {
+      "fitst": false,
+      "text": "F. Jiahui, S. Tanusilp, M. Kumagai, Y. Ohishi, K. Kurosaki, <a href=https://aip.scitation.org/doi/10.1063/5.0057137 target='_blank'>Controlled thermal expansion and thermoelectric properties of Mg2Si/Si composites</a>, Journal of Applied Physics, 130, 2021, 035105"
+    },
+    {
+      "fitst": false,
+      "text": "Y. Inada, Y. Katsura, M. Kumagai, K. Kimura, <a href=https://www.tandfonline.com/doi/full/10.1080/27660400.2021.1986359 target='_blank'>Atomic descriptors generated from coordination polyhedra in crystal structures</a>, Science and Technology of Advanced Materials: Methods, 1, 1, 2021, 200-212"
+    },
+    {
+      "fitst": false,
+      "text": "S. Tanusilp, M. Kumagai, Y. Ohishi, N. Sadayori, K. Kurosaki, <a href=https://onlinelibrary.wiley.com/doi/10.1002/pssr.202100482 target='_blank'>Large Anharmonicity and Low Lattice Thermal Conductivity of Thermoelectric Sn(SbTe2)2</a>, Physica Status Solidi - Rapid Research Letters, 2021, 2100482"
+    },
+    {
+      "fitst": false,
+      "text": "Y. Kawajiri, S. Tanusilp, M. Kumagai, M. Ishimaru, Y. Ohishi, J. Tanaka, K. Kurosaki, <a href=https://pubs.acs.org/doi/10.1021/acsaem.1c02560 target='_blank'>Enhancement of Thermoelectric Properties of n-Type Bi2Te3–xSex by Energy Filtering Effect</a>, ACS Applied Energy Materials, 4, 10, 2021, 11819–11826"
+    },
+    {
+      "fitst": false,
+      "text": "Y. Katsura, M. Kumagai, T. Kodani, M. Kaneshige, Y. Ando, S. Gunji, Y. Imai, H. Ouchi, K. Tobita, K. Kimura, K. Tsuda, <a href=https://www.tandfonline.com/doi/full/10.1080/14686996.2019.1603885 target='_blank'>Data-driven analysis of electron relaxation times in PbTe-type thermoelectric materials</a>, Science and Technology of Advanced Materials, 20, 2019, 511-520"
+    },
+    {
+      "fitst": true,
+      "text": "熊谷 将也, 黒﨑 健, 大石 佑治, 牟田 浩明, 山中 伸介, <a href=https://www.jstage.jst.go.jp/article/jinstmet/81/2/81_J2016053/_pdf target='_blank'>擬ギャップ系材料Al5Co2の電子構造および熱電特性</a>, 日本金属学会誌, 81, 2, 2017, 55-59"
+    },
+    {
+      "fitst": false,
+      "text": "桂 ゆかり, 熊谷 将也, 郡司 咲子, 今井 庸二, 木村 薫, <a href=https://www.jstage.jst.go.jp/article/jjspm/64/8/64_467/_pdf/-char/ja target='_blank'>実験的熱電特性のデータベース化に向けた論文データ収集WebシステムStarry dataの開発</a>, 粉体及び粉末冶金, 64, 8, 2017, 467-470"
+    },
+    {
+      "fitst": false,
+      "text": "熊谷 将也, <a href=https://ir.library.osaka-u.ac.jp/repo/ouka/all/61749/29120_論文.pdf target='_blank'>擬ギャップ・狭ギャップを有するAl系材料の電子構造および熱電特性</a>, 博士学位論文, 2017"
+    },
+    {
+      "fitst": false,
+      "text": "K. Kurosaki, M. Susuki, H. Ishii, M. Kumagai, K. Anada, Y. Murakami, Y. Ohishi, H. Muta, S. Yamanaka, <a href=https://www.nature.com/articles/s41598-017-11774-0 target='_blank'>High wettability of liquid caesium iodine with solid uranium dioxide.</a>, Scientific Reports, 7, 2017"
+    },
+    {
+      "fitst": false,
+      "text": "F. Nakamori, Y. Ohishi, M. Kumagai, H. Muta, K. Kurosaki, K. Fukumoto, S. Yamanaka, <a href=https://www.jstage.jst.go.jp/article/taesj/15/4/15_J16.005/_article/-char/ja/ target='_blank'>Mechanical and thermal properties of Fe2B</a>, Transactions of the Atomic Energy Society of Japan, 15, 2016"
+    },
+    {
+      "fitst": true,
+      "text": "M. Kumagai, K. Kurosaki, Y. Ohishi, H. Muta, S. Yamanaka, <a href=https://onlinelibrary.wiley.com/doi/abs/10.1002/pssb.201552650 target='_blank'>Reduction of lattice thermal conductivity of pseudogap intermetallic compound Al3V</a>, Physica Status Solidi (B) Basic Research, 253, 2016, 469–472"
+    },
+    {
+      "fitst": true,
+      "text": "M. Kumagai, K. Kurosaki, N. Uchida, Y. Ohishi, H. Muta, S. Yamanaka, <a href=https://link.springer.com/article/10.1007%2Fs11664-014-3592-5 target='_blank'>Synthesis and Characterization of Melt-Spun Metastable Al6Ge5</a>, Journal of Electronic Materials, 44, 2015, 948–952"
+    },
+    {
+      "fitst": false,
+      "text": "黒﨑 健, 梅田 亮, 熊谷 将也, 大石 佑治, 牟田 浩明, 山中 伸介, <a href=https://www.jstage.jst.go.jp/article/jinstmet/79/11/79_JA201502/_pdf/-char/ja target='_blank'>単ロール液体急冷法を用いて作製したRuAl2の微細構造と熱伝導率</a>, 日本金属学会誌, 79, 11, 2015, 573-576"
+    },
+    {
+      "fitst": true,
+      "text": "M. Kumagai, K. Kurosaki, Y. Ohishi, H. Muta, S. Yamanaka, <a href=https://www.jstage.jst.go.jp/article/matertrans/55/8/55_E-M2014821/_article target='_blank'>Effect of ball-milling conditions on thermoelectric properties of polycrystalline CuGaTe2</a>, Materials transactions, 55, 2012, 1215–1218"
+    },
+    {
+      "fitst": false,
+      "text": "S. Kiyohara, M. Kumagai, Y. Taguchi, Y. Omata, Y. Kurashima, H. Takikawa, Diamond nanopit arrays fabricated by room-temperature nanoimprinting using diamond molds, in Materials Research Society Symposium Proceedings, 1282, 2011, 117–122"
+    }
+  ],
+  "Presentations": [
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": false,
+      "text": "T. Yokomizo, Y. Sun, M. Kumagai, H. Tsuruta, Y. Ohishi, K. Kurosaki, \n\nConstruction of physical property temperature-dependency benchmarks for high-accuracy machine learning models, TMS2025, Poster, USA, 2025"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": true,
+      "text": "M. Kumagai, H.Tsuruta, R. Tanaka, K. Kurosaki, A Data Structure and Collection System for Synthesis Processes in Materials Science, TMS2025, Poster, USA, 2025"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": false,
+      "text": "Y. Sun, S. Tanusilp, M. Kumagai, H. Tsuruta, Y. Ohishi, H. Muta, K. Kurosaki,, Leveraging machine learning to enhance the performance of filled skutterudites through composition optimization\n, TMS2025, Oral, USA, 2025"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": false,
+      "text": "Yukari Katsura, Tomoya Mato, Yu Takada, Dewi Yana, Erina Fujita,Fumikazu Hosono, Eiji Koyama, Naoto Saito, Atsumi Tanaka, Masaya Kumagai, Starrydata Explorers: Visualization Platforms to Overview the PastReported Experimental Samples, TMS2025, Poster, USA, 2025"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Yukari Katsura, Tomoya Mato, Yu Takada, Dewi Yana, Eiji Koyama, Erina Fujita, Yoshihiro Sakamoto, Naoto Saito, Fumikazu Hosono, Atsumi Tanaka, Masaya Kumagai, LLM-assisted data curation in Starrydata: an open database of material properties extracted from published plots, TMS Specialty Congress 2025/The 3rd World Congress on Artificial Intelligence in Materials and Manufacturing (AIM 2025), Oral, USA, 2025"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": false,
+      "text": "Tetsuya Imamura, Yifan Sun, Masaya Kumagai, Ken Kurosaki, Hirofumi Tsuruta, Hiroaki Muta, Yuji Ohishi, Development of a machine learning model for exploring high performance thermoelectric materials based on the quality factor, The 41st International and 7th Asian Conference on Thermoelectrics, Poster, Japan, 2025"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": false,
+      "text": "Yifan Sun, Tetsuya Imamura, Sora-at Tanusilp, Hirofumi Tsuruta, Masaya Kumagai, Yuji Ohishi, Ken Kurosaki, A Divide and Conquer Approach to Identifying Ultralow Thermal Conductivity Materials with Machine Learning, The 41st International and 7th Asian Conference on Thermoelectrics , Poster, Japan, 2025"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Hirofumi Tsuruta, Ryosuke Tanaka, Ken Kurosaki, An Interoperable Data Structure for Experimental Processes in Thermoelectric Materials, The 41st International and 7th Asian Conference on Thermoelectrics, Poster, Japan, 2025"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "Yifan Sun, Masaya Kumagai, Mingyu Jin, Eriko Sato, Masako Aoki, Yuji Ohishi, Ken Kurosaki, New Developments in Nuclear Fuel Research through Integration with Data Science (8) Harnessing Machine Learning for the Discovery of High Thermal Conductivity Fuel Candidates, 日本原子力学会2024年春の年会, Oral, Japan, 2024"
+    },
+    {
+      "category": "国内学会 / ポスター発表",
+      "fitst": true,
+      "text": "熊谷 将也、鶴田 博文、田中 諒介、黒崎 健, 材料科学における合成プロセスのデータ構造と収集の仕組みの開発, 第21回日本熱電学会学術講演会(TSJ2024), Poster, Japan, 2024"
+    },
+    {
+      "category": "国内学会 / ポスター発表",
+      "fitst": false,
+      "text": "今村 哲也、孫 一帆、熊谷 将也、黒崎 健、牟田 浩明、大石 佑治, 機械学習を用いた quality factor に基\nづく熱電材料探索手法の開発, 第21回日本熱電学会学術講演会(TSJ2024), Poster, Japan, 2024"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり, 間藤 智也, 小山 栄二, 田中 敦美, デウィ ヤナ, 藤田 絵梨奈, 細野 史一, 髙田 悠, 木村 薫, 熊谷 将也, Starrydataにおける過去の熱電材料研究の化学組成分布, 第85回 応用物理学会 秋季学術講演会, Oral, Japan, 2024"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり, 間藤 智也, 髙田 悠, 小山 栄二, 斉藤 直人, 坂本 吉宏, 田中 敦美, デウィ ヤナ, 藤田 絵梨奈, 細野 史一, 木村 薫, 熊谷 将也,  Starrydataの大規模熱電材料データの2D/3D可視化ツール, 第21回日本熱電学会学術講演会(TSJ2024), Oral, Japan, 2024"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "寅田 琉介、大石 佑治、牟田 浩、孫 一帆、熊谷 将也、黒﨑 健, 機械学習を用いた新規高熱伝導率核燃料の選択とU2Tiの物性評価, 日本原子力学会2024年秋の大会, Oral, Japan, 2024"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "孫 一帆、鶴田 博文、熊谷 将也、黒﨑 健, 日本国内における原子力エネルギーに関する報道のトピックと感情分析”, 日本原子力学会2024年秋の大会, Oral, Japan, 2024"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "KATSURA, Yukari, MATO, Tomoya, TAKADA, Yu, FUJITA, Erina, 小山 栄二, 田中 敦美, 細野 史一, 郡 俊志, デウィ ヤナ, 藤本 雅之, 斉藤 直人, トンヌ フン タン, 坂本 吉宏, KIMURA, Kaoru, 津田 浩二, 熊谷 将也, Starrydata dataset with experimental thermoelectric properties of 50,000+ samples from literature,  ICT/ECT 2024, Oral, Poland, 2024"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": false,
+      "text": "Yifan Sun, Masaya Kumagai, Yuji Ohishi, Eriko Sato, Masako Aoki, Ken Kurosak, Optimizing Thermal Conductivity Prediction of Uranium Compounds using Balanced Multiclass Classification, TMS2024 153rd Annual Meeting & Exhibition, Poster, USA, 2024"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": false,
+      "text": "Koki Takeichi, Masaya Kumagai, Yuji Ohishi, , Ken Kurosaki, Feature Engineering for Construction of High-Accuracy Thermal Conductivity Prediction Model for Uranium Compounds, TMS2024 153rd Annual Meeting & Exhibition, Poster, USA, 2024"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "間藤 智也、熊谷 将也、高田 悠、桂 ゆかり, Starrydataにおける大規模論文データ収集の半自動化AIシステムの開発, 第71回 応用物理学会春季学術講演会, Oral, Japan, 2024"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり、間藤 智也、熊谷 将也、津田 宏治, Starrydataの大規模実験データを活用した機械学習の可能性, 第71回 応用物理学会春季学術講演会, Oral, Japan, 2024"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Yukari Katsura, Yuki Inada, Masaya Kumagai, Tomoya Mato, Yu Takada, TakamichiSushida, Masakazu Akiyama, Haruhiko Morito, Masaya Fujioka, Tohru Sugahara   ,  Crystal Structure Builder Based on Delaunay Tetrahedral Chemistry, MRM2023/IUMRS-ICA2023, Oral, Japan, 2023"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Y. Inada, Y. Katsura, H. Morito, M. Kumagai, K. Kimura   , Maps for New Materials Search Generated by Machine Learning, MRM2023/IUMRS-ICA2023, Oral, Japan, 2023"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "武市 航輝、熊谷 将也、大石 佑治、黒崎 健\n, データ科学との融合による核燃料研究の新展開\n(2)高精度な熱伝導率予測モデル構築のための特徴量設計\n, 日本原子力学会 2023年秋の大会, Oral, Japan, 2023"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Yukari Katsura, Yuki Ando, Atsumi Tanaka, Koji Tsuda, Ken Kurosaki, Applicability domain for prediction models of thermoelectric properties based on similarity to known materials, TMS 2022 Annual Meeting & Exhibition, Poster, Online, 2022"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": false,
+      "text": "Naoki Hato, Masaya Kumagai, Ken Kurosaki, Direct prediction of mechanical properties from X-ray diffraction patterns using machine learning, TMS 2022 Annual Meeting & Exhibition, Poster, Online, 2022"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": false,
+      "text": "Meigyoku Kin, Masaya Kumagai, Yuji Ohishi, Eriko Sato, Masako Aoki, Ken Kurosaki, Propose Advanced Nuclear Fuels with High Thermal Conductivity Using Machine Learning, TMS 2022 Annual Meeting & Exhibition,, Poster, Online, 2022"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "鶴田博文, 桂ゆかり, 熊谷将也, 3次元メッシュで表現した結晶構造を用いた材料物性の予測に向けた深層学習モデルの設計, 2022年度 人工知能学会全国大会（第36回）, Oral, Japan, 2022"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "<b>(Invited)</b> 熊谷 将也, 安藤 有希, 田中 敦美, 津田 宏治, 桂 ゆかり, 黒崎 健, 実験MIと新材料探索, 第83回 応用物理学会秋季学術講演会, Oral, Japan, 2022"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "金 明玉\n, 熊谷 将也, 黒﨑 健, 機械学習を用いた高熱伝導率ウラン化合物の網羅的探索, 日本原子力学会 2021年秋の大会, Oral, Online, 2021"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "波頭 直輝, 熊谷 将也, 黒﨑 健, 機械的特性予測のためのX線回折パターンに基づく特徴量の設計, 日本金属学会 2021年秋期(第169回)講演大会, Oral, Online, 2021"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Meigyoku Kin, Masaya Kumagai, Yuji Ohishi, Ken Kurosaki, Uranium Compounds with High Thermal Conductivity Proposed by Machine Learning, the 2021 MRS Fall Meeting & Exhibit, Oral, Online, 2021"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Naoki Hato, Masaya Kumagai, Ken Kurosaki, Design of Features Based on X-ray Diffraction Patterns for Prediction of Mechanical Properties, the 2021 MRS Fall Meeting & Exhibit,, Oral, Online, 2021"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "熊谷 将也、桂 ゆかり、安藤 有希、田中 敦美、津田 宏治、黒崎健, 既知材料との類似性に基づいた熱電特性予測モデルの適用範囲, 第18回日本熱電学会学術講演会, Oral, Japan, 2021"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり、間藤 智也、藤田 絵梨奈、熊谷 将也, 熱電材料のデータベース化に向けた物性概念ツリーの開発, 第18回日本熱電学会学術講演会, Oral, Japan, 2021"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Sora-at Tanusilp, Masaya Kumagai, Yuji Ohishi, Hideki Furusawa, Motoomi Suwabe, Ken Kurosaki, Negative Thermal Expansion and Ultra-Low Thermal Conductivity of ZrW2O8, the 2021 MRS Fall Meeting & Exhibit, Oral, Online, 2021"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "<b>(Invited)</b> 熊谷将也, 知識創発を促すオープンサイエンスへの挑戦〜暗黙知を形式知化する電子実験ノート〜, 情報処理学会 第83回全国大会 IPSJ-ONE 2021, Oral, Online, 2021"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Yukari Katsura, Masaya Kumagai, Takushi Kodani, Kaoru Kimura, Koji Tsuda, Collective analysis of experimental thermoelectric properties of the published plot data in Starrydata web system, 5th Asian Conference on Thermoelectrics, Poster, Online, 2020"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "<b>(Invited)</b> 熊谷将也, 実験科学のオープンサイエンス化に向けた電子実験ノートの開発, 第48回 インターネット技術 第163委員会研究会（ITRC meet48）, Oral, Online, 2020"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり, 熊谷 将也, 小谷 拓史, 佐藤 陸, 木村 薫, 津田 宏治, Starrydata上の実験データのインフォマティクスによる新規熱電材料の設計, 第６７回応用物理学会春季学術講演会, Oral, Japan, 2020"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "稲田祐樹, 桂ゆかり, 熊谷将也, 木村薫, 配位構造に着目した新規元素記述子の作成, 日本金属学会2020年秋季大会, Oral, Japan, 2020"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "<b>(Invited)</b> 熊谷将也, 材料工学に基づいた新しいWebシステム設計・管理アプローチ, 第19回情報技術フォーラム 【併催研究会】インターネットと運用技術、セキュリティとプライバシのチャレンジ（IOT/SPT共催）, Oral, Online, 2020"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり, 熊谷 将也, 小谷 拓史, 佐藤 陸, 木村 薫, 津田 宏治, Starrydata web システムによる熱電材料の Materials Informatics, 第81回応用物理学会秋季学術講演会, Oral, Online, 2020"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり, 熊谷 将也, 佐藤 陸, 安藤 有希, 郡司 咲子, 今井 庸二, 金重 光則, 小谷 拓史, 木村 薫, 津田 宏治, 論文からの大規模実験データの機械学習による熱電特性の直接予測, 第80回応用物理学会秋季学術講演会, Oral, Japan, 2019"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Y. Katsura, M. Kumagai, M. Kaneshige, Y. Ando, S. Gunji, R. Sato, T. Kodani, R. Ni, Y. Imai, H. Ouchi, K. Kimura, K. Tsuda, Starrydata: an open database for experimental data extracted from published plot images, The 38th International Conference on Thermoelectrics (ICT2019), Oral, Korea, 2019"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "熊谷 将也, 松本 亮介, 侵入検知システムのためのグラフ構造に基づいた機械学習および可視化, 第44回インターネットと運用技術研究発表会（IOT44）, Oral, Japan, 2019"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Yukari Katsura, Masaya Kumagai, Mitsunori Kaneshige, Yuki Ando, Sakiko Gunji, Yoji Imai, Riku Sato, Takushi Kodani, Kaoru Kimura, Koji Tsuda, Starrydata: a plot-mined database for published experimental data, The 3rd Forum of Materials Genome Engineering (MGE2019), Oral, Chaina, 2019"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり, 熊谷 将也, 倪 若楠, 佐藤 陸, 小谷 拓史, 安藤 有希, 郡司 咲子, 今井 庸二, 金重 光則, 木村 薫, 津田 宏治, 実験値Materials Informaticsの実現に向けたStarrydata webシステムの開発, 第7回アライアンス若手交流会, Oral, Japan, 2019"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": false,
+      "text": "Yukari Katsura, Masaya Kumagai, Mitsunori Kaneshige, Yuki Ando, Sakiko Gunji, Yoji Imai, Riku Sato, Takushi Kodani, Hideyasu Ouchi, Kazuki Tobita, Kaoru Kimura, Koji Tsuda, Starrydata: a plot mining web system for experimental materials informatics, PRESTO International symposium on materials informatics, Poster, Japan, 2019"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Yukari Katsura, Masaya Kumagai, Riku Sato, Takushi Kodani, Mitsunori Kaneshige, Yuki Ando, Sakiko Gunji, Yoji Imai, Hideyasu Ouchi, Kazuki Tobita, Kaoru Kimura, Koji Tsura, Materials informatics of thermoelectric materials using big literature data, TMS2019 148th Annual meeting and exhibition, Oral, USA, 2019"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "Yukari Katsura, Masaya Kumagai, Mitsunori Kaneshige, Yuki Ando, Sakiko Gunji, Yoji Imai, Riku Sato, Takushi Kodani, Hideyasu Ouchi, Kazuki Tobita, Kaoru Kimura, Koji Tsuda, 論文からの実験データ収集 Web システムStarrydataの開発と熱電材料研究への応用, MaDISシンポジウム 2019 AIで加速する材料開発とデータプラットフォーム戦略, Oral, Japan, 2019"
+    },
+    {
+      "category": "国内学会 / ポスター発表",
+      "fitst": true,
+      "text": "熊谷 将也, 桂 ゆかり, 佐藤 陸, 安藤 有希, 郡司 咲子, 今井 庸二, 小谷 拓史, 木村 薫, 津田 宏治, 大規模論文データの機械学習による実験的熱電特性の予測, 第16回日本熱電学会学術講演会, Poster, Japan, 2019"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "熊谷 将也, 松本 亮介, 疎構造学習およびグラフ畳み込みニューラルネットワークによる異常検知, 情報処理学会 第81回全国大会, Oral, Japan, 2019"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "小谷拓史, 桂ゆかり, 熊谷将也,今井庸二, 郡司咲子, 木村薫, 実験値データベースの応用による高性能SnTe熱電変換材料の開発, 第65回応用物理学会春季学術講演会 (2018), Oral, Japan, 2018"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "熊谷 将也, 桂 ゆかり, 佐藤 陸, 金重 光典, 小谷 拓史, 大内 秀恭, 郡司 咲子, 安藤 有希, 今井 庸二, 木村 薫, 津田 宏治, 論文内実験データ収集・共有WebシステムStarrydataの開発, 第15回日本熱電学会学術講演会（TSJ2018）, Oral, Japan, 2018"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "Yukari Katsura, Masaya Kumagai, Mitsunori Kaneshige, Takushi Kodani, Hideyasu Ouchi, Sakiko Gunji, Yuki Ando, Yoji Imai, Kaoru Kimura and Koji Tsuda, Starrydata2: 論文中のグラフからの材料特性データ収集システム a web system for materials data collection from published plots, Japan Open Science Summit, Oral, Japan, 2018"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Yukari Katsura, Riku Sato, Mitsunori Kaneshige, Takushi Kodani, Yuki Ando, Sakiko Gunji, Yoji Imai, Hideyasu Ouchi, Kaoru Kimura, Koji Tsuda, Data-driven materials design from large-scale experimental data, The 37th International Conference on Thermoelectrics (ICT2019), Poster, France, 2018"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "佐藤陸, 小谷拓史, 桂ゆかり, 熊谷将也, 今井庸二, 郡司咲子, 木村薫, ニューラルネットワークに基づくPbTe系熱電材料の特性予測, 第65回応用物理学会春季学術講演会 (2018), Oral, Japan, 2018"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Takushi Kodani, Yukari Katsura, Masaya Kumagai, Yuki Ando, Yoji Imai, Sakiko Gunji, Kaoru Kimura, Development of high-performance thermoelectric materials guided by large-scale experimental data, The 37th International Conference on Thermoelectrics (ICT2019), Oral, France, 2018"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂ゆかり, 熊谷将也, 小谷拓史,佐藤陸,金重光則, 安藤有希,郡司咲子,今井庸二,木村薫,津田宏治, 熱電材料の大規模実験データを用いたMaterials Informatics, 第39回日本熱物性シンポジウム, Oral, Japan, 2018"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "佐藤陸, 小谷拓史, 桂ゆかり, 熊谷将也,今井庸二, 郡司咲子, 木村薫, ニューラルネットワークに基づく PbTe系熱電材料の特性予測, 第15回日本熱電学会学術講演会（TSJ2018）, Oral, Japan, 2018"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Yukari Katsura, Mitsunori Kaneshige, Takushi Kodani, Hideyasu Ouchi, Sakiko Gunji, Yuki Ando, Yoji Imai, Kaoru Kimura, Koji Tsuda, A web application \"Starrydata\" for collecting and sharing plot data on published papers, The 37th International Conference on Thermoelectrics (ICT2019), Oral, France, 2018"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "小谷拓史，桂ゆかり，熊谷将也, 安藤有希, 郡司咲子, 今井庸二, 木村薫, 実験値データベースと第一原理計算による高性能PbTe系熱電変換材料の探索, 第15回日本熱電学会学術講演会（TSJ2018）, Oral, Japan, 2018"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "熊谷将也, 小谷拓史, 桂ゆかり, 大内秀恭, 郡司咲子, 安藤有希, 今井庸二, 木村薫, 津田宏治, 論文内グラフデータを収集・共有できるWEBシステムの開発, 第65回応用物理学会春季学術講演会 (2018), Oral, Japan, 2018"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂ゆかり, 熊谷将也, 安藤有希, 郡司咲子, 今井庸二, 木村薫, 論文からの熱電特性データベース構築プロジェクトの課題と展望, 第15回日本熱電学会学術講演会（TSJ2018）, Oral, Japan, 2018"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり, 小谷 拓史, 北原 功一, 熊谷 将也, 郡司 咲子, 今井 庸二, 大内 秀恭, 木村 薫, 熱電材料の大規模文献データと第一原理計算に基づく電子緩和時間の推定, 第14回日本熱電学会学術講演会, Oral, Japan, 2017"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Electronic structure and thermoelectric properties of pseudogap intermetallic compound Al5Co2, The Minerals, Metals and Materials Society 2017, Poster, USA, 2017"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": false,
+      "text": "Yukari Katsura, Takushi Kodani, Koichi Kitahara, Masaya Kumagai, Yoji Imai, Sakiko Gunji, Hideyasu Ouchi, Kazuki Tobita, Naoki Sato, Kaoru Kimura, Data-driven evaluation of effective relaxation times for real thermoelectric materials, The 36th International Conference on Thermoelectrics (ICT2017), Oral, USA, 2017"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり, 熊谷 将也, 小谷拓史, 郡司 咲子, 今井 庸二, 大内 秀恭, 飛田 一樹, 木村 薫, 熱電特性実験データの大規模収集とマテリアルズインフォマティクスへの応用, 第38回日本熱物性シンポジウム, Oral, Japan, 2017"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり, 小谷 拓史, 熊谷 将也, 郡司 咲子, 今井 庸二, 木村薫, 熱電特性グラフデータの収集による実験値マテリアルズインフォマティクス, 第78回応用物理学会秋季学術講演会, Oral, Japan, 2017"
+    },
+    {
+      "category": "国内学会 / ポスター発表",
+      "fitst": true,
+      "text": "熊谷 将也, 黒崎 健, 大石 佑治, 牟田 弘明, 山中 伸介, 新規擬ギャップ系材料 Al5Co2の創製および熱電特性の評価, 第13回日本熱電学会学術講演会, Poster, Japan, 2016"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂ゆかり, 熊谷将也, 郡司咲子, 今井庸二, 小谷拓史, 木村薫, 熱電特性の実験値データベース作成に向けた文献データ収集システムの構築, 第13回日本熱電学会学術講演会, Oral, Japan, 2016"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "桂 ゆかり, 熊谷 将也, 今井 庸二, 郡司 咲子, 木村 薫, 熱電特性の実験値のデータベース化に向けたデータ収集web システムの開発, 粉体粉末冶金協会 平成28年度秋季大会(第118回講演大会), Oral, Japan, 2016"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Al-based compounds as low-toxicity thermoelectric materials, 9th Pacific Rim International Conference on Advanced Materials and Processing, Oral, Japan, 2016"
+    },
+    {
+      "category": "国際学会 / 口頭発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Electronic structure and thermoelectric properties of the novel pseudogap system Al3V, 11th International Conference on Ceramic Materials and Components for Energy and Environmental Applications, Oral, Canada, 2015"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Formation of dense dislocation arrays by liquid phase compaction in Si-Al system, International Conference on Thermoelectric Materials Science 2015, Poster, Japan, 2015"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "熊谷 将也, 黒崎 健, 大石 佑治, 牟田 弘明, 山中 伸介, 新規擬ギャップ系材料 Al3Vの創製および熱電特性の評価, 第12回日本熱電学会学術講演会, Oral, Japan, 2015"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Effect of Ti or Nb substitution for the V site on the thermoelectric properties of Al3V, 34th International Conference on Thermoelectrics, Poster, Germany, 2015"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Electronic structure and thermoelectric properties of melt-spun metastable Al6Ge5, 1st Symposium for the Promotion of Applied Research Collaboration in Asia, Poster, Taiwan, 2015"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "熊谷 将也, 黒崎 健, 内田 紀行, 大石 佑治, 牟田 弘明, 山中 伸介, 単ロール液体急冷法による準安定材料 Al6Ge5 の創製および熱電特性の評価, 第11回日本熱電学会学術講演会, Oral, Japan, 2014"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Synthesis and characterization of metastable phase Al6Ge5 prepared by melt-spinning, 33rd International Conference on Thermoelectrics, Poster, USA, 2014"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "熊谷 将也, 黒﨑 健, 首藤 将彰, 大石 佑治, 牟田 浩明, 山中 伸介, 粒径制御による高性能熱電変換材料 CuGaTe2 の中低温域熱電性能の向上, 日本金属学会2013年春季大会, Oral, Japan, 2013"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Effect of ball-milling conditions on thermoelectric properties of polycrystalline CuGaTe2, 32nd International Conference on Thermoelectrics, Poster, Japan, 2013"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": true,
+      "text": "Masaya Kumagai, Ken Kurosaki, Yuji Ohishi, Hiroaki Muta, Shinsuke Yamanaka, Enhancement of the Thermoelectric and Mechanical Properties of Zn4Sb3 by Nanostructuring, The 5th Japan-China-Korea Graduate Student Forum, Poster, Japan, 2012"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": true,
+      "text": "熊谷 将也, 片山 英昭, 池野 成高, 池本 幸平, 中田 健一, 複合類似度法の辞書データが低品質文字認識に与える影響, 第10回情報科学技術フォーラム（FIT2011）, Oral, Japan, 2011"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "池本幸平，熊谷将也，片山英昭, 複数の低品質要因を持つ辞書の文字認識への影響, 第６６回\t電気関係学会関西連合大会, Oral, Japan, 2011"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "中田健一，熊谷将也，片山英昭, 文字認識における各箇所の重要性の定量化, 第６６回\t電気関係学会関西連合大会, Oral, Japan, 2011"
+    },
+    {
+      "category": "国内学会 / 口頭発表",
+      "fitst": false,
+      "text": "池野成高，熊谷将也，片山英昭, 細線化によるフォントに依存しない文字認識, 第６６回\t電気関係学会関西連合大会, Oral, Japan, 2011"
+    },
+    {
+      "category": "国内学会 / ポスター発表",
+      "fitst": true,
+      "text": "熊谷将也, 清原修二, 滝川浩史, 倉島優一, 田口佳男, 杉山嘉也, 小俣有紀子, ダイヤモンド室温ナノインプリント法によるポリシロキサンのナノマスクパターン形成, 2010年度精密工学会関西地方定期学術講演会, Poster, Japan, 2010"
+    },
+    {
+      "category": "国内学会 / ポスター発表",
+      "fitst": false,
+      "text": "荒木慎司，熊谷将也，清原修二，田口佳男，杉山嘉也，小俣有紀子，倉島優一，柏木大幸, ダイヤモンドモールド室温ナノインプリント法によるダイヤモンド エミッタアレイの作製とその評価, 平成21年度高専連携教育研究プロジェクト成果発表会, Poster, Japan, 2010"
+    },
+    {
+      "category": "国際会議 / ポスター発表",
+      "fitst": false,
+      "text": "S. Kiyohara, M. Kumagai, Y. Taguchi, Y. Sugiyama, Y. Omata, Y. Kurashima H. Takikawa, Diamond Nanodot Arrays Fabricated by Room-Temperature Curing Nanoimprinting using Diamond Molds, 2010 Materials Research Society Fall Meeting, Poster, USA, 2010"
+    },
+    {
+      "category": "国内学会 / ポスター発表",
+      "fitst": true,
+      "text": "熊谷 将也, 清原 修二, 田口 佳男, 杉山 嘉也, 小俣 有紀子, 倉島 優一, 滝川 浩史, 柏木 大幸, ダイヤモンドモールド室温硬化インプリントによるダイヤモンドナノドットアレイの作製, 第30回表面科学学術講演会・第51回真空に関する連合講演会, Poster, Japan, 2010"
+    },
+    {
+      "category": "国内学会 / ポスター発表",
+      "fitst": true,
+      "text": "熊谷将也, 柏木大幸, 清原修二, 滝川浩史, 田口佳男, 杉山嘉也, 小俣有紀子, インプリント用ダイヤモンドナノモールドの作製, 日本高専学会第15回年会講演会, Poster, Japan, 2009"
+    }
+  ],
+  "Awards": [
+    {
+      "fitst": true,
+      "text": "<a href=http://www.thermoelectrics.jp/commendation.html target='_blank'>第16回日本熱電学会学術講演会 優秀ポスター賞</a>, 熊谷 将也，桂 ゆかり，佐藤 陸， 安藤 有希，郡司 咲子，今井 庸二，小谷 拓史，木村 薫，津田 宏治, 大規模論文データの機械学習による実験的熱電特性の予測, 2019"
+    },
+    {
+      "fitst": true,
+      "text": "<a href=http://www.its.org/biblio/poster-award-25 target='_blank'>ICT2019 Poster Award</a>, Masaya Kumagai, Yukari Katsura, Riku Sato, Ruonan Ni, Takushi Kodani, Hideyasu Ouchi, Sakiko Gunji, Yuki Ando, Yoji Imai, Kaoru Kimura, Koji Tsuda, Thermoelectric Material Design by Materials Informatics using Enormous Experimental Data on Starrydata, 2019"
+    },
+    {
+      "fitst": false,
+      "text": "<a href=http://s-ken.com/common/images/rc06/indexs.html target='_blank'>第19回NHK高専ロボコン近畿大会 特別賞(ソリッドワークス)</a>, 舞鶴高専 S研（慣性ロータ機構のプログラマーとして参加）"
+    }
+  ],
+  "Articles": [
+    {
+      "category": "学会誌・商業誌等解説",
+      "text": "Starrydataに収録されている化学組成の共起元素マッピング, 日本熱電学会誌 第17巻 第1号（表紙の図）, 2020"
+    },
+    {
+      "category": "インタビュー",
+      "text": "<a href=https://ascii.jp/elem/000/004/011/4011771/ target='_blank'>材料工学から情報工学への挑戦、さくらのパラレルキャリア研究者</a>, ASCII.jp, 2020"
+    },
+    {
+      "category": "学会誌・商業誌等解説",
+      "text": "実験値Materials Informaticsの実現に向けたWebシステム開発・機械学習応用とその経緯, 日本熱電学会誌 第16巻 第3号 特集：羽ばたけ若手（優秀講演賞・優秀ポスター賞各小受賞者）, 2020"
+    },
+    {
+      "category": "インタビュー",
+      "text": "<a href=https://magazine.nimaime.or.jp/parallelcareer_new_graduate/ target='_blank'>【新卒パラレルワーカー座談会】僕らがパラレルワークから学んだこと</a>, 2枚目の名刺 Webマガジン, 2019"
+    },
+    {
+      "category": "学会誌・商業誌等解説",
+      "text": "<a href=http://www.thermoelectrics.jp/zata/gakkaisimokuzi/Vol16-No2.pdf target='_blank'>実験データ収集WebシステムStarrydataの開発と機械学習を利用した熱電材料の探索・設計</a>, 日本熱電学会誌 第16巻 第2号 特集：羽ばたけ若手（ICT/ACT2019 各賞受賞者）, 2019"
+    },
+    {
+      "category": null,
+      "text": ""
+    }
+  ],
+  "Contact": [
+    {
+      "category": "Twitter",
+      "text": "<a href=\"https://twitter.com/kumagallium\" target=\"_blank\">@kumagallium</a>"
+    },
+    {
+      "category": "E-mail",
+      "text": "m-kumagai (at) sakura.ad.jp"
+    }
+  ],
+  "Others": [
+    {
+      "category": "電子工作",
+      "text": "<a href=https://www.youtube.com/watch?v=i3ZOyNfX4RE target='_blank'>3Dバーサライター</a>, 2009年度高専祭S-Pro作品, マイコンプログラム（AVR）および全体の電子回路を担当"
+    },
+    {
+      "category": "楽曲",
+      "text": "<a href=https://youtu.be/Qv-Ld_-B8i0 target='_blank'>太陽</a>, 高専時代(2008~2011)のバンド\"Unruly hair\", ボーカルを担当"
+    },
+    {
+      "category": "電子工作",
+      "text": "<a href=http://s-ken.com/common/images/rc06/indexs.html target='_blank'>閑雲野鶴</a>, 第19回NHK高専ロボコン近畿大会, 慣性ロータ機構のプログラムを担当"
+    },
+    {
+      "category": "楽曲",
+      "text": "<a href=https://youtu.be/GQ6fkxgG-e8 target='_blank'>恋心</a>, 高専時代(2008~2011)のバンド\"Unruly hair\", 作詞作曲およびボーカルを担当"
+    },
+    {
+      "category": "楽曲",
+      "text": "<a href=https://youtu.be/gd9W2HnrC9s target='_blank'>雨</a>, 高専時代(2008~2011)のバンド\"Unruly hair\", 作詞作曲およびボーカルを担当"
+    },
+    {
+      "category": null,
+      "text": ""
+    }
+  ],
+  "Works": [
+    {
+      "category": "材料科学のためのWebサイト",
+      "text": "<a href=https://e4m.jp/ target='_blank'>E4M</a>"
+    },
+    {
+      "category": "Blog",
+      "text": "<a href=https://kumagallium.hatenablog.com/ target='_blank'>クマガリウムぶろぐ</a>"
+    },
+    {
+      "category": "実験的物性値データベース",
+      "text": "<a href=https://www.starrydata2.org/ target='_blank'>Starrydata2</a>"
+    },
+    {
+      "category": "Qiita",
+      "text": "<a href=https://qiita.com/M_Kumagai target='_blank'>M_Kumagai</a>"
+    }
+  ]
+}
