@@ -6,15 +6,7 @@
     },
     {
       "category": "所属",
-      "text": "2024年4月〜\n<a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>京都大学 非常勤研究員</a>"
-    },
-    {
-      "category": "所属",
-      "text": "2020年6月〜\n大阪大学 招へい研究員"
-    },
-    {
-      "category": "所属",
-      "text": "2020年4月〜2024年3月\n<a href=\"http://www.energy.kyoto-u.ac.jp/jp/socio-environmental/\" target='_blank'>京都大学 特定助教</a>"
+      "text": "2017年6月〜\n<a href=\"https://research.sakura.ad.jp/about/\" target='_blank'>さくらインターネット研究所 研究員</a></li>"
     },
     {
       "category": "所属",
@@ -22,7 +14,15 @@
     },
     {
       "category": "所属",
-      "text": "2017年6月〜\n<a href=\"https://research.sakura.ad.jp/about/\" target='_blank'>さくらインターネット研究所 研究員</a></li>"
+      "text": "2020年4月〜2024年3月\n<a href=\"http://www.energy.kyoto-u.ac.jp/jp/socio-environmental/\" target='_blank'>京都大学 特定助教</a>"
+    },
+    {
+      "category": "所属",
+      "text": "2020年6月〜\n大阪大学 招へい研究員"
+    },
+    {
+      "category": "所属",
+      "text": "2024年4月〜\n<a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>京都大学 非常勤研究員</a>"
     },
     {
       "category": "経歴",
@@ -30,11 +30,7 @@
     },
     {
       "category": "リンク",
-      "text": "<a href=\"https://kumagallium.hatenablog.com/\" target='_blank'>研究ブログ</a>"
-    },
-    {
-      "category": "リンク",
-      "text": "<a href=\"https://speakerdeck.com/kumagallium\" target='_blank'>Speaker Deck</a>"
+      "text": "<a href=\"https://researchmap.jp/mkumagai\" target=’_blank’>researchmap</a>"
     },
     {
       "category": "リンク",
@@ -42,7 +38,11 @@
     },
     {
       "category": "リンク",
-      "text": "<a href=\"https://researchmap.jp/mkumagai\" target=’_blank’>researchmap</a>"
+      "text": "<a href=\"https://speakerdeck.com/kumagallium\" target='_blank'>Speaker Deck</a>"
+    },
+    {
+      "category": "リンク",
+      "text": "<a href=\"https://kumagallium.hatenablog.com/\" target='_blank'>研究ブログ</a>"
     }
   ],
   "Publications ": [
@@ -661,16 +661,8 @@
   ],
   "Others": [
     {
-      "category": null,
-      "text": ""
-    },
-    {
-      "category": "楽曲",
-      "text": "<a href=https://youtu.be/GQ6fkxgG-e8 target='_blank'>恋心</a>, 高専時代(2008~2011)のバンド\"Unruly hair\", 作詞作曲およびボーカルを担当"
-    },
-    {
-      "category": "楽曲",
-      "text": "<a href=https://youtu.be/gd9W2HnrC9s target='_blank'>雨</a>, 高専時代(2008~2011)のバンド\"Unruly hair\", 作詞作曲およびボーカルを担当"
+      "category": "電子工作",
+      "text": "<a href=https://www.youtube.com/watch?v=i3ZOyNfX4RE target='_blank'>3Dバーサライター</a>, 2009年度高専祭S-Pro作品, マイコンプログラム（AVR）および全体の電子回路を担当"
     },
     {
       "category": "楽曲",
@@ -681,15 +673,19 @@
       "text": "<a href=http://s-ken.com/common/images/rc06/indexs.html target='_blank'>閑雲野鶴</a>, 第19回NHK高専ロボコン近畿大会, 慣性ロータ機構のプログラムを担当"
     },
     {
-      "category": "電子工作",
-      "text": "<a href=https://www.youtube.com/watch?v=i3ZOyNfX4RE target='_blank'>3Dバーサライター</a>, 2009年度高専祭S-Pro作品, マイコンプログラム（AVR）および全体の電子回路を担当"
+      "category": "楽曲",
+      "text": "<a href=https://youtu.be/GQ6fkxgG-e8 target='_blank'>恋心</a>, 高専時代(2008~2011)のバンド\"Unruly hair\", 作詞作曲およびボーカルを担当"
+    },
+    {
+      "category": "楽曲",
+      "text": "<a href=https://youtu.be/gd9W2HnrC9s target='_blank'>雨</a>, 高専時代(2008~2011)のバンド\"Unruly hair\", 作詞作曲およびボーカルを担当"
+    },
+    {
+      "category": null,
+      "text": ""
     }
   ],
   "Works": [
-    {
-      "category": "Qiita",
-      "text": "<a href=https://qiita.com/M_Kumagai target='_blank'>M_Kumagai</a>"
-    },
     {
       "category": "材料科学のためのWebサイト",
       "text": "<a href=https://e4m.jp/ target='_blank'>E4M</a>"
@@ -701,6 +697,10 @@
     {
       "category": "実験的物性値データベース",
       "text": "<a href=https://www.starrydata2.org/ target='_blank'>Starrydata2</a>"
+    },
+    {
+      "category": "Qiita",
+      "text": "<a href=https://qiita.com/M_Kumagai target='_blank'>M_Kumagai</a>"
     }
   ]
 }
