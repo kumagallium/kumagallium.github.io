@@ -140,7 +140,11 @@ def fetch_publications():
             text += ", " + str(d["Year"])
         if d["Pages"]:
             text += ", " + d["Pages"]
-        result.append({"fitst": d["First"], "text": text})
+        result.append({
+            "fitst": d["First"], "first": bool(d["First"]),
+            "year": d["Year"], "title": d["Title"], "url": d["URL"],
+            "journal": d["Journal"], "text": text,
+        })
     return result
 
 
@@ -181,7 +185,12 @@ def fetch_presentations():
             text += ", " + d["Country"]
         if d["Year"]:
             text += ", " + str(d["Year"])
-        result.append({"category": d["Category"], "fitst": d["First"], "text": text})
+        result.append({
+            "category": d["Category"], "fitst": d["First"], "first": bool(d["First"]),
+            "invited": bool(d["Invited"]), "year": d["Year"], "title": d["Title"],
+            "url": d["URL"], "event": d["Event"], "type": d["Type"],
+            "country": d["Country"], "text": text,
+        })
     return result
 
 
@@ -212,7 +221,10 @@ def fetch_awards():
             text += ", " + d["Title"]
         if d["Year"]:
             text += ", " + str(d["Year"])
-        result.append({"fitst": d["First"], "text": text})
+        result.append({
+            "fitst": d["First"], "first": bool(d["First"]),
+            "year": d["Year"], "title": d["Award"], "url": d["URL"], "text": text,
+        })
     return result
 
 
@@ -240,7 +252,10 @@ def fetch_articles():
             text += ", " + d["Medium"]
         if d["Year"]:
             text += ", " + str(d["Year"])
-        result.append({"category": d["Category"], "text": text})
+        result.append({
+            "category": d["Category"], "year": d["Year"],
+            "title": d["Title"], "url": d["URL"], "medium": d["Medium"], "text": text,
+        })
     return result
 
 
@@ -270,7 +285,8 @@ def fetch_others():
         text = build_link(url, title) if url else (title or "")
         if comment:
             text += ", " + comment
-        result.append({"category": category, "text": text})
+        result.append({"category": category, "title": title, "url": url,
+                       "comment": comment, "text": text})
     return result
 
 
@@ -284,7 +300,7 @@ def fetch_works():
         name = get_prop(props, "Name", "title")
         category = get_prop(props, "Category", "select")
         text = build_link(url, name) if url else (name or "")
-        result.append({"category": category, "text": text})
+        result.append({"category": category, "title": name, "url": url, "text": text})
     return result
 
 
