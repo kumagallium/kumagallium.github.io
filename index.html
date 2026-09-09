@@ -1,190 +1,294 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>熊谷 将也 | KUMAGAI Masaya</title>
+  <meta name="description" content="熊谷将也（KUMAGAI Masaya）のポートフォリオ。材料科学 × 情報科学の研究業績と、OSS 開発アクティビティを一望できます。">
+  <meta property="og:title" content="熊谷 将也 | KUMAGAI Masaya">
+  <meta property="og:description" content="材料科学 × 情報科学。研究業績と OSS 活動のダッシュボード。">
+  <meta property="og:type" content="profile">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Masaya KUMAGAI">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-
-    <title>研究業績</title>
-  </head>
-
-  <body>
-    <div id="app">
-      <v-app style="background-color:black;">
-        <v-main style="background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),url('./images/periodictable.jpg');">
-          <v-container fluid class="pa-sm-10 pa-7" style="height:100%;">
-            <v-row justify="center" align-content="center">
-              <v-col cols="12" class="pt-sm-10 pt-0 pb-0 mt-sm-0 mt-2 mb-sm-5 mb-0">
-                <v-card flat color="rgba(255, 255, 255, 0)" class="text-md-h4 text-h5" width="100%" style="text-align: center;color:#fff;">
-                  {{name}}
-                </v-card>
-              </v-col>
-            </v-row>
-            <v-row class="mt-0" justify="center" align-content="center">
-              <v-col cols="12" class="pt-0 pb-sm-5 pb-0 mt-sm-0 mt-2 mb-sm-2 mb-0">
-                <v-card flat color="rgba(255, 255, 255, 0)" class="text-md-h5 text-h6" width="100%" style="text-align: center;color:#f5f5f5;">
-                  {{name_en}}
-                </v-card>
-              </v-col>
-            </v-row>
-            <v-row justify="center" align-content="center">
-              <v-col cols="11" sm="7" class="pa-0 mt-sm-12 mt-7">
-                <v-card flat color="rgba(255, 255, 255, 0)">
-                  <v-row>
-                    <v-col cols="6" md="3" class="pa-0" v-for="block of blocks">
-                      <v-hover v-slot="{ hover }">
-                        <v-card tile flat @click="overlayflow = !overlayflow;selectedblock=block;" :color="hover ? block.color+'55' : block.color+'dd'">
-                          <v-responsive :aspect-ratio="1">
-                            <v-card-text style="height:100%;" class="">
-                              <v-row style="height:100%;" class="my-0" justify="center" align-content="center">
-                                <v-col class="" style="text-align: center;">
-                                  <div><v-icon dark>{{block.icon}}</v-icon></div>
-                                  <div class="text-xsOnly-overline" style="height:100%;color:#fff;letter-spacing:0.1666666667em;font-size:16px;font-weight:400;">
-                                    {{block.name}}
-                                  </div>
-                                </v-col>
-                              </v-row>
-                            </v-card-text>
-                          </v-responsive>
-                        </v-card>
-                      </v-hover>
-                    </v-col>
-                  </v-row>
-                </v-card>
-                
-                <v-dialog
-                  transition="dialog-transition"
-                  max-width="90%"
-                  scrollable
-                  v-model="overlayflow"
-                >
-                  
-                  <v-card >
-                    <v-toolbar
-                      :color="selectedblock.color"
-                      flat
-                      dark
-                      class="text-h5"
-                    >
-                      {{selectedblock.name}}
-                      <v-spacer></v-spacer>
-                      <v-btn
-                      text
-                      @click="overlayflow = false"
-                    >Close</v-btn>
-                    </v-toolbar>
-                    <v-card-text class="py-5" v-if="Object.keys(contents_notion).indexOf(selectedblock.name)>-1">
-                      <v-expansion-panels
-                        flat
-                        multiple
-                        accordion
-                        flat
-                        :value="[...Array(Array.from(new Set(contents_notion[selectedblock.name].map(cnt=>cnt.category))).length)].map((_, i) => i)"
-                        v-if="(selectedblock.name == 'Presentations')||(selectedblock.name == 'Profile')||(selectedblock.name == 'Articles')"
-                      >
-                        <v-expansion-panel
-                          v-for="cat of Array.from(new Set(contents_notion[selectedblock.name].map(cnt=>cnt.category)))"
-                        >
-                          <v-expansion-panel-header class="text-h6 pa-0" style="color:grey;">
-                            {{cat}} [{{contents_notion[selectedblock.name].filter(cnt=>cnt.category == cat).length}}]
-                          </v-expansion-panel-header>
-                          <v-expansion-panel-content>
-                            <v-card flat :color="selectedblock.color+'11'" class="my-2 py-2 px-4" v-for="(content,index) in contents_notion[selectedblock.name].filter(cnt=>cnt.category == cat)">
-                              <v-card-text class="pa-0" style="color:black;">
-                                  <span v-if="(selectedblock.name != 'Profile')&&(selectedblock.name != 'Contact')&&(selectedblock.name != 'Works')">{{index+1}}. </span>
-                                  <span v-html="content.text.replace('熊谷将也','<b>熊谷将也</b>').replace('熊谷 将也','<b>熊谷 将也</b>').replace('M. Kumagai','<b>M. Kumagai</b>').replace('Masaya Kumagai','<b>Masaya Kumagai</b>')"></span>
-                              </v-card-text>
-                            </v-card>
-                          </v-expansion-panel-content>
-                        </v-expansion-panel>
-                      </v-expansion-panels>
-
-                      <v-row v-else v-for="cat of Array.from(new Set(contents_notion[selectedblock.name].map(cnt=>cnt.category)))">
-                        <v-col cols="12" v-if="cat != undefined">
-                          <div class="text-h6">{{cat}}</div>
-                        </v-col>
-                        <v-col cols="12" class="py-2" v-for="(content,index) in contents_notion[selectedblock.name].filter(cnt=>cnt.category == cat)">
-                          <v-card flat :color="selectedblock.color+'10'" class="py-2 px-4">
-                            <v-card-text class="pa-0" style="color:black;">
-                                <span v-if="(selectedblock.name != 'Profile')&&(selectedblock.name != 'Contact')&&(selectedblock.name != 'Works')">{{index+1}}. </span>
-                                <span v-html="content.text.replace('熊谷将也','<b>熊谷将也</b>').replace('熊谷 将也','<b>熊谷 将也</b>').replace('M. Kumagai','<b>M. Kumagai</b>').replace('Masaya Kumagai','<b>Masaya Kumagai</b>')"></span>
-                            </v-card-text>
-                          </v-card>
-                        </v-col>
-                      </v-row>
-                      <div class="mt-3" id="copyright" v-if="selectedblock.name == 'Presentations'">
-                        <h4 id="interview">※著作権に係る注意事項</h4>
-                        <div class="text">情報処理学会に投稿された論文の著作権について: 論文の著作権は情報処理学会に帰属します. 論文は著作権者である情報処理学会の許可のもとに掲載するものです. ご利用に当たっては「著作権法」ならびに「情報処理学会倫理綱領」に従うことをお願い致します. </div>
-                        <div class="text">About the copyright of the paper submitted to the Information Processing Society: The copyright of the paper is retained by the Information Processing Society of Japan (IPSJ). The paper is published on this web site with the agreement of the author (s) and the IPSJ. Please be complied with Copyright Law of Japan and the Code of Ethics of the IPSJ if any users wish to reproduce, make derivative work, distribute or make available to the public any part or whole thereof.</div>
-                      </div>
-                    </v-card-text>
-                  </v-card>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-main>
-      </v-app>
-
-    </div>
-    <style>
-      .v-expansion-panel-content__wrap { padding: 5px !important; }
-    </style>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-      new Vue({
-          el: '#app',
-          vuetify: new Vuetify(),
-          data() {
-              return {
-                name:"熊谷 将也",
-                name_en:"KUMAGAI Masaya",
-                blocks:[
-                  {"name":"Profile","icon":"mdi-account","color":"#004D40"},
-                  {"name":"Publications ","icon":"mdi-file-document-outline","color":"#1A237E"},
-                  {"name":"Presentations","icon":"mdi-message-image","color":"#FF8F00"},
-                  {"name":"Awards","icon":"mdi-license","color":"#E57373"},
-                  {"name":"Works","icon":"mdi-laptop","color":"#5D4037"},
-                  {"name":"Articles","icon":"mdi-book-open-variant","color":"#546E7A"},
-                  {"name":"Others","icon":"mdi-hammer-wrench","color":"#BA68C8"},
-                  {"name":"Contact","icon":"mdi-email","color":"#00838F"}
-                ],
-                selectedblock:{},
-                contents_notion:{
-                  "Profile":[],
-                  "Publications ":[],
-                  "Presentations":[],
-                  "Awards":[],
-                  "Articles":[],
-                  "Others":[],
-                  "Contact":[],
-                  "Works":[]
-                },
-                overlayflow:false
-              }
-          },
-          mounted () {
-            axios.get('./data/notion_data.json')
-              .then(response => {
-                this.contents_notion = response.data
-              })
-          },
-          methods: {
-              
-          }
-  });
+  <script>
+    // FOUC 回避のため、テーマ適用だけは head で先に走らせる
+    (function () {
+      try {
+        // ?theme=dark で共有できるようにクエリを優先し、次に保存済みの設定を見る
+        var q = new URLSearchParams(location.search).get('theme');
+        var saved = q === 'dark' || q === 'light' ? q : localStorage.getItem('theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) { /* localStorage が使えない環境は既定のライトのまま */ }
+    })();
   </script>
+</head>
 
-  </body>
+<body>
+
+<!-- アイコン定義（インライン SVG スプライト） -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+  </symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+  </symbol>
+  <symbol id="i-github" viewBox="0 0 16 16" fill="currentColor">
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+  </symbol>
+  <symbol id="i-repo" viewBox="0 0 16 16" fill="currentColor">
+    <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.5 2.5 0 0 1 2 11.5zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.5 2.5 0 0 1 4.5 9h8zM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2z"/>
+  </symbol>
+  <symbol id="i-star" viewBox="0 0 16 16" fill="currentColor">
+    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z"/>
+  </symbol>
+  <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7L12 19"/>
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/>
+  </symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">熊谷 将也<small>Kumagai Masaya</small></a>
+    <nav class="site-nav" id="nav">
+      <a href="#activity">Activity</a>
+      <a href="#oss">OSS</a>
+      <a href="#career">Career</a>
+      <a href="#publications">Publications</a>
+      <a href="#presentations">Presentations</a>
+      <a href="#works">Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="テーマを切り替える" title="テーマを切り替える">
+      <svg class="i-sun"><use href="#i-sun"/></svg>
+      <svg class="i-moon"><use href="#i-moon"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <img class="avatar" id="avatar" alt="" src="./images/periodictable.jpg" width="116" height="116">
+        <div>
+          <h1>熊谷 将也</h1>
+          <p class="name-en">Kumagai Masaya</p>
+          <p class="tagline">
+            材料科学と情報科学の境界で研究しています。実験データの構造化・機械学習応用から、
+            研究の来歴（Provenance）を扱うツールの OSS 開発まで。
+          </p>
+          <div class="topics-wrap" id="topics-wrap">
+            <div class="topics-label">主な研究テーマ<span>業績・OSS から自動集計</span></div>
+            <div class="topics" id="topics"></div>
+          </div>
+          <ul class="affil-list" id="affiliations"></ul>
+          <div class="link-row" id="links"></div>
+        </div>
+      </div>
+
+      <div class="kpi-grid" id="kpis"></div>
+    </div>
+  </section>
+
+  <!-- ============ ACTIVITY ============ -->
+  <section class="section" id="activity">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Research output</div>
+        <h2>年別の研究アウトプット</h2>
+        <p>論文・学会発表・記事・受賞を年ごとに積み上げて表示しています。</p>
+      </div>
+
+      <div class="chart-grid">
+        <div class="card chart-card">
+          <h3>年別アウトプット</h3>
+          <p class="chart-note">クリックで種別の表示/ 非表示を切り替えられます</p>
+          <div class="chart-box"><canvas id="chart-output"></canvas></div>
+        </div>
+        <div class="card chart-card">
+          <h3>学会発表の内訳</h3>
+          <p class="chart-note">国内 / 国際 × 口頭 / ポスター</p>
+          <div class="chart-box is-short"><canvas id="chart-pres"></canvas></div>
+        </div>
+      </div>
+
+      <div class="chart-grid" style="margin-top:16px;grid-template-columns:1fr 1fr">
+        <div class="card chart-card">
+          <h3>参加学会</h3>
+          <p class="chart-note" id="venue-note">学会コミュニティ別の発表数</p>
+          <div class="chart-box is-tall"><canvas id="chart-venue"></canvas></div>
+        </div>
+        <div class="card chart-card">
+          <h3>投稿先</h3>
+          <p class="chart-note" id="journal-note">掲載誌・会議録別の論文数</p>
+          <div class="chart-box is-tall"><canvas id="chart-journal"></canvas></div>
+        </div>
+      </div>
+
+      <div class="chart-grid" style="margin-top:16px">
+        <div class="card chart-card">
+          <h3>学会発表の推移（国内 / 国際）</h3>
+          <p class="chart-note">発表の場が国内から国際へどう広がったか</p>
+          <div class="chart-box is-short"><canvas id="chart-pres-year"></canvas></div>
+        </div>
+        <div class="card chart-card">
+          <h3>OSS の使用言語</h3>
+          <p class="chart-note">公開リポジトリの主要言語</p>
+          <div class="chart-box is-short"><canvas id="chart-lang"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OSS / GITHUB ============ -->
+  <section class="section" id="oss">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Open source</div>
+        <h2>GitHub アクティビティ</h2>
+        <p id="gh-summary">公開リポジトリとコントリビューションの推移。データは GitHub API から毎日自動更新しています。</p>
+      </div>
+
+      <div class="chart-grid">
+        <div class="card chart-card">
+          <h3>年別コントリビューション</h3>
+          <p class="chart-note">コミット / プルリクエスト / Issue・レビュー</p>
+          <div class="chart-box is-short"><canvas id="chart-gh-year"></canvas></div>
+        </div>
+        <div class="card chart-card">
+          <h3>直近 1 年の活動</h3>
+          <p class="chart-note">日別コントリビューション</p>
+          <div class="heat-card" id="heatmap-wrap" style="padding:0;border:0;box-shadow:none;background:none">
+            <div id="heatmap"></div>
+            <div class="heat-legend">
+              <span>少</span>
+              <i style="background:var(--heat-0)"></i><i style="background:var(--heat-1)"></i>
+              <i style="background:var(--heat-2)"></i><i style="background:var(--heat-3)"></i>
+              <i style="background:var(--heat-4)"></i>
+              <span>多</span>
+            </div>
+            <div class="heat-stats" id="heat-stats"></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin:34px 0 14px;font-size:15px">公開リポジトリ</h3>
+      <div class="repo-grid" id="repos"></div>
+    </div>
+  </section>
+
+  <!-- ============ CAREER ============ -->
+  <section class="section" id="career">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Career</div>
+        <h2>経歴と受賞</h2>
+      </div>
+      <div class="chart-grid" style="grid-template-columns:1fr 1fr">
+        <div>
+          <h3 style="font-size:14.5px;margin-bottom:14px">年表</h3>
+          <div class="timeline" id="timeline"></div>
+        </div>
+        <div>
+          <h3 style="font-size:14.5px;margin-bottom:14px">略歴</h3>
+          <div class="card chart-card prose bio-sticky" id="bio"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PUBLICATIONS ============ -->
+  <section class="section" id="publications">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Publications</div>
+        <h2>論文 <span id="count-pub" style="color:var(--text-muted);font-weight:600;font-size:16px"></span></h2>
+      </div>
+      <div id="list-pub"></div>
+    </div>
+  </section>
+
+  <!-- ============ PRESENTATIONS ============ -->
+  <section class="section" id="presentations">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Presentations</div>
+        <h2>学会発表 <span id="count-pres" style="color:var(--text-muted);font-weight:600;font-size:16px"></span></h2>
+      </div>
+      <div class="filter-row" id="filter-pres"></div>
+      <div class="legend entry">
+        <span><i class="bar" style="background:var(--c-pres)"></i>国内</span>
+        <span><i class="bar" style="background:var(--c-pub)"></i>国際</span>
+        <span><span class="badge is-form-oral">口頭</span></span>
+        <span><span class="badge is-form-poster">ポスター</span></span>
+      </div>
+      <div id="list-pres"></div>
+      <div class="note">
+        <h4>※著作権に係る注意事項</h4>
+        <div>情報処理学会に投稿された論文の著作権について: 論文の著作権は情報処理学会に帰属します. 論文は著作権者である情報処理学会の許可のもとに掲載するものです. ご利用に当たっては「著作権法」ならびに「情報処理学会倫理綱領」に従うことをお願い致します.</div>
+        <div style="margin-top:6px">About the copyright of the paper submitted to the Information Processing Society: The copyright of the paper is retained by the Information Processing Society of Japan (IPSJ). The paper is published on this web site with the agreement of the author(s) and the IPSJ. Please be complied with Copyright Law of Japan and the Code of Ethics of the IPSJ if any users wish to reproduce, make derivative work, distribute or make available to the public any part or whole thereof.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORKS / ARTICLES / OTHERS ============ -->
+  <section class="section" id="works">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Works &amp; Articles</div>
+        <h2>制作物・記事・その他</h2>
+      </div>
+      <div class="chart-grid" style="grid-template-columns:1fr 1fr">
+        <div>
+          <h3 style="font-size:14.5px;margin-bottom:12px">Works</h3>
+          <div id="list-works" class="entry-list"></div>
+          <h3 style="font-size:14.5px;margin:26px 0 12px">Others</h3>
+          <div id="list-others" class="entry-list"></div>
+        </div>
+        <div>
+          <h3 style="font-size:14.5px;margin-bottom:12px">Articles</h3>
+          <div id="list-art" class="entry-list"></div>
+          <h3 style="font-size:14.5px;margin:26px 0 12px">Awards</h3>
+          <div id="list-award" class="entry-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Contact</div>
+        <h2>連絡先</h2>
+      </div>
+      <div class="contact-grid" id="contact-list"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;width:100%">
+    <span>&copy; <span id="year"></span> KUMAGAI Masaya</span>
+    <span class="spacer"></span>
+    <span id="updated"></span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="./js/app.js"></script>
+</body>
 </html>
