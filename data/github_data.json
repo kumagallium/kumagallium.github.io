@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T22:04:17+00:00",
+  "generated_at": "2026-09-09T00:53:04+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -11,6 +11,26 @@
     "created_at": "2013-07-17T01:29:55Z"
   },
   "repos": [
+    {
+      "name": "starrydata-stats",
+      "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
+      "html_url": "https://github.com/kumagallium/starrydata-stats",
+      "homepage": "https://kumagallium.github.io/starrydata-stats/",
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "topics": [
+        "dashboard",
+        "data-visualization",
+        "dataset",
+        "materials-informatics",
+        "materials-science",
+        "starrydata",
+        "thermoelectrics"
+      ],
+      "created_at": "2026-07-20",
+      "pushed_at": "2026-09-08"
+    },
     {
       "name": "Graphium",
       "description": "Block-based note editor with PROV-DM provenance tracking — built on BlockNote.js",
@@ -35,26 +55,6 @@
       ],
       "created_at": "2026-03-23",
       "pushed_at": "2026-09-08"
-    },
-    {
-      "name": "starrydata-stats",
-      "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
-      "html_url": "https://github.com/kumagallium/starrydata-stats",
-      "homepage": "https://kumagallium.github.io/starrydata-stats/",
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "topics": [
-        "dashboard",
-        "data-visualization",
-        "dataset",
-        "materials-informatics",
-        "materials-science",
-        "starrydata",
-        "thermoelectrics"
-      ],
-      "created_at": "2026-07-20",
-      "pushed_at": "2026-09-07"
     },
     {
       "name": "asterism",
@@ -314,11 +314,11 @@
       "count": 7
     },
     {
-      "name": "TypeScript",
+      "name": "HTML",
       "count": 4
     },
     {
-      "name": "HTML",
+      "name": "TypeScript",
       "count": 4
     },
     {
@@ -463,12 +463,12 @@
       },
       {
         "year": 2026,
-        "commits": 3096,
+        "commits": 3099,
         "pull_requests": 1360,
         "issues": 4,
         "reviews": 0,
         "repositories": 9,
-        "total": 4469
+        "total": 4472
       }
     ],
     "calendar": [
@@ -1202,11 +1202,11 @@
       },
       {
         "date": "2026-03-11",
-        "count": 0
+        "count": 1
       },
       {
         "date": "2026-03-12",
-        "count": 4
+        "count": 3
       },
       {
         "date": "2026-03-13",
@@ -1822,11 +1822,11 @@
       },
       {
         "date": "2026-08-13",
-        "count": 101
+        "count": 102
       },
       {
         "date": "2026-08-14",
-        "count": 104
+        "count": 103
       },
       {
         "date": "2026-08-15",
@@ -1882,11 +1882,11 @@
       },
       {
         "date": "2026-08-28",
-        "count": 100
+        "count": 101
       },
       {
         "date": "2026-08-29",
-        "count": 33
+        "count": 32
       },
       {
         "date": "2026-08-30",
@@ -1930,13 +1930,13 @@
       },
       {
         "date": "2026-09-09",
-        "count": 0
+        "count": 3
       }
     ]
   },
   "totals": {
     "repos": 22,
     "stars": 4,
-    "contributions": 4793
+    "contributions": 4796
   }
 }
