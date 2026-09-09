@@ -101,6 +101,9 @@ body {
 
 img { max-width: 100%; display: block; }
 
+/* 日本語は文字単位で折り返るため、分断したくない語はこれで囲む */
+.nb { white-space: nowrap; }
+
 a { color: var(--accent-text); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -210,7 +213,9 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
   color: var(--text-muted); text-transform: uppercase; margin: 6px 0 0;
 }
 .hero .tagline {
-  margin: 14px 0 0; max-width: 62ch;
+  margin: 14px 0 0;
+  /* 幅は制限しない。measure を絞ると右に不自然な余白が残る */
+  text-wrap: pretty;
   color: var(--text-secondary); font-size: 15px;
 }
 
@@ -289,15 +294,28 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
 
 /* --- charts ------------------------------------------------------------ */
 .chart-grid { display: grid; gap: 16px; grid-template-columns: 1.85fr 1fr; }
+.chart-grid > * { min-width: 0; }
 .chart-card { padding: 20px 22px 18px; }
 .chart-card h3 { font-size: 14.5px; }
 .chart-card .chart-note { font-size: 12px; color: var(--text-muted); margin: 3px 0 14px; }
+.card-head { display: flex; align-items: center; gap: 10px; }
+.card-head h3 { flex: 1; }
+.scale-toggle {
+  flex: none; padding: 3px 10px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--bg-elevated);
+  font-family: inherit; font-size: 11px; font-weight: 700;
+  color: var(--text-secondary); transition: all .15s ease;
+}
+.scale-toggle:hover { border-color: var(--border-strong); color: var(--text); background: var(--surface-hover); }
 .chart-box { position: relative; height: 290px; }
 .chart-box.is-short { height: 250px; }
 .chart-box.is-tall { height: 360px; }
 
 /* --- GitHub ------------------------------------------------------------ */
-.heat-card { padding: 20px 22px; overflow-x: auto; }
+/* セル幅は JS がコンテナの実寸から決める。
+   それでも入らない狭い端末だけ横スクロールに逃がす */
+#heatmap { overflow-x: auto; }
+#heatmap svg { display: block; }
 .heat-legend {
   display: flex; align-items: center; gap: 6px; justify-content: flex-end;
   font-size: 11.5px; color: var(--text-muted); margin-top: 8px;
@@ -352,8 +370,8 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
 .repo.is-minor .repo-desc { display: none; }
 
 .heat-stats {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px; margin-top: 16px; padding-top: 14px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px 14px; margin-top: 16px; padding-top: 14px;
   border-top: 1px solid var(--border);
 }
 .heat-stats .k {
@@ -362,7 +380,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
 }
 .heat-stats .v {
   font-size: 14px; font-weight: 700; color: var(--text);
-  font-variant-numeric: tabular-nums;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
 }
 
 /* --- timeline ---------------------------------------------------------- */

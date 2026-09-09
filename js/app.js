@@ -193,6 +193,8 @@ function journalOf(journal) {
 /* ========================================================================== */
 
 const charts = {};
+// 年別コントリビューションの軸。桁が違いすぎるため既定は対数
+let ghYearLogScale = true;
 let DATA = { notion: null, github: null };
 
 Promise.all([
@@ -224,6 +226,13 @@ function render() {
     Object.values(charts).forEach(c => c && c.destroy());
     buildCharts();
     renderHeatmap();
+  });
+
+  // ヒートマップはセル幅をコンテナの実寸から決めるので、幅が変わったら描き直す
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(renderHeatmap, 150);
   });
 }
 
@@ -367,6 +376,7 @@ function renderGithub() {
   }
 
   renderHeatmap();
+  setupGhScaleToggle();
 }
 
 function renderHeatmap() {
@@ -374,46 +384,63 @@ function renderHeatmap() {
   const el = $('#heatmap');
   if (!cal.length) { $('#heatmap-wrap').style.display = 'none'; return; }
 
-  const CELL = 11, GAP = 3, TOP = 16, LEFT = 22;
-  const max = Math.max(...cal.map(d => d.count), 1);
+  const GAP_RATIO = 0.27;      // セルに対する隙間の比率
+  const TOP = 16, LEFT = 22;   // 月ラベルと曜日ラベルに使う領域
 
   // 週の先頭（日曜）が列になるようにオフセットを取る
   const firstDow = new Date(cal[0].date + 'T00:00:00').getDay();
   const cols = Math.ceil((firstDow + cal.length) / 7);
-  const w = LEFT + cols * (CELL + GAP);
-  const h = TOP + 7 * (CELL + GAP);
 
+  // セルはコンテナの実寸から決める。広い画面では最大 13px まで伸ばし、
+  // 狭い画面では 6px まで縮めて 1 年分が切れずに収まるようにする。
+  const avail = (el.clientWidth || 0) - LEFT - 2;
+  const fit = avail > 0 ? avail / (cols * (1 + GAP_RATIO)) : 11;
+  // 下限 3.5px（小さくても濃淡は読めるので、切るより縮める）
+  // 上限 16px（広い画面で右に余白を残さず幅を使い切る）
+  const CELL = Math.max(3.5, Math.min(16, Math.floor(fit * 10) / 10));
+  const GAP = Math.max(0.8, +(CELL * GAP_RATIO).toFixed(1));
+  const step = CELL + GAP;
+
+  const w = LEFT + cols * step;
+  const h = TOP + 7 * step;
+  const max = Math.max(...cal.map(d => d.count), 1);
   const level = c => c === 0 ? 0 : c <= max * 0.08 ? 1 : c <= max * 0.25 ? 2 : c <= max * 0.55 ? 3 : 4;
 
   let cells = '';
   cal.forEach((d, i) => {
     const idx = firstDow + i;
-    const x = LEFT + Math.floor(idx / 7) * (CELL + GAP);
-    const yy = TOP + (idx % 7) * (CELL + GAP);
-    cells += `<rect x="${x}" y="${yy}" width="${CELL}" height="${CELL}" rx="2.5" ` +
-      `fill="var(--heat-${level(d.count)})"><title>${d.date}: ${d.count} contributions</title></rect>`;
+    const x = LEFT + Math.floor(idx / 7) * step;
+    const yy = TOP + (idx % 7) * step;
+    cells += `<rect x="${x.toFixed(1)}" y="${yy.toFixed(1)}" width="${CELL}" height="${CELL}" ` +
+      `rx="${(CELL * 0.22).toFixed(1)}" fill="var(--heat-${level(d.count)})">` +
+      `<title>${d.date}: ${d.count} contributions</title></rect>`;
   });
 
-  // 月ラベル（月が変わる最初の週にだけ置く）
+  // 月ラベル。セルが小さいときは間引いて重なりを防ぐ
+  const labelEvery = step < 8 ? 3 : step < 10 ? 2 : 1;
   let months = '';
-  let lastMonth = -1;
+  let lastMonth = -1, shown = 0;
   cal.forEach((d, i) => {
     const dt = new Date(d.date + 'T00:00:00');
     const idx = firstDow + i;
     if (dt.getMonth() !== lastMonth && idx % 7 === 0) {
       lastMonth = dt.getMonth();
-      months += `<text x="${LEFT + Math.floor(idx / 7) * (CELL + GAP)}" y="11" ` +
-        `font-size="9.5" fill="var(--text-muted)">${dt.getMonth() + 1}月</text>`;
+      if (shown++ % labelEvery === 0) {
+        months += `<text x="${(LEFT + Math.floor(idx / 7) * step).toFixed(1)}" y="11" ` +
+          `font-size="9.5" fill="var(--text-muted)">${dt.getMonth() + 1}月</text>`;
+      }
     }
   });
 
   const dowLabels = ['', '月', '', '水', '', '金', '']
-    .map((t, i) => t ? `<text x="0" y="${TOP + i * (CELL + GAP) + 9}" font-size="9.5" fill="var(--text-muted)">${t}</text>` : '')
+    .map((t, i) => t ? `<text x="0" y="${(TOP + i * step + CELL * 0.85).toFixed(1)}" ` +
+      `font-size="9.5" fill="var(--text-muted)">${t}</text>` : '')
     .join('');
 
-  el.innerHTML = `<svg viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" ` +
+  // viewBox と width を一致させ、はみ出すぶんだけ CSS 側で横スクロールさせる
+  el.innerHTML = `<svg viewBox="0 0 ${w.toFixed(1)} ${h.toFixed(1)}" ` +
+    `width="${w.toFixed(1)}" height="${h.toFixed(1)}" role="img" ` +
     `aria-label="直近1年のGitHubコントリビューション">${months}${dowLabels}${cells}</svg>`;
-  el.style.overflowX = 'auto';
 
   renderHeatStats(cal);
 }
@@ -434,7 +461,7 @@ function renderHeatStats(cal) {
     ['コントリビューション', fmt(total)],
     ['稼働日', `${activeDays} / ${cal.length} 日`],
     ['最長連続', `${best} 日`],
-    ['最も多かった日', `${busiest.date}（${busiest.count}）`],
+    ['最も多かった日', `${busiest.date.slice(5).replace('-', '/')}（${fmt(busiest.count)} 件）`],
   ];
 
   $('#heat-stats').innerHTML = stats.map(([k, v]) =>
@@ -887,14 +914,19 @@ function buildLangChart(d) {
   });
 }
 
-/** GitHub の年別コントリビューション */
+/**
+ * GitHub の年別コントリビューション。
+ * 直近が過去の 40 倍以上あり線形では過去が潰れるため既定を対数軸にする。
+ * 対数軸では棒の長さが加算的にならないので積み上げは使わない
+ * （積み上げたままだと合計の見た目が実際の合計と一致せず誤読を招く）。
+ */
 function buildGithubYearChart(d) {
   const yearly = (DATA.github?.contributions?.yearly || []).filter(y => y.total > 0);
   if (!yearly.length) return;
 
   const mk = (label, key, color) => ({
     label, data: yearly.map(y => y[key]), backgroundColor: color,
-    borderRadius: 3, borderSkipped: false, maxBarThickness: 30,
+    borderRadius: 3, borderSkipped: false, maxBarThickness: 22,
   });
 
   const datasets = [
@@ -907,7 +939,52 @@ function buildGithubYearChart(d) {
   charts.ghYear = new Chart($('#chart-gh-year'), {
     type: 'bar',
     data: { labels: yearly.map(y => y.year), datasets },
-    options: baseOptions(d)
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'bottom', labels: { color: d.text, boxWidth: 10, boxHeight: 10, usePointStyle: true, pointStyle: 'circle', padding: 14, font: { size: 11 } } },
+        tooltip: {
+          backgroundColor: d.surface, titleColor: cssVar('--text'), bodyColor: d.text,
+          borderColor: cssVar('--border-strong'), borderWidth: 1, padding: 10,
+          cornerRadius: 8, usePointStyle: true,
+          callbacks: { footer: items => `合計 ${fmt(yearly[items[0].dataIndex].total)} 件` }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, border: { color: d.grid }, ticks: { color: d.muted, font: { size: 10.5 } } },
+        y: ghYearLogScale
+          ? {
+              // 下端を 1 未満にしないと値 1 の年（2013・2024）が高さ 0 で消える
+              type: 'logarithmic', min: 0.6,
+              grid: { color: d.grid }, border: { display: false },
+              // 対数軸の既定は目盛りが多すぎるので 10 のべき乗だけ出す
+              ticks: {
+                color: d.muted, font: { size: 10.5 },
+                callback: v => (Math.log10(v) % 1 === 0 ? fmt(v) : ''),
+              }
+            }
+          : {
+              beginAtZero: true, grid: { color: d.grid }, border: { display: false },
+              ticks: { color: d.muted, precision: 0, font: { size: 10.5 } }
+            }
+      }
+    }
+  });
+}
+
+/** 対数 / 線形の切り替え。どちらで読んでいるか分かるようにボタンに出す */
+function setupGhScaleToggle() {
+  const btn = $('#gh-scale-toggle');
+  if (!btn || btn.dataset.bound) return;
+  btn.dataset.bound = '1';
+  const sync = () => { btn.textContent = ghYearLogScale ? '対数目盛' : '線形目盛'; };
+  sync();
+  btn.addEventListener('click', () => {
+    ghYearLogScale = !ghYearLogScale;
+    sync();
+    charts.ghYear?.destroy();
+    buildGithubYearChart(chartDefaults());
   });
 }
 

@@ -85,10 +85,9 @@
         <div>
           <h1>熊谷 将也</h1>
           <p class="name-en">Kumagai Masaya</p>
-          <p class="tagline">
-            材料科学と情報科学の境界で研究しています。実験データの構造化・機械学習応用から、
-            研究の来歴（Provenance）を扱うツールの OSS 開発まで。
-          </p>
+          <!-- 日本語は HTML の改行がそのまま半角スペースになるので 1 行で書く。
+               複合語の途中で折り返らないよう、意味のまとまりを .nb で囲む -->
+          <p class="tagline">材料科学と情報科学の境界で研究しています。実験データの<span class="nb">構造化</span>・<span class="nb">機械学習応用</span>から、<span class="nb">研究の来歴（Provenance）</span>を<span class="nb">扱うツールの OSS 開発まで。</span></p>
           <div class="topics-wrap" id="topics-wrap">
             <div class="topics-label">主な研究テーマ<span>業績・OSS から自動集計</span></div>
             <div class="topics" id="topics"></div>
@@ -161,27 +160,31 @@
         <p id="gh-summary">公開リポジトリとコントリビューションの推移。データは GitHub API から毎日自動更新しています。</p>
       </div>
 
-      <div class="chart-grid">
-        <div class="card chart-card">
-          <h3>年別コントリビューション</h3>
-          <p class="chart-note">コミット / プルリクエスト / Issue・レビュー</p>
-          <div class="chart-box is-short"><canvas id="chart-gh-year"></canvas></div>
-        </div>
-        <div class="card chart-card">
-          <h3>直近 1 年の活動</h3>
-          <p class="chart-note">日別コントリビューション</p>
-          <div class="heat-card" id="heatmap-wrap" style="padding:0;border:0;box-shadow:none;background:none">
-            <div id="heatmap"></div>
-            <div class="heat-legend">
-              <span>少</span>
-              <i style="background:var(--heat-0)"></i><i style="background:var(--heat-1)"></i>
-              <i style="background:var(--heat-2)"></i><i style="background:var(--heat-3)"></i>
-              <i style="background:var(--heat-4)"></i>
-              <span>多</span>
-            </div>
-            <div class="heat-stats" id="heat-stats"></div>
+      <!-- ヒートマップは 53 週分の横幅が要るので、カラムに入れず全幅で置く -->
+      <div class="card chart-card">
+        <h3>直近 1 年の活動</h3>
+        <p class="chart-note">日別コントリビューション</p>
+        <div id="heatmap-wrap">
+          <div id="heatmap"></div>
+          <div class="heat-legend">
+            <span>少</span>
+            <i style="background:var(--heat-0)"></i><i style="background:var(--heat-1)"></i>
+            <i style="background:var(--heat-2)"></i><i style="background:var(--heat-3)"></i>
+            <i style="background:var(--heat-4)"></i>
+            <span>多</span>
           </div>
+          <div class="heat-stats" id="heat-stats"></div>
         </div>
+      </div>
+
+      <div class="card chart-card" style="margin-top:16px">
+        <div class="card-head">
+          <h3>年別コントリビューション</h3>
+          <button class="scale-toggle" id="gh-scale-toggle" type="button"
+                  title="目盛りを対数 / 線形で切り替える">対数目盛</button>
+        </div>
+        <p class="chart-note">コミット / プルリクエスト / Issue。年ごとの桁が違うので既定は対数目盛</p>
+        <div class="chart-box is-short"><canvas id="chart-gh-year"></canvas></div>
       </div>
 
       <h3 style="margin:34px 0 14px;font-size:15px">公開リポジトリ</h3>
