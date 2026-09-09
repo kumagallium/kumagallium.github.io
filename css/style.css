@@ -104,6 +104,11 @@ img { max-width: 100%; display: block; }
 /* 日本語は文字単位で折り返るため、分断したくない語はこれで囲む */
 .nb { white-space: nowrap; }
 
+/* 長い英単語（リポジトリ名・URL・大文字ラベル）が枠を越えないようにする。
+   break-word なので、収まらないときだけ単語を割る */
+.kpi-label, .kpi-sub, .repo-name, .repo-desc, .entry, .tl-desc, .tl-title,
+.contact-item .v, .heat-stats .k { overflow-wrap: break-word; }
+
 a { color: var(--accent-text); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -200,6 +205,8 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
 .hero-grid {
   display: grid; grid-template-columns: 116px 1fr; gap: 30px; align-items: start;
 }
+/* grid item は既定で min-width:auto なので縮まず、中の折り返しが効かなくなる */
+.hero-grid > * { min-width: 0; }
 .avatar {
   margin-top: 6px;
   width: 116px; height: 116px; border-radius: 26px;
@@ -324,7 +331,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
 
 .repo-grid {
   display: grid; gap: 14px; margin-top: 4px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
 }
 .repo {
   display: flex; flex-direction: column; padding: 17px 18px;
@@ -370,7 +377,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
 .repo.is-minor .repo-desc { display: none; }
 
 .heat-stats {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
   gap: 10px 14px; margin-top: 16px; padding-top: 14px;
   border-top: 1px solid var(--border);
 }
@@ -516,7 +523,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
 .prose ul { margin: 0; padding-left: 1.2em; }
 .prose li { margin-bottom: 6px; }
 
-.contact-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.contact-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
 .contact-item { padding: 16px 18px; }
 .contact-item .k {
   font-size: 11px; font-weight: 700; letter-spacing: .1em;
@@ -559,6 +566,14 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
   .site-nav { display: none; }
   .theme-toggle { margin-left: auto; }
   .chart-box { height: 250px; }
+}
+
+/* 320px 級の端末では 2 列でもラベルが収まらないので 1 列にする */
+@media (max-width: 380px) {
+  .kpi-grid { grid-template-columns: 1fr; }
+  .kpi { padding: 12px 14px; }
+  .kpi .kpi-value { font-size: 22px; }
+  .kpi .kpi-label { letter-spacing: .04em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
