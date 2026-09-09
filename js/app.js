@@ -23,6 +23,46 @@ const Theme = {
 
 $('#theme-toggle').addEventListener('click', () => Theme.toggle());
 
+/* --- モバイルのナビ（ハンバーガー） ------------------------------------- */
+// データ取得を待つ必要がないので、描画とは切り離してここで初期化する。
+(function setupNavDrawer() {
+  const btn = $('#nav-toggle');
+  const nav = $('#nav');
+  const overlay = $('#nav-overlay');
+  if (!btn || !nav || !overlay) return;
+
+  const isOpen = () => btn.getAttribute('aria-expanded') === 'true';
+
+  const setOpen = open => {
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    nav.classList.toggle('is-open', open);
+    overlay.hidden = !open;
+    // 背面のスクロールを止める（閉じたら元に戻す）
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+
+  btn.addEventListener('click', () => setOpen(!isOpen()));
+  overlay.addEventListener('click', () => setOpen(false));
+
+  // セクションへ飛んだらパネルは用済みなので閉じる
+  nav.addEventListener('click', ev => {
+    if (ev.target.closest('a')) setOpen(false);
+  });
+
+  document.addEventListener('keydown', ev => {
+    if (ev.key === 'Escape' && isOpen()) {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+
+  // 広い画面に戻したらナビは常時表示になるので、開いた状態を解除しておく
+  window.addEventListener('resize', () => {
+    if (isOpen() && window.innerWidth > 720) setOpen(false);
+  });
+})();
+
 /** CSS 変数の実値を取得する（Chart.js は CSS 変数を解釈できないため） */
 function cssVar(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();

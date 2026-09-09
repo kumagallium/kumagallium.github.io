@@ -182,6 +182,33 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
 [data-theme="dark"] .theme-toggle .i-sun { display: none; }
 :root:not([data-theme="dark"]) .theme-toggle .i-moon { display: none; }
 
+/* --- ハンバーガー（狭い画面のみ） --------------------------------------- */
+.nav-toggle {
+  display: none;   /* 広い画面ではナビが直接並ぶので不要 */
+  flex: none;
+  width: 36px; height: 36px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--bg-elevated);
+  color: var(--text-secondary); cursor: pointer;
+  place-items: center;
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+.nav-toggle:hover { background: var(--surface-hover); color: var(--text); border-color: var(--border-strong); }
+.nav-toggle svg { width: 20px; height: 20px; }
+/* 開いている間はアイコンを × に差し替える */
+.nav-toggle .i-shut { display: none; }
+.nav-toggle[aria-expanded="true"] .i-open { display: none; }
+.nav-toggle[aria-expanded="true"] .i-shut { display: block; }
+.nav-toggle[aria-expanded="true"] {
+  background: var(--accent-soft); color: var(--accent-text);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.nav-overlay {
+  position: fixed; inset: 60px 0 0; z-index: 40;
+  background: color-mix(in srgb, var(--bg) 55%, transparent);
+  backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
+}
+
 /* --- hero -------------------------------------------------------------- */
 .hero {
   position: relative; overflow: hidden;
@@ -546,6 +573,11 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
 .site-footer .spacer { margin-left: auto; }
 
 /* --- responsive -------------------------------------------------------- */
+@media (min-width: 721px) {
+  /* 広い画面に戻したときにドロワーの残骸が出ないようにする */
+  .nav-overlay { display: none !important; }
+}
+
 @media (max-width: 900px) {
   .chart-grid { grid-template-columns: 1fr; }
   .kpi-grid { grid-template-columns: repeat(3, 1fr); }
@@ -563,8 +595,31 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
   .year-group { grid-template-columns: 1fr; gap: 8px; }
   .year-label { position: static; font-size: 17px; }
   .affil-list li { grid-template-columns: 1fr; gap: 0; }
-  .site-nav { display: none; }
+  /* ナビはヘッダー直下から降りてくるパネルにする */
+  .nav-toggle { display: grid; }
   .theme-toggle { margin-left: auto; }
+
+  .site-nav {
+    position: fixed; top: 60px; left: 0; right: 0; z-index: 45;
+    display: grid; gap: 2px; margin: 0; padding: 10px 16px 16px;
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+    overflow: visible;
+    /* 閉じているときは上へ隠す。visibility も落としてフォーカスが入らないようにする */
+    transform: translateY(-8px);
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: transform .2s ease, opacity .2s ease, visibility .2s;
+  }
+  .site-nav.is-open {
+    transform: translateY(0);
+    opacity: 1; visibility: visible; pointer-events: auto;
+  }
+  .site-nav a {
+    padding: 11px 12px; border-radius: 10px; font-size: 15px;
+    border-bottom: 1px solid var(--border);
+  }
+  .site-nav a:last-child { border-bottom: 0; }
   .chart-box { height: 250px; }
 }
 
