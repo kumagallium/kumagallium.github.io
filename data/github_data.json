@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T03:37:04+00:00",
+  "generated_at": "2026-09-24T03:27:55+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -11,38 +11,6 @@
     "created_at": "2013-07-17T01:29:55Z"
   },
   "repos": [
-    {
-      "name": "starrydata-stats",
-      "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
-      "html_url": "https://github.com/kumagallium/starrydata-stats",
-      "homepage": "https://kumagallium.github.io/starrydata-stats/",
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "topics": [
-        "dashboard",
-        "data-visualization",
-        "dataset",
-        "materials-informatics",
-        "materials-science",
-        "starrydata",
-        "thermoelectrics"
-      ],
-      "created_at": "2026-07-20",
-      "pushed_at": "2026-09-22"
-    },
-    {
-      "name": "asterism",
-      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
-      "html_url": "https://github.com/kumagallium/asterism",
-      "homepage": "https://kumagallium.github.io/asterism/",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-05-27",
-      "pushed_at": "2026-09-21"
-    },
     {
       "name": "Graphium",
       "description": "Block-based note editor with PROV-DM provenance tracking — built on BlockNote.js",
@@ -66,7 +34,39 @@
         "zettelkasten"
       ],
       "created_at": "2026-03-23",
-      "pushed_at": "2026-09-18"
+      "pushed_at": "2026-09-24"
+    },
+    {
+      "name": "asterism",
+      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
+      "html_url": "https://github.com/kumagallium/asterism",
+      "homepage": "https://kumagallium.github.io/asterism/",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-05-27",
+      "pushed_at": "2026-09-24"
+    },
+    {
+      "name": "starrydata-stats",
+      "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
+      "html_url": "https://github.com/kumagallium/starrydata-stats",
+      "homepage": "https://kumagallium.github.io/starrydata-stats/",
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "topics": [
+        "dashboard",
+        "data-visualization",
+        "dataset",
+        "materials-informatics",
+        "materials-science",
+        "starrydata",
+        "thermoelectrics"
+      ],
+      "created_at": "2026-07-20",
+      "pushed_at": "2026-09-23"
     },
     {
       "name": "PROVision",
@@ -314,11 +314,11 @@
       "count": 7
     },
     {
-      "name": "HTML",
+      "name": "TypeScript",
       "count": 4
     },
     {
-      "name": "TypeScript",
+      "name": "HTML",
       "count": 4
     },
     {
@@ -463,19 +463,15 @@
       },
       {
         "year": 2026,
-        "commits": 3496,
-        "pull_requests": 1470,
+        "commits": 3526,
+        "pull_requests": 1487,
         "issues": 4,
         "reviews": 0,
         "repositories": 9,
-        "total": 4979
+        "total": 5026
       }
     ],
     "calendar": [
-      {
-        "date": "2025-09-24",
-        "count": 0
-      },
       {
         "date": "2025-09-25",
         "count": 0
@@ -1866,7 +1862,7 @@
       },
       {
         "date": "2026-09-07",
-        "count": 30
+        "count": 40
       },
       {
         "date": "2026-09-08",
@@ -1930,13 +1926,17 @@
       },
       {
         "date": "2026-09-23",
-        "count": 0
+        "count": 16
+      },
+      {
+        "date": "2026-09-24",
+        "count": 21
       }
     ]
   },
   "totals": {
     "repos": 22,
     "stars": 4,
-    "contributions": 5303
+    "contributions": 5350
   }
 }
