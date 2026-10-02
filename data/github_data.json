@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T04:30:25+00:00",
+  "generated_at": "2026-10-02T04:22:47+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -34,19 +34,7 @@
         "zettelkasten"
       ],
       "created_at": "2026-03-23",
-      "pushed_at": "2026-10-01"
-    },
-    {
-      "name": "asterism",
-      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
-      "html_url": "https://github.com/kumagallium/asterism",
-      "homepage": "https://kumagallium.github.io/asterism/",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-05-27",
-      "pushed_at": "2026-10-01"
+      "pushed_at": "2026-10-02"
     },
     {
       "name": "starrydata-stats",
@@ -66,7 +54,7 @@
         "thermoelectrics"
       ],
       "created_at": "2026-07-20",
-      "pushed_at": "2026-10-01"
+      "pushed_at": "2026-10-02"
     },
     {
       "name": "PROVision",
@@ -78,7 +66,7 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-08-20",
-      "pushed_at": "2026-09-29"
+      "pushed_at": "2026-10-01"
     },
     {
       "name": "octivity",
@@ -101,7 +89,19 @@
         "vite"
       ],
       "created_at": "2026-08-28",
-      "pushed_at": "2026-09-01"
+      "pushed_at": "2026-10-01"
+    },
+    {
+      "name": "asterism",
+      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
+      "html_url": "https://github.com/kumagallium/asterism",
+      "homepage": "https://kumagallium.github.io/asterism/",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-05-27",
+      "pushed_at": "2026-10-01"
     },
     {
       "name": "Crucible",
@@ -463,19 +463,15 @@
       },
       {
         "year": 2026,
-        "commits": 4125,
-        "pull_requests": 1651,
+        "commits": 4162,
+        "pull_requests": 1662,
         "issues": 4,
         "reviews": 0,
         "repositories": 9,
-        "total": 5789
+        "total": 5837
       }
     ],
     "calendar": [
-      {
-        "date": "2025-10-02",
-        "count": 0
-      },
       {
         "date": "2025-10-03",
         "count": 0
@@ -1930,13 +1926,17 @@
       },
       {
         "date": "2026-10-01",
-        "count": 60
+        "count": 92
+      },
+      {
+        "date": "2026-10-02",
+        "count": 16
       }
     ]
   },
   "totals": {
     "repos": 22,
     "stars": 4,
-    "contributions": 6113
+    "contributions": 6161
   }
 }
