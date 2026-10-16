@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T03:29:17+00:00",
+  "generated_at": "2026-10-16T03:25:09+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -34,7 +34,7 @@
         "zettelkasten"
       ],
       "created_at": "2026-03-23",
-      "pushed_at": "2026-10-15"
+      "pushed_at": "2026-10-16"
     },
     {
       "name": "starrydata-stats",
@@ -54,7 +54,19 @@
         "thermoelectrics"
       ],
       "created_at": "2026-07-20",
-      "pushed_at": "2026-10-14"
+      "pushed_at": "2026-10-15"
+    },
+    {
+      "name": "PROVision",
+      "description": "Provenance for AI-generated figures. W3C PROV graph that crosses notes, data, and images — queryable by SPARQL/MCP.",
+      "html_url": "https://github.com/kumagallium/PROVision",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-08-20",
+      "pushed_at": "2026-10-15"
     },
     {
       "name": "asterism",
@@ -67,18 +79,6 @@
       "topics": [],
       "created_at": "2026-05-27",
       "pushed_at": "2026-10-14"
-    },
-    {
-      "name": "PROVision",
-      "description": "Provenance for AI-generated figures. W3C PROV graph that crosses notes, data, and images — queryable by SPARQL/MCP.",
-      "html_url": "https://github.com/kumagallium/PROVision",
-      "homepage": null,
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-08-20",
-      "pushed_at": "2026-10-08"
     },
     {
       "name": "octivity",
@@ -472,10 +472,6 @@
       }
     ],
     "calendar": [
-      {
-        "date": "2025-10-16",
-        "count": 0
-      },
       {
         "date": "2025-10-17",
         "count": 0
@@ -1930,6 +1926,10 @@
       },
       {
         "date": "2026-10-15",
+        "count": 0
+      },
+      {
+        "date": "2026-10-16",
         "count": 0
       }
     ]
