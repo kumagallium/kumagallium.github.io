@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T03:19:42+00:00",
+  "generated_at": "2026-10-19T03:31:52+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -11,6 +11,31 @@
     "created_at": "2013-07-17T01:29:55Z"
   },
   "repos": [
+    {
+      "name": "Graphium",
+      "description": "Block-based note editor with PROV-DM provenance tracking — built on BlockNote.js",
+      "html_url": "https://github.com/kumagallium/Graphium",
+      "homepage": "https://kumagallium.github.io/Graphium/?intro=1",
+      "language": "TypeScript",
+      "stars": 2,
+      "forks": 0,
+      "topics": [
+        "blocknote",
+        "knowledge-management",
+        "local-first",
+        "note-taking",
+        "notes-app",
+        "pkm",
+        "prov-dm",
+        "provenance",
+        "research-tools",
+        "second-brain",
+        "tauri",
+        "zettelkasten"
+      ],
+      "created_at": "2026-03-23",
+      "pushed_at": "2026-10-19"
+    },
     {
       "name": "starrydata-stats",
       "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
@@ -29,32 +54,7 @@
         "thermoelectrics"
       ],
       "created_at": "2026-07-20",
-      "pushed_at": "2026-10-17"
-    },
-    {
-      "name": "Graphium",
-      "description": "Block-based note editor with PROV-DM provenance tracking — built on BlockNote.js",
-      "html_url": "https://github.com/kumagallium/Graphium",
-      "homepage": "https://kumagallium.github.io/Graphium/?intro=1",
-      "language": "TypeScript",
-      "stars": 1,
-      "forks": 0,
-      "topics": [
-        "blocknote",
-        "knowledge-management",
-        "local-first",
-        "note-taking",
-        "notes-app",
-        "pkm",
-        "prov-dm",
-        "provenance",
-        "research-tools",
-        "second-brain",
-        "tauri",
-        "zettelkasten"
-      ],
-      "created_at": "2026-03-23",
-      "pushed_at": "2026-10-16"
+      "pushed_at": "2026-10-18"
     },
     {
       "name": "PROVision",
@@ -314,11 +314,11 @@
       "count": 7
     },
     {
-      "name": "HTML",
+      "name": "TypeScript",
       "count": 4
     },
     {
-      "name": "TypeScript",
+      "name": "HTML",
       "count": 4
     },
     {
@@ -463,19 +463,15 @@
       },
       {
         "year": 2026,
-        "commits": 4539,
-        "pull_requests": 1763,
+        "commits": 4555,
+        "pull_requests": 1770,
         "issues": 4,
         "reviews": 0,
         "repositories": 9,
-        "total": 6315
+        "total": 6338
       }
     ],
     "calendar": [
-      {
-        "date": "2025-10-19",
-        "count": 0
-      },
       {
         "date": "2025-10-20",
         "count": 0
@@ -1914,7 +1910,7 @@
       },
       {
         "date": "2026-10-14",
-        "count": 91
+        "count": 93
       },
       {
         "date": "2026-10-15",
@@ -1931,12 +1927,16 @@
       {
         "date": "2026-10-18",
         "count": 0
+      },
+      {
+        "date": "2026-10-19",
+        "count": 21
       }
     ]
   },
   "totals": {
     "repos": 22,
-    "stars": 4,
-    "contributions": 6639
+    "stars": 5,
+    "contributions": 6662
   }
 }
