@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T03:33:48+00:00",
+  "generated_at": "2026-10-22T03:33:38+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -11,6 +11,18 @@
     "created_at": "2013-07-17T01:29:55Z"
   },
   "repos": [
+    {
+      "name": "asterism",
+      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
+      "html_url": "https://github.com/kumagallium/asterism",
+      "homepage": "https://kumagallium.github.io/asterism/",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-05-27",
+      "pushed_at": "2026-10-22"
+    },
     {
       "name": "Graphium",
       "description": "Block-based note editor with PROV-DM provenance tracking — built on BlockNote.js",
@@ -34,19 +46,7 @@
         "zettelkasten"
       ],
       "created_at": "2026-03-23",
-      "pushed_at": "2026-10-21"
-    },
-    {
-      "name": "asterism",
-      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
-      "html_url": "https://github.com/kumagallium/asterism",
-      "homepage": "https://kumagallium.github.io/asterism/",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-05-27",
-      "pushed_at": "2026-10-21"
+      "pushed_at": "2026-10-22"
     },
     {
       "name": "starrydata-stats",
@@ -66,7 +66,7 @@
         "thermoelectrics"
       ],
       "created_at": "2026-07-20",
-      "pushed_at": "2026-10-20"
+      "pushed_at": "2026-10-21"
     },
     {
       "name": "PROVision",
@@ -463,19 +463,15 @@
       },
       {
         "year": 2026,
-        "commits": 4804,
-        "pull_requests": 1842,
+        "commits": 4956,
+        "pull_requests": 1878,
         "issues": 4,
         "reviews": 0,
         "repositories": 9,
-        "total": 6659
+        "total": 6847
       }
     ],
     "calendar": [
-      {
-        "date": "2025-10-22",
-        "count": 0
-      },
       {
         "date": "2025-10-23",
         "count": 0
@@ -1926,17 +1922,21 @@
       },
       {
         "date": "2026-10-20",
-        "count": 153
+        "count": 179
       },
       {
         "date": "2026-10-21",
-        "count": 49
+        "count": 166
+      },
+      {
+        "date": "2026-10-22",
+        "count": 45
       }
     ]
   },
   "totals": {
     "repos": 22,
     "stars": 5,
-    "contributions": 6983
+    "contributions": 7171
   }
 }
