@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T03:32:28+00:00",
+  "generated_at": "2026-10-25T03:29:12+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -29,7 +29,19 @@
         "thermoelectrics"
       ],
       "created_at": "2026-07-20",
-      "pushed_at": "2026-10-23"
+      "pushed_at": "2026-10-24"
+    },
+    {
+      "name": "asterism",
+      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
+      "html_url": "https://github.com/kumagallium/asterism",
+      "homepage": "https://kumagallium.github.io/asterism/",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-05-27",
+      "pushed_at": "2026-10-24"
     },
     {
       "name": "Graphium",
@@ -54,19 +66,7 @@
         "zettelkasten"
       ],
       "created_at": "2026-03-23",
-      "pushed_at": "2026-10-23"
-    },
-    {
-      "name": "asterism",
-      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
-      "html_url": "https://github.com/kumagallium/asterism",
-      "homepage": "https://kumagallium.github.io/asterism/",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-05-27",
-      "pushed_at": "2026-10-23"
+      "pushed_at": "2026-10-24"
     },
     {
       "name": "PROVision",
@@ -464,18 +464,14 @@
       {
         "year": 2026,
         "commits": 5257,
-        "pull_requests": 1927,
+        "pull_requests": 1928,
         "issues": 4,
         "reviews": 0,
         "repositories": 9,
-        "total": 7197
+        "total": 7198
       }
     ],
     "calendar": [
-      {
-        "date": "2025-10-25",
-        "count": 0
-      },
       {
         "date": "2025-10-26",
         "count": 0
@@ -1930,6 +1926,10 @@
       },
       {
         "date": "2026-10-24",
+        "count": 1
+      },
+      {
+        "date": "2026-10-25",
         "count": 0
       }
     ]
@@ -1937,6 +1937,6 @@
   "totals": {
     "repos": 22,
     "stars": 5,
-    "contributions": 7521
+    "contributions": 7522
   }
 }
