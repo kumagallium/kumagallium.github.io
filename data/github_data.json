@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T04:40:08+00:00",
+  "generated_at": "2026-10-31T04:24:09+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -12,12 +12,32 @@
   },
   "repos": [
     {
+      "name": "starrydata-stats",
+      "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
+      "html_url": "https://github.com/kumagallium/starrydata-stats",
+      "homepage": "https://kumagallium.github.io/starrydata-stats/",
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "topics": [
+        "dashboard",
+        "data-visualization",
+        "dataset",
+        "materials-informatics",
+        "materials-science",
+        "starrydata",
+        "thermoelectrics"
+      ],
+      "created_at": "2026-07-20",
+      "pushed_at": "2026-10-31"
+    },
+    {
       "name": "Graphium",
       "description": "Block-based note editor with PROV-DM provenance tracking — built on BlockNote.js",
       "html_url": "https://github.com/kumagallium/Graphium",
       "homepage": "https://kumagallium.github.io/Graphium/?intro=1",
       "language": "TypeScript",
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "topics": [
         "blocknote",
@@ -37,48 +57,40 @@
       "pushed_at": "2026-10-30"
     },
     {
-      "name": "ouchi-theater-support",
-      "description": "おうち上映会 / Ouchi Theater — Privacy policy and support",
-      "html_url": "https://github.com/kumagallium/ouchi-theater-support",
+      "name": "Crucible-Agent",
+      "description": "AI agent runtime that connects any frontend to MCP servers via LLM — domain behavior is driven by swappable prompt profiles",
+      "html_url": "https://github.com/kumagallium/Crucible-Agent",
       "homepage": null,
-      "language": "HTML",
+      "language": "Python",
       "stars": 0,
       "forks": 0,
       "topics": [],
-      "created_at": "2026-10-29",
+      "created_at": "2026-03-17",
       "pushed_at": "2026-10-30"
     },
     {
-      "name": "starrydata-stats",
-      "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
-      "html_url": "https://github.com/kumagallium/starrydata-stats",
-      "homepage": "https://kumagallium.github.io/starrydata-stats/",
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "topics": [
-        "dashboard",
-        "data-visualization",
-        "dataset",
-        "materials-informatics",
-        "materials-science",
-        "starrydata",
-        "thermoelectrics"
-      ],
-      "created_at": "2026-07-20",
-      "pushed_at": "2026-10-30"
-    },
-    {
-      "name": "PROVision",
-      "description": "Provenance for AI-generated figures. W3C PROV graph that crosses notes, data, and images — queryable by SPARQL/MCP.",
-      "html_url": "https://github.com/kumagallium/PROVision",
-      "homepage": null,
-      "language": "TypeScript",
+      "name": "Crucible",
+      "description": "Self-hosted deployment platform for MCP servers — paste a GitHub URL to auto-build, deploy, and connect. Works with private repos.",
+      "html_url": "https://github.com/kumagallium/Crucible",
+      "homepage": "https://kumagallium.github.io/Crucible/",
+      "language": "Python",
       "stars": 0,
       "forks": 0,
       "topics": [],
-      "created_at": "2026-08-20",
-      "pushed_at": "2026-10-29"
+      "created_at": "2026-03-14",
+      "pushed_at": "2026-10-30"
+    },
+    {
+      "name": "personal_gpt",
+      "description": null,
+      "html_url": "https://github.com/kumagallium/personal_gpt",
+      "homepage": null,
+      "language": "Vue",
+      "stars": 2,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2023-02-05",
+      "pushed_at": "2026-10-30"
     },
     {
       "name": "asterism",
@@ -90,7 +102,31 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-05-27",
-      "pushed_at": "2026-10-26"
+      "pushed_at": "2026-10-30"
+    },
+    {
+      "name": "vue_photo_organizer",
+      "description": null,
+      "html_url": "https://github.com/kumagallium/vue_photo_organizer",
+      "homepage": null,
+      "language": "Vue",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2021-11-23",
+      "pushed_at": "2026-10-30"
+    },
+    {
+      "name": "e4m-mcp",
+      "description": "材料科学に特化した MCP サーバー群 / MCP servers for materials science",
+      "html_url": "https://github.com/kumagallium/e4m-mcp",
+      "homepage": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-03-11",
+      "pushed_at": "2026-10-30"
     },
     {
       "name": "octivity",
@@ -113,19 +149,43 @@
         "vite"
       ],
       "created_at": "2026-08-28",
-      "pushed_at": "2026-10-01"
+      "pushed_at": "2026-10-30"
     },
     {
-      "name": "Crucible",
-      "description": "Self-hosted deployment platform for MCP servers — paste a GitHub URL to auto-build, deploy, and connect. Works with private repos.",
-      "html_url": "https://github.com/kumagallium/Crucible",
-      "homepage": "https://kumagallium.github.io/Crucible/",
+      "name": "PROVision",
+      "description": "Provenance for AI-generated figures. W3C PROV graph that crosses notes, data, and images — queryable by SPARQL/MCP.",
+      "html_url": "https://github.com/kumagallium/PROVision",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-08-20",
+      "pushed_at": "2026-10-30"
+    },
+    {
+      "name": "labmine-api",
+      "description": null,
+      "html_url": "https://github.com/kumagallium/labmine-api",
+      "homepage": null,
       "language": "Python",
       "stars": 0,
       "forks": 0,
       "topics": [],
-      "created_at": "2026-03-14",
-      "pushed_at": "2026-08-27"
+      "created_at": "2021-09-30",
+      "pushed_at": "2026-10-30"
+    },
+    {
+      "name": "labmine-front",
+      "description": null,
+      "html_url": "https://github.com/kumagallium/labmine-front",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2021-09-29",
+      "pushed_at": "2026-10-30"
     },
     {
       "name": "geo-logo",
@@ -137,31 +197,19 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-08-13",
-      "pushed_at": "2026-08-20"
+      "pushed_at": "2026-10-30"
     },
     {
-      "name": "Crucible-Agent",
-      "description": "AI agent runtime that connects any frontend to MCP servers via LLM — domain behavior is driven by swappable prompt profiles",
-      "html_url": "https://github.com/kumagallium/Crucible-Agent",
+      "name": "ouchi-theater-support",
+      "description": "おうち上映会 / Ouchi Theater — Privacy policy and support",
+      "html_url": "https://github.com/kumagallium/ouchi-theater-support",
       "homepage": null,
-      "language": "Python",
+      "language": "HTML",
       "stars": 0,
       "forks": 0,
       "topics": [],
-      "created_at": "2026-03-17",
-      "pushed_at": "2026-08-13"
-    },
-    {
-      "name": "e4m-mcp",
-      "description": "材料科学に特化した MCP サーバー群 / MCP servers for materials science",
-      "html_url": "https://github.com/kumagallium/e4m-mcp",
-      "homepage": null,
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-03-11",
-      "pushed_at": "2026-04-01"
+      "created_at": "2026-10-29",
+      "pushed_at": "2026-10-30"
     },
     {
       "name": "matprov-schema",
@@ -248,18 +296,6 @@
       "pushed_at": "2023-05-18"
     },
     {
-      "name": "personal_gpt",
-      "description": null,
-      "html_url": "https://github.com/kumagallium/personal_gpt",
-      "homepage": null,
-      "language": "Vue",
-      "stars": 2,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2023-02-05",
-      "pushed_at": "2023-02-06"
-    },
-    {
       "name": "cgal_docker",
       "description": null,
       "html_url": "https://github.com/kumagallium/cgal_docker",
@@ -282,42 +318,6 @@
       "topics": [],
       "created_at": "2021-10-05",
       "pushed_at": "2022-05-18"
-    },
-    {
-      "name": "labmine-api",
-      "description": null,
-      "html_url": "https://github.com/kumagallium/labmine-api",
-      "homepage": null,
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2021-09-30",
-      "pushed_at": "2022-05-15"
-    },
-    {
-      "name": "labmine-front",
-      "description": null,
-      "html_url": "https://github.com/kumagallium/labmine-front",
-      "homepage": null,
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2021-09-29",
-      "pushed_at": "2022-05-15"
-    },
-    {
-      "name": "vue_photo_organizer",
-      "description": null,
-      "html_url": "https://github.com/kumagallium/vue_photo_organizer",
-      "homepage": null,
-      "language": "Vue",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2021-11-23",
-      "pushed_at": "2022-01-16"
     }
   ],
   "languages": [
@@ -338,6 +338,10 @@
       "count": 2
     },
     {
+      "name": "JavaScript",
+      "count": 1
+    },
+    {
       "name": "Dockerfile",
       "count": 1
     },
@@ -347,10 +351,6 @@
     },
     {
       "name": "C++",
-      "count": 1
-    },
-    {
-      "name": "JavaScript",
       "count": 1
     }
   ],
@@ -475,19 +475,15 @@
       },
       {
         "year": 2026,
-        "commits": 5583,
-        "pull_requests": 2039,
+        "commits": 5666,
+        "pull_requests": 2058,
         "issues": 4,
         "reviews": 0,
         "repositories": 10,
-        "total": 7636
+        "total": 7738
       }
     ],
     "calendar": [
-      {
-        "date": "2025-10-31",
-        "count": 0
-      },
       {
         "date": "2025-11-01",
         "count": 0
@@ -1942,13 +1938,17 @@
       },
       {
         "date": "2026-10-30",
-        "count": 119
+        "count": 221
+      },
+      {
+        "date": "2026-10-31",
+        "count": 0
       }
     ]
   },
   "totals": {
     "repos": 23,
-    "stars": 5,
-    "contributions": 7960
+    "stars": 6,
+    "contributions": 8062
   }
 }
