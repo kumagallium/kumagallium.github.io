@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T05:26:53+00:00",
+  "generated_at": "2026-11-06T05:25:42+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -34,19 +34,7 @@
         "zettelkasten"
       ],
       "created_at": "2026-03-23",
-      "pushed_at": "2026-11-05"
-    },
-    {
-      "name": "personal_gpt",
-      "description": null,
-      "html_url": "https://github.com/kumagallium/personal_gpt",
-      "homepage": null,
-      "language": "Vue",
-      "stars": 2,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2023-02-05",
-      "pushed_at": "2026-11-05"
+      "pushed_at": "2026-11-06"
     },
     {
       "name": "asterism",
@@ -58,7 +46,7 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-05-27",
-      "pushed_at": "2026-11-05"
+      "pushed_at": "2026-11-06"
     },
     {
       "name": "starrydata-stats",
@@ -78,6 +66,30 @@
         "thermoelectrics"
       ],
       "created_at": "2026-07-20",
+      "pushed_at": "2026-11-06"
+    },
+    {
+      "name": "ouchi-theater-support",
+      "description": "おうち上映会 / Ouchi Theater — Privacy policy and support",
+      "html_url": "https://github.com/kumagallium/ouchi-theater-support",
+      "homepage": null,
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-10-29",
+      "pushed_at": "2026-11-05"
+    },
+    {
+      "name": "personal_gpt",
+      "description": null,
+      "html_url": "https://github.com/kumagallium/personal_gpt",
+      "homepage": null,
+      "language": "Vue",
+      "stars": 2,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2023-02-05",
       "pushed_at": "2026-11-05"
     },
     {
@@ -197,18 +209,6 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-08-13",
-      "pushed_at": "2026-10-30"
-    },
-    {
-      "name": "ouchi-theater-support",
-      "description": "おうち上映会 / Ouchi Theater — Privacy policy and support",
-      "html_url": "https://github.com/kumagallium/ouchi-theater-support",
-      "homepage": null,
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-10-29",
       "pushed_at": "2026-10-30"
     },
     {
@@ -475,19 +475,15 @@
       },
       {
         "year": 2026,
-        "commits": 5823,
-        "pull_requests": 2121,
+        "commits": 5960,
+        "pull_requests": 2159,
         "issues": 4,
         "reviews": 0,
         "repositories": 10,
-        "total": 7958
+        "total": 8133
       }
     ],
     "calendar": [
-      {
-        "date": "2025-11-06",
-        "count": 0
-      },
       {
         "date": "2025-11-07",
         "count": 0
@@ -1942,13 +1938,17 @@
       },
       {
         "date": "2026-11-05",
-        "count": 64
+        "count": 140
+      },
+      {
+        "date": "2026-11-06",
+        "count": 99
       }
     ]
   },
   "totals": {
     "repos": 23,
     "stars": 6,
-    "contributions": 8282
+    "contributions": 8457
   }
 }
