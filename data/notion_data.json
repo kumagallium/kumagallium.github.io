@@ -2,47 +2,58 @@
   "Profile": [
     {
       "category": "略歴",
-      "text": "<div>　2005~2010年国立舞鶴工業高等専門学校（舞鶴高専）にて, プログラムや回路を学び, 頭でイメージできた電子工作は, 大抵作れる技術力を身に着ける. 2006年10月NHK高専ロボコン近畿大会に出場し, 特別賞受賞. 2009年, 回路部品に使用される無機材料に興味があり材料工学の研究をはじめ, 同年8月に国内学会口頭発表を経験. 2010~2012年, 舞鶴高専専攻科に進学し, 材料工学および情報工学の両分野での研究, 学会発表を経験. 2010年11月（大学学部３年相当）, 査読あり国際学会での発表を経験.\n</div>\n</br>\n<div>　2012~2017年大阪大学大学院 工学研究科において, 無機材料工学を専門として博士課程まで進み, 2017年3月に博士号（工学）を取得. 研究活動とは別に, 自分の不足しているWeb開発技術を向上するため, 趣味のWebサイトや学内ベンチャー企業のWebシステムを開発. Web開発をきっかけに, 材料工学と組み合わせたマテリアルズ・インフォマティクス研究を紹介され, 博士論文の研究とは別に進める.\n</div>\n</br>\n<div>　2017年4月, 自身のインフラの技術が不足していることを感じ, さくらインターネット株式会社に入社. 同年6月, さくらインターネット研究所に配属されると同時に, 同社パラレルキャリア制度を利用し, 理化学研究所 革新知能統合研究センターの客員研究員として, マテリアルズ・インフォマティクス研究に従事. 機械学習を共通の要素技術として, 材料工学および情報工学の知識を双方に生かした学際的研究に主眼を置く. マテリアルズ・インフォマティクス研究が評価され, 2019年7月国際会議International Conference on Thermoelectrics (ICT2019)でポスター賞を受賞, 同年9月日本熱電学会学術講演会で優秀ポスター賞を受賞.　2020年4月~2024年3月, クロスアポイントメント制度を利用して京都大学の特定助教として従事（さくらインターネット株式会社60%, 京都大学40%）.2024年4月 京都大学の非常勤研究員に着任.\n</div>"
+      "text": "<div>　2005~2010年国立舞鶴工業高等専門学校（舞鶴高専）にて, プログラムや回路を学び, 頭でイメージできた電子工作は, 大抵作れる技術力を身に着ける. 2006年10月NHK高専ロボコン近畿大会に出場し, 特別賞受賞. 2009年, 回路部品に使用される無機材料に興味があり材料工学の研究をはじめ, 同年8月に国内学会口頭発表を経験. 2010~2012年, 舞鶴高専専攻科に進学し, 材料工学および情報工学の両分野での研究, 学会発表を経験. 2010年11月（大学学部３年相当）, 査読あり国際学会での発表を経験.\n</div>\n</br>\n<div>　2012~2017年大阪大学大学院 工学研究科において, 無機材料工学を専門として博士課程まで進み, 2017年3月に博士号（工学）を取得. 研究活動とは別に, 自分の不足しているWeb開発技術を向上するため, 趣味のWebサイトや学内ベンチャー企業のWebシステムを開発. Web開発をきっかけに, 材料工学と組み合わせたマテリアルズ・インフォマティクス研究を紹介され, 博士論文の研究とは別に進める.\n</div>\n</br>\n<div>　2017年4月, 自身のインフラの技術が不足していることを感じ, さくらインターネット株式会社に入社. 同年6月, さくらインターネット研究所に配属されると同時に, 同社パラレルキャリア制度を利用し, 理化学研究所 革新知能統合研究センターの客員研究員として, マテリアルズ・インフォマティクス研究に従事. 機械学習を共通の要素技術として, 材料工学および情報工学の知識を双方に生かした学際的研究に主眼を置く. マテリアルズ・インフォマティクス研究が評価され, 2019年7月国際会議International Conference on Thermoelectrics (ICT2019)でポスター賞を受賞, 同年9月日本熱電学会学術講演会で優秀ポスター賞を受賞.　2020年4月~2024年3月, クロスアポイントメント制度を利用して京都大学の特定助教として従事（さくらインターネット株式会社60%, 京都大学40%）.2024年4月 京都大学の非常勤研究員に着任.\n</div>",
+      "text_en": "<div>From 2005 to 2010, at the National Institute of Technology, Maizuru College (Maizuru KOSEN), I studied programming and electronic circuits and gained the skills to build almost any electronic device I could imagine. In October 2006, I competed in the NHK KOSEN Robocon Kinki regional contest and received a Special Prize. In 2009, drawn to the inorganic materials used in circuit components, I began research in materials engineering and gave my first oral presentation at a domestic conference that August. From 2010 to 2012, in the KOSEN advanced course, I carried out research and presented at conferences in both materials engineering and information engineering. In November 2010 (equivalent to the third year of an undergraduate program), I presented at a peer-reviewed international conference.\n</div>\n</br>\n<div>From 2012 to 2017, I studied inorganic materials engineering at the Graduate School of Engineering, Osaka University, through the doctoral program, and received my Ph.D. in Engineering in March 2017. Alongside my research, I built hobby websites and a web system for a university startup to strengthen my web development skills. Through that web development work, I was introduced to materials informatics, which combines materials engineering with data science, and pursued it separately from my doctoral research.\n</div>\n</br>\n<div>In April 2017, feeling that my infrastructure skills were lacking, I joined SAKURA internet Inc. In June of that year, I was assigned to the SAKURA internet Research Center and, through the company's parallel career program, also became a Visiting Scientist at the RIKEN Center for Advanced Intelligence Project, working on materials informatics. My focus is interdisciplinary research that brings knowledge of materials engineering and information engineering to bear on each other, with machine learning as the common foundation. This materials informatics work received a Poster Award at the International Conference on Thermoelectrics (ICT2019) in July 2019 and an Excellent Poster Award at the Annual Meeting of the Thermoelectrics Society of Japan in September 2019. From April 2020 to March 2024, under a cross-appointment, I served as a Program-Specific Assistant Professor at Kyoto University (60% SAKURA internet, 40% Kyoto University). In April 2024, I became a part-time researcher at Kyoto University.\n</div>"
     },
     {
       "category": "所属",
-      "text": "2017年6月〜\n<a href=\"https://research.sakura.ad.jp/members\" target='_blank'>さくらインターネット研究所 研究員</a></li>"
+      "text": "2017年6月〜\n<a href=\"https://research.sakura.ad.jp/members\" target='_blank'>さくらインターネット研究所 研究員</a></li>",
+      "text_en": "June 2017~\n<a href=\"https://research.sakura.ad.jp/about/\" target='_blank'>Researcher at SAKURA internet Inc.</a></li>"
     },
     {
       "category": "所属",
-      "text": "2017年6月〜\n<a href=\"https://aip.riken.jp/labs/goalorient_tech/mol_inf/?lang=ja\" target='_blank'>理化学研究所 客員研究員</a>"
+      "text": "2017年6月〜\n<a href=\"https://aip.riken.jp/labs/goalorient_tech/mol_inf/?lang=ja\" target='_blank'>理化学研究所 客員研究員</a>",
+      "text_en": "June 2017~\n<a href=\"https://aip.riken.jp/labs/goalorient_tech/mol_inf/?lang=en\" target='_blank'>Visiting Scientist at RIKEN</a>"
     },
     {
       "category": "所属",
-      "text": "2020年4月〜2024年3月\n<a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>京都大学 特定助教</a>"
+      "text": "2020年4月〜2024年3月\n<a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>京都大学 特定助教</a>",
+      "text_en": "April 2020~March 2024\n<a href=\"http://www.energy.kyoto-u.ac.jp/jp/socio-environmental/\" target='_blank'>Program-Specific Assistant Professor at Kyoto University</a>"
     },
     {
       "category": "所属",
-      "text": "2020年6月〜2020年3月\n大阪大学 招へい研究員"
+      "text": "2020年6月〜2020年3月\n大阪大学 招へい研究員",
+      "text_en": "June 2020~\nVisiting Researcher at Osaka University "
     },
     {
       "category": "所属",
-      "text": "2024年4月〜\n<a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>京都大学 非常勤研究員</a>"
+      "text": "2024年4月〜\n<a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>京都大学 非常勤研究員</a>",
+      "text_en": "April 2024~\n<a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>Researcher (part-time) at Kyoto University</a>"
     },
     {
       "category": "経歴",
-      "text": "<ul style=\"margin:0px;\">\n<li>2024年4月 <a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>京都大学 複合原子力科学研究所附属安全原子力システム研究センター</a> 非常勤研究員</li>\n<li>2020年4月〜2024年3月 <a href=\"http://www.energy.kyoto-u.ac.jp/jp/socio-environmental/\" target='_blank'>京都大学 複合原子力科学研究所附属安全原子力システム研究センター （兼　大学院エネルギー科学研究科）</a> 特定助教</li>\n<li>2017年6月〜 <a href=\"https://aip.riken.jp/labs/goalorient_tech/mol_inf/?lang=ja\" target='_blank'>理化学研究所 革新知能統合研究センター 目的指向基盤技術研究グループ 分子情報科学チーム</a> 客員研究員 就任</li>\n<li>2017年6月〜 <a href=\"https://research.sakura.ad.jp/about/\" target='_blank'>さくらインターネット株式会社 さくらインターネット研究所</a> 研究員 就任</li>\n<li>2017年4月〜 さくらインターネット株式会社 入社</li>\n<li>2017年3月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 博士課程 修了</li>\n<li>2015年4月 日本学術振興会 特別研究員（DC2）</li>\n<li>2014年4月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 博士課程 入学</li>\n<li>2014年3月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 修士課程 修了</li>\n<li>2012年4月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 修士課程 入学</li>\n<li>2012年3月 国立舞鶴工業高等専門学校 専攻科 電気・制御システム工学専攻 卒業</li>\n<li>2010年4月 国立舞鶴工業高等専門学校 専攻科 電気・制御システム工学専攻 入学</li>\n<li>2010年3月 国立舞鶴工業高等専門学校 電子制御工学科 卒業</li>\n<li>2005年4月 国立舞鶴工業高等専門学校 電子制御工学科 入学</li>\n</ul>"
+      "text": "<ul style=\"margin:0px;\">\n<li>2024年4月 <a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>京都大学 複合原子力科学研究所附属安全原子力システム研究センター</a> 非常勤研究員</li>\n<li>2020年4月〜2024年3月 <a href=\"http://www.energy.kyoto-u.ac.jp/jp/socio-environmental/\" target='_blank'>京都大学 複合原子力科学研究所附属安全原子力システム研究センター （兼　大学院エネルギー科学研究科）</a> 特定助教</li>\n<li>2017年6月〜 <a href=\"https://aip.riken.jp/labs/goalorient_tech/mol_inf/?lang=ja\" target='_blank'>理化学研究所 革新知能統合研究センター 目的指向基盤技術研究グループ 分子情報科学チーム</a> 客員研究員 就任</li>\n<li>2017年6月〜 <a href=\"https://research.sakura.ad.jp/about/\" target='_blank'>さくらインターネット株式会社 さくらインターネット研究所</a> 研究員 就任</li>\n<li>2017年4月〜 さくらインターネット株式会社 入社</li>\n<li>2017年3月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 博士課程 修了</li>\n<li>2015年4月 日本学術振興会 特別研究員（DC2）</li>\n<li>2014年4月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 博士課程 入学</li>\n<li>2014年3月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 修士課程 修了</li>\n<li>2012年4月 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 修士課程 入学</li>\n<li>2012年3月 国立舞鶴工業高等専門学校 専攻科 電気・制御システム工学専攻 卒業</li>\n<li>2010年4月 国立舞鶴工業高等専門学校 専攻科 電気・制御システム工学専攻 入学</li>\n<li>2010年3月 国立舞鶴工業高等専門学校 電子制御工学科 卒業</li>\n<li>2005年4月 国立舞鶴工業高等専門学校 電子制御工学科 入学</li>\n</ul>",
+      "text_en": "<ul style=\"margin:0px;\">\n<li>April 2020~ <a href=\"http://www.energy.kyoto-u.ac.jp/jp/socio-environmental/\" target='_blank'>京都大学 複合原子力科学研究所附属安全原子力システム研究センター （兼　大学院エネルギー科学研究科）</a> 特定助教 就任</li>\n<li>June 2017~ <a href=\"https://aip.riken.jp/labs/goalorient_tech/mol_inf/?lang=ja\" target='_blank'>理化学研究所 革新知能統合研究センター 目的指向基盤技術研究グループ 分子情報科学チーム</a> 客員研究員 就任</li>\n<li>June 2017~ <a href=\"https://research.sakura.ad.jp/about/\" target='_blank'>さくらインターネット株式会社 さくらインターネット研究所</a> 研究員 就任</li>\n<li>April 2017~ さくらインターネット株式会社 入社</li>\n<li>March 2017 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 博士課程 修了</li>\n<li>April 2015 日本学術振興会 特別研究員（DC2）</li>\n<li>April 2014 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 博士課程 入学</li>\n<li>March 2014 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 修士課程 修了</li>\n<li>April 2012 大阪大学大学院 工学研究科 環境・エネルギー工学専攻 修士課程 入学</li>\n<li>March 2012 国立舞鶴工業高等専門学校 専攻科 電気・制御システム工学専攻 卒業</li>\n<li>April 2010 国立舞鶴工業高等専門学校 専攻科 電気・制御システム工学専攻 入学</li>\n<li>March 2010 国立舞鶴工業高等専門学校 電子制御工学科 卒業</li>\n<li>April 2005 国立舞鶴工業高等専門学校 電子制御工学科 入学</li>\n</ul>"
     },
     {
       "category": "リンク",
-      "text": "<a href=\"https://researchmap.jp/mkumagai\" target=’_blank’>researchmap</a>"
+      "text": "<a href=\"https://researchmap.jp/mkumagai\" target=’_blank’>researchmap</a>",
+      "text_en": "<a href=\"https://researchmap.jp/mkumagai?lang=en\" target=’_blank’>researchmap</a>"
     },
     {
       "category": "リンク",
-      "text": "<a href=\"https://publons.com/researcher/1877781/masaya-kumagai/\" target='_blank'>Publons</a>"
+      "text": "<a href=\"https://publons.com/researcher/1877781/masaya-kumagai/\" target='_blank'>Publons</a>",
+      "text_en": "<a href=\"https://publons.com/researcher/1877781/masaya-kumagai/\" target='_blank'>Publons</a>"
     },
     {
       "category": "リンク",
-      "text": "<a href=\"https://speakerdeck.com/kumagallium\" target='_blank'>Speaker Deck</a>"
+      "text": "<a href=\"https://speakerdeck.com/kumagallium\" target='_blank'>Speaker Deck</a>",
+      "text_en": null
     },
     {
       "category": "リンク",
-      "text": "<a href=\"https://kumagallium.hatenablog.com/\" target='_blank'>研究ブログ</a>"
+      "text": "<a href=\"https://kumagallium.hatenablog.com/\" target='_blank'>研究ブログ</a>",
+      "text_en": "<a href=\"https://kumagallium.hatenablog.com/\" target='_blank'>Research blog (Japanese)</a>"
     }
   ],
   "Publications ": [
@@ -293,6 +304,7 @@
   "Presentations": [
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": null,
       "fitst": false,
       "first": false,
       "invited": false,
@@ -306,6 +318,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": null,
       "fitst": false,
       "first": false,
       "invited": false,
@@ -319,6 +332,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -332,6 +346,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -345,6 +360,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -358,6 +374,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -371,6 +388,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -384,6 +402,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -397,6 +416,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -410,6 +430,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -423,6 +444,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -436,6 +458,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -449,6 +472,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -462,6 +486,7 @@
     },
     {
       "category": "国内学会 / ポスター発表",
+      "category_en": "Domecsic Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -475,6 +500,7 @@
     },
     {
       "category": "国内学会 / ポスター発表",
+      "category_en": "Domecsic Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -488,6 +514,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -501,6 +528,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -514,6 +542,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -527,6 +556,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -540,6 +570,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -553,6 +584,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -566,6 +598,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -579,6 +612,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -592,6 +626,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -605,6 +640,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -618,6 +654,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -631,6 +668,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": true,
@@ -644,6 +682,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -657,6 +696,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -670,6 +710,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -683,6 +724,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -696,6 +738,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -709,6 +752,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -722,6 +766,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -735,6 +780,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -748,6 +794,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -761,6 +808,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -774,6 +822,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": true,
@@ -787,6 +836,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -800,6 +850,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -813,6 +864,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -826,6 +878,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -839,6 +892,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": true,
@@ -852,6 +906,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": true,
@@ -865,6 +920,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -878,6 +934,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -891,6 +948,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -904,6 +962,7 @@
     },
     {
       "category": "国内学会 / ポスター発表",
+      "category_en": "Domecsic Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -917,6 +976,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -930,6 +990,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -943,6 +1004,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -956,6 +1018,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -969,6 +1032,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -982,6 +1046,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -995,6 +1060,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1008,6 +1074,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1021,6 +1088,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1034,6 +1102,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1047,6 +1116,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1060,6 +1130,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1073,6 +1144,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1086,6 +1158,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1099,6 +1172,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1112,6 +1186,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1125,6 +1200,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1138,6 +1214,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1151,6 +1228,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1164,6 +1242,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1177,6 +1256,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1190,6 +1270,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1203,6 +1284,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1216,6 +1298,7 @@
     },
     {
       "category": "国内学会 / ポスター発表",
+      "category_en": "Domecsic Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1229,6 +1312,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1242,6 +1326,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1255,6 +1340,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1268,6 +1354,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1281,6 +1368,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1294,6 +1382,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1307,6 +1396,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1320,6 +1410,7 @@
     },
     {
       "category": "国際学会 / 口頭発表",
+      "category_en": "International Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1333,6 +1424,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1346,6 +1438,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1359,6 +1452,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1372,6 +1466,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1385,6 +1480,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1398,6 +1494,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1411,6 +1508,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1424,6 +1522,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1437,6 +1536,7 @@
     },
     {
       "category": "国内学会 / 口頭発表",
+      "category_en": "Domestic Conference (Oral)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1450,6 +1550,7 @@
     },
     {
       "category": "国内学会 / ポスター発表",
+      "category_en": "Domecsic Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1463,6 +1564,7 @@
     },
     {
       "category": "国内学会 / ポスター発表",
+      "category_en": "Domecsic Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1476,6 +1578,7 @@
     },
     {
       "category": "国内学会 / ポスター発表",
+      "category_en": "Domecsic Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1489,6 +1592,7 @@
     },
     {
       "category": "国際会議 / ポスター発表",
+      "category_en": "International Conference (Poster)",
       "fitst": false,
       "first": false,
       "invited": false,
@@ -1502,6 +1606,7 @@
     },
     {
       "category": "国内学会 / ポスター発表",
+      "category_en": "Domecsic Conference (Poster)",
       "fitst": true,
       "first": true,
       "invited": false,
@@ -1520,24 +1625,30 @@
       "first": true,
       "year": "2019",
       "title": "第16回日本熱電学会学術講演会 優秀ポスター賞",
+      "title_en": "Excellent Poster Award, the 16th Annual Meeting of the Thermoelectrics Society of Japan",
       "url": "http://www.thermoelectrics.jp/commendation.html",
-      "text": "<a href=http://www.thermoelectrics.jp/commendation.html target='_blank'>第16回日本熱電学会学術講演会 優秀ポスター賞</a>, 熊谷 将也，桂 ゆかり，佐藤 陸， 安藤 有希，郡司 咲子，今井 庸二，小谷 拓史，木村 薫，津田 宏治, 大規模論文データの機械学習による実験的熱電特性の予測, 2019"
+      "text": "<a href=http://www.thermoelectrics.jp/commendation.html target='_blank'>第16回日本熱電学会学術講演会 優秀ポスター賞</a>, 熊谷 将也，桂 ゆかり，佐藤 陸， 安藤 有希，郡司 咲子，今井 庸二，小谷 拓史，木村 薫，津田 宏治, 大規模論文データの機械学習による実験的熱電特性の予測, 2019",
+      "text_en": "<a href=http://www.thermoelectrics.jp/commendation.html target='_blank'>Excellent Poster Award, the 16th Annual Meeting of the Thermoelectrics Society of Japan</a>, Masaya Kumagai, Yukari Katsura, Riku Sato, Yuki Ando, Sakiko Gunji, Yoji Imai, Takushi Kodani, Kaoru Kimura, Koji Tsuda, Prediction of experimental thermoelectric properties by machine learning on large-scale literature data, 2019"
     },
     {
       "fitst": true,
       "first": true,
       "year": "2019",
       "title": "ICT2019 Poster Award",
+      "title_en": "ICT2019 Poster Award",
       "url": "http://www.its.org/biblio/poster-award-25",
-      "text": "<a href=http://www.its.org/biblio/poster-award-25 target='_blank'>ICT2019 Poster Award</a>, Masaya Kumagai, Yukari Katsura, Riku Sato, Ruonan Ni, Takushi Kodani, Hideyasu Ouchi, Sakiko Gunji, Yuki Ando, Yoji Imai, Kaoru Kimura, Koji Tsuda, Thermoelectric Material Design by Materials Informatics using Enormous Experimental Data on Starrydata, 2019"
+      "text": "<a href=http://www.its.org/biblio/poster-award-25 target='_blank'>ICT2019 Poster Award</a>, Masaya Kumagai, Yukari Katsura, Riku Sato, Ruonan Ni, Takushi Kodani, Hideyasu Ouchi, Sakiko Gunji, Yuki Ando, Yoji Imai, Kaoru Kimura, Koji Tsuda, Thermoelectric Material Design by Materials Informatics using Enormous Experimental Data on Starrydata, 2019",
+      "text_en": "<a href=http://www.its.org/biblio/poster-award-25 target='_blank'>ICT2019 Poster Award</a>, Masaya Kumagai, Yukari Katsura, Riku Sato, Ruonan Ni, Takushi Kodani, Hideyasu Ouchi, Sakiko Gunji, Yuki Ando, Yoji Imai, Kaoru Kimura, Koji Tsuda, Thermoelectric Material Design by Materials Informatics using Enormous Experimental Data on Starrydata, 2019"
     },
     {
       "fitst": false,
       "first": false,
       "year": null,
       "title": "第19回NHK高専ロボコン近畿大会 特別賞(ソリッドワークス)",
+      "title_en": "Special Prize (SolidWorks), the 19th NHK KOSEN Robocon Kinki Regional Contest",
       "url": "http://s-ken.com/common/images/rc06/indexs.html",
-      "text": "<a href=http://s-ken.com/common/images/rc06/indexs.html target='_blank'>第19回NHK高専ロボコン近畿大会 特別賞(ソリッドワークス)</a>, 舞鶴高専 S研（慣性ロータ機構のプログラマーとして参加）"
+      "text": "<a href=http://s-ken.com/common/images/rc06/indexs.html target='_blank'>第19回NHK高専ロボコン近畿大会 特別賞(ソリッドワークス)</a>, 舞鶴高専 S研（慣性ロータ機構のプログラマーとして参加）",
+      "text_en": "<a href=http://s-ken.com/common/images/rc06/indexs.html target='_blank'>Special Prize (SolidWorks), the 19th NHK KOSEN Robocon Kinki Regional Contest</a>, Maizuru KOSEN S-Lab (programmer for the inertial rotor mechanism)"
     }
   ],
   "Articles": [
@@ -1644,7 +1755,11 @@
       "text": "<a href=https://starrydata.nims.go.jp/starrydata2/ target='_blank'>Starrydata2</a>",
       "image": "images/works/starrydata2.jpg",
       "description": "論文のグラフから実験データを集めて共有する、材料科学のオープンデータベース",
-      "order": 1
+      "order": 1,
+      "category_en": "Open Database of Experimental Physical Properties",
+      "title_en": "Starrydata2",
+      "url_en": "https://starrydata.nims.go.jp/starrydata2/",
+      "description_en": "An open database of experimental materials data, collected from plots in published papers and shared with everyone"
     },
     {
       "category": "ノートアプリ（OSS）",
@@ -1653,7 +1768,11 @@
       "text": "<a href=https://kumagallium.github.io/Graphium/?intro=1 target='_blank'>Graphium</a>",
       "image": "images/works/graphium.jpg",
       "description": "書いた記録と AI の答えが出典まで辿れる、AI 時代のノートアプリ",
-      "order": 2
+      "order": 2,
+      "category_en": "Notebook app (OSS)",
+      "title_en": "Graphium",
+      "url_en": "https://kumagallium.github.io/Graphium/?intro=1",
+      "description_en": "A notebook for the AI era: every line you wrote and every AI answer traces back to its source"
     },
     {
       "category": "データ基盤（OSS）",
@@ -1662,7 +1781,11 @@
       "text": "<a href=https://github.com/kumagallium/asterism target='_blank'>Asterism</a>",
       "image": "images/works/asterism.jpg",
       "description": "散らばったデータを共有オントロジーで繋ぎ、出典まで辿れる事実として AI に渡す",
-      "order": 3
+      "order": 3,
+      "category_en": "Data platform (OSS)",
+      "title_en": "Asterism",
+      "url_en": "https://github.com/kumagallium/asterism",
+      "description_en": "Connects scattered data through shared ontologies and hands it to AI as facts you can trace to their source"
     },
     {
       "category": "材料科学のためのWebサイト",
@@ -1671,7 +1794,11 @@
       "text": "<a href=https://e4m.jp/ target='_blank'>E4M</a>",
       "image": "images/works/e4m.jpg",
       "description": "科学研究に役立つツール群を開発・キュレーションするオープンソースプロジェクト",
-      "order": 4
+      "order": 4,
+      "category_en": "Website for Materials Science",
+      "title_en": "E4M",
+      "url_en": "https://e4m.jp/en",
+      "description_en": "An open-source project that builds and curates tools for scientific research"
     },
     {
       "category": "iPhone・iPad アプリ",
@@ -1680,7 +1807,11 @@
       "text": "<a href=https://apps.apple.com/jp/app/id6815565930 target='_blank'>おうち上映会</a>",
       "image": "images/works/ouchi-theater.jpg",
       "description": "撮りためた子どもや旅行の動画を選んで、つづけて上映できるアプリ（2026）",
-      "order": 5
+      "order": 5,
+      "category_en": "iPhone & iPad app",
+      "title_en": "Ouchi Theater",
+      "url_en": "https://apps.apple.com/us/app/id6815565930",
+      "description_en": "Pick videos from your photo albums and play them back to back — an iPhone & iPad app (2026)"
     },
     {
       "category": "ブログ（日本語）",
@@ -1689,7 +1820,11 @@
       "text": "<a href=https://note.com/kumagallium target='_blank'>note</a>",
       "image": "images/works/note.jpg",
       "description": "日々考えていることや、作ったものについて書いています",
-      "order": 6
+      "order": 6,
+      "category_en": "Blog (Japanese)",
+      "title_en": "note",
+      "url_en": "https://note.com/kumagallium",
+      "description_en": "Where I write about what I'm thinking and what I've built (in Japanese)"
     },
     {
       "category": "ブログ（英語）",
@@ -1698,7 +1833,11 @@
       "text": "<a href=https://dev.to/kumagallium target='_blank'>DEV Community</a>",
       "image": "images/works/devto.jpg",
       "description": "Graphium などの開発の記録を英語で書いています",
-      "order": 7
+      "order": 7,
+      "category_en": "Blog (English)",
+      "title_en": "DEV Community",
+      "url_en": "https://dev.to/kumagallium",
+      "description_en": "Development notes on Graphium and other projects, in English"
     }
   ]
 }

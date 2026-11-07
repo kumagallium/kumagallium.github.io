@@ -23,6 +23,38 @@ const Theme = {
 
 $('#theme-toggle').addEventListener('click', () => Theme.toggle());
 
+/* --- 言語（日本語 / 英語） ----------------------------------------------- */
+// 言語は index.html の head で <html lang> に決めてある。切り替えは読み込み直しで行う
+// （グラフやイベントを描き直すより単純で、URL の ?lang= で共有もできる）。
+const EN = document.documentElement.lang === 'en';
+/** 日本語と英語の文言から、いまの言語のほうを返す */
+const L = (ja, en) => (EN ? en : ja);
+/** Notion の項目から、英語表示なら *_en を優先して値を取る（空なら日本語に戻す） */
+const pick = (o, key) => (EN && o?.[key + '_en']) || o?.[key];
+
+(function applyStaticText() {
+  if (EN) {
+    $$('[data-en]').forEach(el => { el.innerHTML = el.dataset.en; });
+    $$('[data-en-aria-label]').forEach(el => el.setAttribute('aria-label', el.dataset.enAriaLabel));
+    $$('[data-en-title]').forEach(el => el.setAttribute('title', el.dataset.enTitle));
+    $$('[data-only="ja"]').forEach(el => { el.hidden = true; });
+  }
+  const btn = $('#lang-toggle');
+  if (!btn) return;
+  const next = EN ? 'ja' : 'en';
+  btn.textContent = EN ? 'JA' : 'EN';
+  btn.lang = next;
+  const label = EN ? '日本語に切り替える' : 'Switch to English';
+  btn.setAttribute('aria-label', label);
+  btn.title = label;
+  btn.addEventListener('click', () => {
+    try { localStorage.setItem('lang', next); } catch (e) { /* noop */ }
+    const url = new URL(location.href);
+    url.searchParams.set('lang', next);
+    location.href = url.toString();
+  });
+})();
+
 /* --- モバイルのナビ（ハンバーガー） ------------------------------------- */
 // データ取得を待つ必要がないので、描画とは切り離してここで初期化する。
 (function setupNavDrawer() {
@@ -35,7 +67,7 @@ $('#theme-toggle').addEventListener('click', () => Theme.toggle());
 
   const setOpen = open => {
     btn.setAttribute('aria-expanded', String(open));
-    btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    btn.setAttribute('aria-label', open ? L('メニューを閉じる', 'Close menu') : L('メニューを開く', 'Open menu'));
     nav.classList.toggle('is-open', open);
     overlay.hidden = !open;
     // 背面のスクロールを止める（閉じたら元に戻す）
@@ -104,7 +136,7 @@ function normalizeLinks(html) {
   });
 }
 
-const fmt = n => (n ?? 0).toLocaleString('ja-JP');
+const fmt = n => (n ?? 0).toLocaleString(EN ? 'en-US' : 'ja-JP');
 
 /** 淡色の下限。ダークでは薄すぎると背景に沈むため強めにする */
 const softAlpha = () => (Theme.get() === 'dark' ? 0.62 : 0.42);
@@ -117,6 +149,11 @@ function presScope(cat) { return String(cat || '').startsWith('国内') ? '国�
  * 発表形式。Notion には Category（グルーピング用）と Type（Oral / Poster）の
  * 両方があり、まれに食い違うため実値である Type を優先する。
  */
+const SCOPE_EN = { 国内: 'Domestic', 国際: 'International' };
+const FORM_EN = { 口頭: 'Oral', ポスター: 'Poster' };
+const scopeLabel = s => L(s, SCOPE_EN[s] || s);
+const formLabel = f => L(f, FORM_EN[f] || f);
+
 function presForm(item) {
   const t = String(item?.type || '');
   if (/poster/i.test(t)) return 'ポスター';
@@ -184,20 +221,20 @@ function extractTopics(limit = 10) {
 // 回数や略称を含み表記もゆれるため、学会コミュニティ単位に寄せる。
 // 上から順に最初にマッチしたものを採用する（順序に意味がある）。
 const VENUE_RULES = [
-  [/熱電学会|TSJ/,                                  '日本熱電学会'],
-  [/Thermoelectric|ICT ?\/ ?ECT|ICT ?20|ECT ?20/i,  '国際熱電会議 (ICT/ECT/ACT)'],
-  [/応用物理学会|JSAP/,                             '応用物理学会'],
-  [/原子力学会|Atomic Energy Society/i,             '日本原子力学会'],
-  [/金属学会|Materials Transactions/i,              '日本金属学会'],
+  [/熱電学会|TSJ/,                                  '日本熱電学会', 'Thermoelectrics Society of Japan'],
+  [/Thermoelectric|ICT ?\/ ?ECT|ICT ?20|ECT ?20/i,  '国際熱電会議 (ICT/ECT/ACT)', 'Intl. Conf. on Thermoelectrics (ICT/ECT/ACT)'],
+  [/応用物理学会|JSAP/,                             '応用物理学会', 'Japan Society of Applied Physics'],
+  [/原子力学会|Atomic Energy Society/i,             '日本原子力学会', 'Atomic Energy Society of Japan'],
+  [/金属学会|Materials Transactions/i,              '日本金属学会', 'Japan Institute of Metals and Materials'],
   // 「TMS2025」のように略称と年が続くため \b では拾えない
   [/TMS ?\d|\bTMS\b|Minerals, ?Metals and Materials Society/i, 'TMS'],
-  [/熱物性/,                                        '日本熱物性学会'],
+  [/熱物性/,                                        '日本熱物性学会', 'Japan Society of Thermophysical Properties'],
   [/\bMRS\b|MRM|IUMRS|Materials Research Society/i, 'MRS / MRM / IUMRS'],
   [/情報処理学会|IPSJ|インターネットと運用技術|IOT|ITRC|情報(科学)?技術フォーラム|FIT ?\d|\bFIT\b/,
-                                                    '情報処理学会系 (IPSJ / IOT)'],
-  [/人工知能学会|JSAI/,                             '人工知能学会'],
-  [/粉体|粉末冶金/,                                 '粉体粉末冶金協会'],
-  [/電気関係学会関西連合/,                          '電気関係学会関西連合大会'],
+                                                    '情報処理学会系 (IPSJ / IOT)', 'Information Processing Society of Japan (IPSJ / IOT)'],
+  [/人工知能学会|JSAI/,                             '人工知能学会', 'Japanese Society for Artificial Intelligence'],
+  [/粉体|粉末冶金/,                                 '粉体粉末冶金協会', 'Japan Society of Powder and Powder Metallurgy'],
+  [/電気関係学会関西連合/,                          '電気関係学会関西連合大会', 'Kansai Joint Convention of Electrical Engineering'],
   [/MGE|Materials Genome/i,                        'MGE (Materials Genome)'],
   [/MaDIS|NIMS/,                                   'NIMS / MaDIS'],
 ];
@@ -210,14 +247,16 @@ const JOURNAL_ALIASES = [
   [/Materials transactions/i,        'Materials Transactions'],
 ];
 
+const OTHER = L('その他', 'Other');
+
 /** 学会名を学会コミュニティ名に寄せる */
 function venueOf(event) {
   const e = String(event || '').trim();
   if (!e) return null;
-  for (const [re, label] of VENUE_RULES) {
-    if (re.test(e)) return label;
+  for (const [re, label, labelEn] of VENUE_RULES) {
+    if (re.test(e)) return EN && labelEn ? labelEn : label;
   }
-  return 'その他';
+  return OTHER;
 }
 
 /** 掲載誌名を正規化する */
@@ -259,7 +298,7 @@ function render() {
   $('#year').textContent = new Date().getFullYear();
   if (DATA.github?.generated_at) {
     const d = new Date(DATA.github.generated_at);
-    $('#updated').textContent = `最終更新: ${d.getFullYear()}/${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}`;
+    $('#updated').textContent = `${L('最終更新', 'Last updated')}: ${d.getFullYear()}/${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}`;
   }
 
   document.addEventListener('themechange', () => {
@@ -283,12 +322,12 @@ function renderHero() {
   if (DATA.github?.user?.avatar_url) {
     const img = $('#avatar');
     img.src = DATA.github.user.avatar_url;
-    img.alt = '熊谷将也のプロフィール画像';
+    img.alt = L('熊谷将也のプロフィール画像', 'Profile photo of Masaya Kumagai');
   }
 
   // 所属：1 行目が期間、以降が組織名（Notion の書式に合わせて分解する）
   const affil = profile.filter(p => p.category === '所属').map(p => {
-    const lines = String(p.text).split('\n');
+    const lines = String(pick(p, 'text')).split('\n');
     const period = lines[0].replace(/<[^>]+>/g, '').trim();
     const body = normalizeLinks(lines.slice(1).join(' ')).replace(/<\/li>/g, '');
     return { period, body: body || period };
@@ -303,7 +342,7 @@ function renderHero() {
     linkHtml.push(`<a class="pill" href="${DATA.github.user.html_url}" target="_blank" rel="noopener noreferrer"><svg><use href="#i-github"/></svg>GitHub</a>`);
   }
   profile.filter(p => p.category === 'リンク').forEach(p => {
-    const m = normalizeLinks(p.text).match(/<a href="([^"]+)"[^>]*>(.*?)<\/a>/i);
+    const m = normalizeLinks(pick(p, 'text')).match(/<a href="([^"]+)"[^>]*>(.*?)<\/a>/i);
     if (m) linkHtml.push(`<a class="pill" href="${m[1]}" target="_blank" rel="noopener noreferrer"><svg><use href="#i-link"/></svg>${escapeHtml(m[2].replace(/<[^>]+>/g, ''))}</a>`);
   });
   (DATA.notion['Contact'] || []).forEach(c => {
@@ -324,7 +363,7 @@ function renderTopics() {
   $('#topics').innerHTML = topics.map(t => {
     // 上位ほど濃く。0.22〜1.0 の範囲に収めて薄すぎる帯を作らない
     const w = 0.22 + 0.78 * (t.score / max);
-    return `<span class="topic" style="--topic-w:${w.toFixed(2)}" title="${t.count} 件の業績・OSS に登場">` +
+    return `<span class="topic" style="--topic-w:${w.toFixed(2)}" title="${L(`${t.count} 件の業績・OSS に登場`, `Appears in ${t.count} publications and repositories`)}">` +
       `${escapeHtml(t.label)}<i>${t.count}</i></span>`;
   }).join('');
 }
@@ -341,11 +380,11 @@ function renderKpis() {
   const intl = pres.filter(p => presScope(p.category) === '国際').length;
 
   const items = [
-    { v: pubs.length, label: 'Publications', sub: `筆頭著者 ${firstAuthor} 件`, color: 'var(--c-pub)' },
-    { v: pres.length, label: 'Presentations', sub: `うち国際 ${intl} 件`, color: 'var(--c-pres)' },
-    { v: awards.length, label: 'Awards', sub: '受賞', color: 'var(--c-award)' },
-    { v: gh ? gh.totals.repos : '–', label: 'OSS Repos', sub: gh ? `${gh.languages.length} 言語` : '', color: 'var(--c-oss)' },
-    { v: gh ? gh.totals.contributions : '–', label: 'Contributions', sub: 'GitHub 累計', color: 'var(--c-art)' },
+    { v: pubs.length, label: 'Publications', sub: L(`筆頭著者 ${firstAuthor} 件`, `${firstAuthor} as first author`), color: 'var(--c-pub)' },
+    { v: pres.length, label: 'Presentations', sub: L(`うち国際 ${intl} 件`, `${intl} international`), color: 'var(--c-pres)' },
+    { v: awards.length, label: 'Awards', sub: L('受賞', 'Awards received'), color: 'var(--c-award)' },
+    { v: gh ? gh.totals.repos : '–', label: 'OSS Repos', sub: gh ? L(`${gh.languages.length} 言語`, `${gh.languages.length} languages`) : '', color: 'var(--c-oss)' },
+    { v: gh ? gh.totals.contributions : '–', label: 'Contributions', sub: L('GitHub 累計', 'GitHub total'), color: 'var(--c-art)' },
   ];
 
   $('#kpis').innerHTML = items.map(i => `
@@ -374,9 +413,11 @@ function renderGithub() {
   const y = gh.contributions.yearly || [];
   const thisYear = y.length ? y[y.length - 1] : null;
   if (thisYear) {
-    $('#gh-summary').textContent =
+    $('#gh-summary').textContent = L(
       `公開リポジトリ ${gh.totals.repos} 件、累計 ${fmt(gh.totals.contributions)} コントリビューション。` +
-      `${thisYear.year} 年だけで ${fmt(thisYear.total)} 件（コミット ${fmt(thisYear.commits)} / PR ${fmt(thisYear.pull_requests)}）。`;
+      `${thisYear.year} 年だけで ${fmt(thisYear.total)} 件（コミット ${fmt(thisYear.commits)} / PR ${fmt(thisYear.pull_requests)}）。`,
+      `${gh.totals.repos} public repositories and ${fmt(gh.totals.contributions)} contributions in total — ` +
+      `${fmt(thisYear.total)} in ${thisYear.year} alone (${fmt(thisYear.commits)} commits / ${fmt(thisYear.pull_requests)} PRs).`);
   }
 
   // 説明のあるものを「主要」として先に出し、残りは折りたたむ
@@ -401,7 +442,7 @@ function renderGithub() {
     const btn = document.createElement('button');
     btn.className = 'more-btn';
     btn.type = 'button';
-    btn.textContent = `過去のリポジトリをすべて表示（${minor.length} 件）`;
+    btn.textContent = L(`過去のリポジトリをすべて表示（${minor.length} 件）`, `Show all past repositories (${minor.length})`);
     btn.addEventListener('click', () => {
       const shown = btn.dataset.shown === '1';
       $('#repos').innerHTML = shown
@@ -409,8 +450,8 @@ function renderGithub() {
         : gh.repos.map(r => card(r, !r.description)).join('');
       btn.dataset.shown = shown ? '0' : '1';
       btn.textContent = shown
-        ? `過去のリポジトリをすべて表示（${minor.length} 件）`
-        : '主要リポジトリのみ表示';
+        ? L(`過去のリポジトリをすべて表示（${minor.length} 件）`, `Show all past repositories (${minor.length})`)
+        : L('主要リポジトリのみ表示', 'Show main repositories only');
     });
     $('#repos').after(btn);
   }
@@ -467,12 +508,12 @@ function renderHeatmap() {
       lastMonth = dt.getMonth();
       if (shown++ % labelEvery === 0) {
         months += `<text x="${(LEFT + Math.floor(idx / 7) * step).toFixed(1)}" y="11" ` +
-          `font-size="9.5" fill="var(--text-muted)">${dt.getMonth() + 1}月</text>`;
+          `font-size="9.5" fill="var(--text-muted)">${EN ? dt.toLocaleString('en-US', { month: 'short' }) : `${dt.getMonth() + 1}月`}</text>`;
       }
     }
   });
 
-  const dowLabels = ['', '月', '', '水', '', '金', '']
+  const dowLabels = (EN ? ['', 'Mon', '', 'Wed', '', 'Fri', ''] : ['', '月', '', '水', '', '金', ''])
     .map((t, i) => t ? `<text x="0" y="${(TOP + i * step + CELL * 0.85).toFixed(1)}" ` +
       `font-size="9.5" fill="var(--text-muted)">${t}</text>` : '')
     .join('');
@@ -480,7 +521,7 @@ function renderHeatmap() {
   // viewBox と width を一致させ、はみ出すぶんだけ CSS 側で横スクロールさせる
   el.innerHTML = `<svg viewBox="0 0 ${w.toFixed(1)} ${h.toFixed(1)}" ` +
     `width="${w.toFixed(1)}" height="${h.toFixed(1)}" role="img" ` +
-    `aria-label="直近1年のGitHubコントリビューション">${months}${dowLabels}${cells}</svg>`;
+    `aria-label="${L('直近1年のGitHubコントリビューション', 'GitHub contributions in the past year')}">${months}${dowLabels}${cells}</svg>`;
 
   renderHeatStats(cal);
 }
@@ -498,10 +539,11 @@ function renderHeatStats(cal) {
   const busiest = cal.reduce((a, b) => (b.count > a.count ? b : a), cal[0]);
 
   const stats = [
-    ['コントリビューション', fmt(total)],
-    ['稼働日', `${activeDays} / ${cal.length} 日`],
-    ['最長連続', `${best} 日`],
-    ['最も多かった日', `${busiest.date.slice(5).replace('-', '/')}（${fmt(busiest.count)} 件）`],
+    [L('コントリビューション', 'Contributions'), fmt(total)],
+    [L('稼働日', 'Active days'), L(`${activeDays} / ${cal.length} 日`, `${activeDays} / ${cal.length}`)],
+    [L('最長連続', 'Longest streak'), L(`${best} 日`, `${best} days`)],
+    [L('最も多かった日', 'Busiest day'), L(`${busiest.date.slice(5).replace('-', '/')}（${fmt(busiest.count)} 件）`,
+      `${busiest.date.slice(5).replace('-', '/')} (${fmt(busiest.count)})`)],
   ];
 
   $('#heat-stats').innerHTML = stats.map(([k, v]) =>
@@ -511,8 +553,8 @@ function renderHeatStats(cal) {
 /* --- キャリア年表 -------------------------------------------------------- */
 function renderCareer() {
   const profile = DATA.notion['Profile'] || [];
-  const bio = profile.filter(p => p.category === '略歴').map(p => normalizeLinks(p.text)).join('');
-  $('#bio').innerHTML = bio || '<p class="empty">準備中</p>';
+  const bio = profile.filter(p => p.category === '略歴').map(p => normalizeLinks(pick(p, 'text'))).join('');
+  $('#bio').innerHTML = bio || `<p class="empty">${L('準備中', 'Coming soon')}</p>`;
 
   // 年ごとに 1 行へ集約する。節目（所属・受賞）は固有名詞を残し、
   // 業績は件数だけの圧縮サマリーにする。
@@ -526,7 +568,7 @@ function renderCareer() {
 
   // 所属
   profile.filter(p => p.category === '所属').forEach(p => {
-    const lines = String(p.text).split('\n');
+    const lines = String(pick(p, 'text')).split('\n');
     const period = lines[0].replace(/<[^>]+>/g, '').trim();
     const yr = toYear((period.match(/(\d{4})/) || [])[1]);
     if (!yr) return;
@@ -538,8 +580,8 @@ function renderCareer() {
   (DATA.notion['Awards'] || []).forEach(a => {
     const yr = toYear(a.year) ?? 2006;
     const label = a.url
-      ? `<a href="${a.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(a.title || '')}</a>`
-      : escapeHtml(a.title || '');
+      ? `<a href="${a.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(pick(a, 'title') || '')}</a>`
+      : escapeHtml(pick(a, 'title') || '');
     bucket(yr).awards.push(label);
   });
 
@@ -568,13 +610,15 @@ function renderCareer() {
     // 節目：所属と受賞。これがある年はドットを強調する
     const milestones = [
       ...v.affiliations.map(a => `${a.label}<span class="tl-period">${escapeHtml(a.period)}</span>`),
-      ...v.awards.map(a => `${a}<span class="tl-period">受賞</span>`),
+      ...v.awards.map(a => `${a}<span class="tl-period">${L('受賞', 'Award')}</span>`),
     ];
 
     const metrics = [
-      v.pubs && ['論文', `${v.pubs} 本`, 'var(--c-pub)'],
-      v.pres && ['発表', v.presIntl ? `${v.pres} 件（国際 ${v.presIntl}）` : `${v.pres} 件`, 'var(--c-pres)'],
-      v.oss.length && ['OSS', `${v.oss.length} 本`, 'var(--c-oss)'],
+      v.pubs && [L('論文', 'Papers'), L(`${v.pubs} 本`, `${v.pubs}`), 'var(--c-pub)'],
+      v.pres && [L('発表', 'Talks'), v.presIntl
+        ? L(`${v.pres} 件（国際 ${v.presIntl}）`, `${v.pres} (${v.presIntl} intl.)`)
+        : L(`${v.pres} 件`, `${v.pres}`), 'var(--c-pres)'],
+      v.oss.length && ['OSS', L(`${v.oss.length} 本`, `${v.oss.length}`), 'var(--c-oss)'],
     ].filter(Boolean);
 
     const color = milestones.length ? 'var(--accent)' : 'var(--text-muted)';
@@ -594,7 +638,7 @@ function renderCareer() {
 function summarize(values, unit, limit = 3) {
   const uniq = Array.from(new Set(values));
   const head = uniq.slice(0, limit).join(' / ');
-  return uniq.length > limit ? `${head} 他 ${uniq.length - limit} ${unit}` : head;
+  return uniq.length > limit ? L(`${head} 他 ${uniq.length - limit} ${unit}`, `${head} +${uniq.length - limit} more`) : head;
 }
 
 /* --- 一覧 --------------------------------------------------------------- */
@@ -607,14 +651,14 @@ function entryHtml(item, opts = {}) {
     const scope = presScope(item.category);
     const form = presForm(item);
     color = scope === '国際' ? 'var(--c-pub)' : 'var(--c-pres)';
-    badges.push(`<span class="badge is-scope-${scope === '国際' ? 'intl' : 'dom'}">${scope}</span>`);
-    badges.push(`<span class="badge is-form-${form === 'ポスター' ? 'poster' : 'oral'}">${form}</span>`);
+    badges.push(`<span class="badge is-scope-${scope === '国際' ? 'intl' : 'dom'}">${scopeLabel(scope)}</span>`);
+    badges.push(`<span class="badge is-form-${form === 'ポスター' ? 'poster' : 'oral'}">${formLabel(form)}</span>`);
   }
 
   if (item.invited) badges.push('<span class="badge is-invited">Invited</span>');
   if (item.first) badges.push('<span class="badge is-first">First author</span>');
 
-  const text = emphasizeName(normalizeLinks(item.text || ''));
+  const text = emphasizeName(normalizeLinks(pick(item, 'text') || ''));
   return `<li class="entry" style="--entry-color:${color}">` +
     `${badges.length ? `<span class="badge-row">${badges.join('')}</span>` : ''}${text}</li>`;
 }
@@ -625,7 +669,7 @@ function renderYearGroups(container, items, color, kind) {
   items.forEach(i => { (groups[toYear(i.year) ?? '—'] ||= []).push(i); });
   const years = Object.keys(groups).sort((a, b) => (b === '—' ? -1 : a === '—' ? 1 : b - a));
 
-  if (!items.length) { container.innerHTML = '<p class="empty">該当する項目がありません。</p>'; return; }
+  if (!items.length) { container.innerHTML = `<p class="empty">${L('該当する項目がありません。', 'No items.')}</p>`; return; }
 
   container.innerHTML = years.map(y => `
     <div class="year-group">
@@ -644,9 +688,18 @@ function renderLists() {
   // 学会発表：カテゴリで絞り込めるようにする
   const pres = n['Presentations'] || [];
   $('#count-pres').textContent = `(${pres.length})`;
-  const cats = ['すべて', ...Array.from(new Set(pres.map(p => p.category).filter(Boolean)))];
+  const ALL = 'すべて';
+  const cats = [ALL, ...Array.from(new Set(pres.map(p => p.category).filter(Boolean)))];
+  // 絞り込みのキーは日本語のカテゴリのまま。英語表示では区分と形式から組み立てる
+  // （Notion の Category_en は行ごとに入っていたりいなかったりするため使わない）
+  const catLabel = c => {
+    if (c === ALL) return L(ALL, 'All');
+    if (!EN) return c;
+    const sample = pres.find(p => p.category === c);
+    return `${scopeLabel(presScope(c))} / ${formLabel(presForm(sample))}`;
+  };
   $('#filter-pres').innerHTML = cats.map((c, i) =>
-    `<button class="chip${i === 0 ? ' is-active' : ''}" type="button" data-cat="${escapeHtml(c)}">${escapeHtml(c)}` +
+    `<button class="chip${i === 0 ? ' is-active' : ''}" type="button" data-cat="${escapeHtml(c)}">${escapeHtml(catLabel(c))}` +
     `${i === 0 ? ` (${pres.length})` : ` (${pres.filter(p => p.category === c).length})`}</button>`
   ).join('');
   $('#filter-pres').addEventListener('click', ev => {
@@ -654,7 +707,7 @@ function renderLists() {
     if (!btn) return;
     $$('#filter-pres .chip').forEach(b => b.classList.toggle('is-active', b === btn));
     const cat = btn.dataset.cat;
-    renderYearGroups($('#list-pres'), cat === 'すべて' ? pres : pres.filter(p => p.category === cat),
+    renderYearGroups($('#list-pres'), cat === ALL ? pres : pres.filter(p => p.category === cat),
       'var(--c-pres)', 'presentation');
   });
   renderYearGroups($('#list-pres'), pres, 'var(--c-pres)', 'presentation');
@@ -663,7 +716,7 @@ function renderLists() {
     const el = $(sel);
     el.innerHTML = items.length
       ? items.map(i => entryHtml(i, { color })).join('')
-      : '<p class="empty">準備中</p>';
+      : `<p class="empty">${L('準備中', 'Coming soon')}</p>`;
   };
   renderWorks(n['Works'] || []);
   simple('#list-others', n['Others'] || [], 'var(--text-muted)');
@@ -680,12 +733,14 @@ const safeUrl = s => (s && /^https?:\/\//i.test(s)) ? s : '';
 
 function renderWorks(items) {
   const el = $('#works-grid');
-  if (!items.length) { el.innerHTML = '<p class="empty">準備中</p>'; return; }
+  if (!items.length) { el.innerHTML = `<p class="empty">${L('準備中', 'Coming soon')}</p>`; return; }
   // 並び順は fetch_notion.py で決めている（Notion の Order 列 → 未設定は新しい順）
   el.innerHTML = items.map((w, i) => {
-    const url = safeUrl(w.url);
+    const url = safeUrl(pick(w, 'url'));
     const img = safeImage(w.image);
-    const name = w.title || '';
+    const name = pick(w, 'title') || '';
+    const category = pick(w, 'category');
+    const description = pick(w, 'description');
     // 画像が無いものは名前の頭文字と色面で表紙を作る（色は並び順で回す）
     const cover = img
       ? `<img src="${escapeAttr(img)}" alt="" loading="lazy" width="1200" height="675">`
@@ -695,9 +750,9 @@ function renderWorks(items) {
     return `<${tag} class="card work"${attrs}>
       <div class="work-cover">${cover}</div>
       <div class="work-body">
-        ${w.category ? `<div class="work-cat">${escapeHtml(w.category)}</div>` : ''}
+        ${category ? `<div class="work-cat">${escapeHtml(category)}</div>` : ''}
         <div class="work-name">${escapeHtml(name)}</div>
-        ${w.description ? `<p class="work-desc">${escapeHtml(w.description)}</p>` : ''}
+        ${description ? `<p class="work-desc">${escapeHtml(description)}</p>` : ''}
       </div>
     </${tag}>`;
   }).join('');
@@ -773,21 +828,22 @@ function buildVenueChart(d) {
   // 「その他」は内訳が混ざったまとめなので常に末尾へ置く
   const rows = Array.from(byVenue.entries())
     .sort((a, b) => {
-      if (a[0] === 'その他') return 1;
-      if (b[0] === 'その他') return -1;
+      if (a[0] === OTHER) return 1;
+      if (b[0] === OTHER) return -1;
       return (b[1].国内 + b[1].国際) - (a[1].国内 + a[1].国際);
     });
 
   $('#venue-note').textContent =
-    `${rows.filter(r => r[0] !== 'その他').length} コミュニティ・のべ ${pres.length} 件`;
+    L(`${rows.filter(r => r[0] !== OTHER).length} コミュニティ・のべ ${pres.length} 件`,
+      `${rows.filter(r => r[0] !== OTHER).length} communities, ${pres.length} presentations`);
 
   charts.venue = new Chart($('#chart-venue'), {
     type: 'bar',
     data: {
       labels: rows.map(r => r[0]),
       datasets: [
-        { label: '国内', data: rows.map(r => r[1].国内), backgroundColor: alpha(cssVar('--c-pres'), .82) },
-        { label: '国際', data: rows.map(r => r[1].国際), backgroundColor: cssVar('--c-pub') },
+        { label: scopeLabel('国内'), data: rows.map(r => r[1].国内), backgroundColor: alpha(cssVar('--c-pres'), .82) },
+        { label: scopeLabel('国際'), data: rows.map(r => r[1].国際), backgroundColor: cssVar('--c-pub') },
       ].map(ds => Object.assign(ds, { borderRadius: 3, borderSkipped: false, maxBarThickness: 18 }))
     },
     options: {
@@ -824,14 +880,15 @@ function buildJournalChart(d) {
   const rows = all.slice(0, 10);
 
   $('#journal-note').textContent =
-    `のべ ${all.length} 誌・会議録${all.length > rows.length ? `（上位 ${rows.length} 件を表示）` : ''}`;
+    L(`のべ ${all.length} 誌・会議録${all.length > rows.length ? `（上位 ${rows.length} 件を表示）` : ''}`,
+      `${all.length} journals and proceedings${all.length > rows.length ? ` (top ${rows.length} shown)` : ''}`);
 
   charts.journal = new Chart($('#chart-journal'), {
     type: 'bar',
     data: {
       labels: rows.map(r => r[0].length > 34 ? r[0].slice(0, 33) + '…' : r[0]),
       datasets: [{
-        label: '論文数',
+        label: L('論文数', 'Papers'),
         data: rows.map(r => r[1]),
         backgroundColor: cssVar('--c-pub'),
         borderRadius: 4, borderSkipped: false, maxBarThickness: 18,
@@ -861,10 +918,10 @@ function buildJournalChart(d) {
 function buildOutputChart(d) {
   const n = DATA.notion;
   const series = [
-    { key: 'Publications ', label: '論文', color: cssVar('--c-pub') },
-    { key: 'Presentations', label: '学会発表', color: cssVar('--c-pres') },
-    { key: 'Articles', label: '記事・解説', color: cssVar('--c-art') },
-    { key: 'Awards', label: '受賞', color: cssVar('--c-award') },
+    { key: 'Publications ', label: L('論文', 'Papers'), color: cssVar('--c-pub') },
+    { key: 'Presentations', label: L('学会発表', 'Presentations'), color: cssVar('--c-pres') },
+    { key: 'Articles', label: L('記事・解説', 'Articles'), color: cssVar('--c-art') },
+    { key: 'Awards', label: L('受賞', 'Awards'), color: cssVar('--c-award') },
   ];
 
   const years = new Set();
@@ -890,7 +947,7 @@ function buildOutputChart(d) {
           backgroundColor: d.surface, titleColor: cssVar('--text'), bodyColor: d.text,
           borderColor: cssVar('--border-strong'), borderWidth: 1, padding: 10, cornerRadius: 8, usePointStyle: true,
           callbacks: {
-            footer: items => `合計 ${items.reduce((a, b) => a + b.parsed.y, 0)} 件`
+            footer: items => L(`合計 ${items.reduce((a, b) => a + b.parsed.y, 0)} 件`, `Total ${items.reduce((a, b) => a + b.parsed.y, 0)}`)
           }
         }
       }
@@ -914,7 +971,7 @@ function buildPresDoughnut(d) {
 
   charts.pres = new Chart($('#chart-pres'), {
     type: 'doughnut',
-    data: { labels: keys, datasets: [{ data: counts, backgroundColor: colors, borderColor: cssVar('--bg-elevated'), borderWidth: 2 }] },
+    data: { labels: keys.map(k => k.split(' / ').map((x, i) => (i ? formLabel(x) : scopeLabel(x))).join(' / ')), datasets: [{ data: counts, backgroundColor: colors, borderColor: cssVar('--bg-elevated'), borderWidth: 2 }] },
     options: {
       responsive: true, maintainAspectRatio: false, cutout: '58%',
       plugins: {
@@ -925,7 +982,7 @@ function buildPresDoughnut(d) {
           callbacks: {
             label: c => {
               const total = c.dataset.data.reduce((a, b) => a + b, 0);
-              return ` ${c.label}: ${c.parsed} 件 (${Math.round(c.parsed / total * 100)}%)`;
+              return ` ${c.label}: ${c.parsed}${L(' 件', '')} (${Math.round(c.parsed / total * 100)}%)`;
             }
           }
         }
@@ -939,7 +996,7 @@ function buildPresYearChart(d) {
   const pres = DATA.notion['Presentations'] || [];
   const years = Array.from(new Set(pres.map(p => toYear(p.year)).filter(Boolean))).sort((a, b) => a - b);
   const mk = (scope, color) => ({
-    label: scope,
+    label: scopeLabel(scope),
     data: years.map(y => pres.filter(p => toYear(p.year) === y && presScope(p.category) === scope).length),
     backgroundColor: color, borderRadius: 3, borderSkipped: false, maxBarThickness: 26,
   });
@@ -961,7 +1018,7 @@ function buildLangChart(d) {
     data: {
       labels: langs.map(l => l.name),
       datasets: [{
-        label: 'リポジトリ数',
+        label: L('リポジトリ数', 'Repositories'),
         data: langs.map(l => l.count),
         backgroundColor: langs.map(l => langColor(l.name)),
         borderColor: cssVar('--border-strong'), borderWidth: 1,
@@ -1002,10 +1059,10 @@ function buildGithubYearChart(d) {
   });
 
   const datasets = [
-    mk('コミット', 'commits', cssVar('--c-oss')),
-    mk('プルリクエスト', 'pull_requests', cssVar('--c-pub')),
+    mk(L('コミット', 'Commits'), 'commits', cssVar('--c-oss')),
+    mk(L('プルリクエスト', 'Pull requests'), 'pull_requests', cssVar('--c-pub')),
     mk('Issue', 'issues', cssVar('--c-pres')),
-    mk('レビュー', 'reviews', cssVar('--c-art')),
+    mk(L('レビュー', 'Reviews'), 'reviews', cssVar('--c-art')),
   ].filter(ds => ds.data.some(v => v > 0));
 
   charts.ghYear = new Chart($('#chart-gh-year'), {
@@ -1020,7 +1077,7 @@ function buildGithubYearChart(d) {
           backgroundColor: d.surface, titleColor: cssVar('--text'), bodyColor: d.text,
           borderColor: cssVar('--border-strong'), borderWidth: 1, padding: 10,
           cornerRadius: 8, usePointStyle: true,
-          callbacks: { footer: items => `合計 ${fmt(yearly[items[0].dataIndex].total)} 件` }
+          callbacks: { footer: items => L(`合計 ${fmt(yearly[items[0].dataIndex].total)} 件`, `Total ${fmt(yearly[items[0].dataIndex].total)}`) }
         }
       },
       scales: {
@@ -1050,7 +1107,7 @@ function setupGhScaleToggle() {
   const btn = $('#gh-scale-toggle');
   if (!btn || btn.dataset.bound) return;
   btn.dataset.bound = '1';
-  const sync = () => { btn.textContent = ghYearLogScale ? '対数目盛' : '線形目盛'; };
+  const sync = () => { btn.textContent = ghYearLogScale ? L('対数目盛', 'Log scale') : L('線形目盛', 'Linear scale'); };
   sync();
   btn.addEventListener('click', () => {
     ghYearLogScale = !ghYearLogScale;

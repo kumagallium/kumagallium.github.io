@@ -96,9 +96,10 @@ def fetch_profile():
     for page in rows:
         props = page["properties"]
         text = get_prop(props, "Text", "rich_text")
+        text_en = get_prop(props, "Text_en", "rich_text")
         category = get_prop(props, "Category", "select")
         if text:
-            result.append({"category": category, "text": text})
+            result.append({"category": category, "text": text, "text_en": text_en})
     result.sort(key=lambda x: PROFILE_CATEGORY_ORDER.index(x["category"])
                 if x["category"] in PROFILE_CATEGORY_ORDER else len(PROFILE_CATEGORY_ORDER))
     return result
@@ -164,6 +165,7 @@ def fetch_presentations():
             "Country":  get_prop(props, "Country",  "rich_text"),
             "Year":     get_prop(props, "Year",     "number"),
             "Category": get_prop(props, "Category", "select"),
+            "Category_en": get_prop(props, "Category_en", "rich_text"),
             "First":    get_prop(props, "First",    "checkbox"),
         })
     result = []
@@ -186,7 +188,8 @@ def fetch_presentations():
         if d["Year"]:
             text += ", " + str(d["Year"])
         result.append({
-            "category": d["Category"], "fitst": d["First"], "first": bool(d["First"]),
+            "category": d["Category"], "category_en": d["Category_en"],
+            "fitst": d["First"], "first": bool(d["First"]),
             "invited": bool(d["Invited"]), "year": d["Year"], "title": d["Title"],
             "url": d["URL"], "event": d["Event"], "type": d["Type"],
             "country": d["Country"], "text": text,
@@ -207,23 +210,30 @@ def fetch_awards():
             "Title":  get_prop(props, "Title",  "rich_text"),
             "Year":   get_prop(props, "Year",   "number"),
             "First":  get_prop(props, "First",  "checkbox"),
+            "Award_en":  get_prop(props, "Award_en",  "rich_text"),
+            "Author_en": get_prop(props, "Auther_en", "rich_text"),  # Notion 側の列名は Auther_en
+            "Title_en":  get_prop(props, "Title_en",  "rich_text"),
         })
-    result = []
-    for d in sort_by_year(items):
-        text = ""
-        if d["URL"]:
-            text += build_link(d["URL"], d["Award"])
-        elif d["Award"]:
-            text += d["Award"]
-        if d["Author"]:
-            text += ", " + d["Author"]
-        if d["Title"]:
-            text += ", " + d["Title"]
+
+    def award_text(award, author, title, d):
+        text = build_link(d["URL"], award) if d["URL"] else (award or "")
+        if author:
+            text += ", " + author
+        if title:
+            text += ", " + title
         if d["Year"]:
             text += ", " + str(d["Year"])
+        return text
+
+    result = []
+    for d in sort_by_year(items):
+        # 英語列が空なら日本語の値で埋める
+        award_en = d["Award_en"] or d["Award"]
         result.append({
             "fitst": d["First"], "first": bool(d["First"]),
-            "year": d["Year"], "title": d["Award"], "url": d["URL"], "text": text,
+            "year": d["Year"], "title": d["Award"], "title_en": award_en, "url": d["URL"],
+            "text": award_text(d["Award"], d["Author"], d["Title"], d),
+            "text_en": award_text(award_en, d["Author_en"] or d["Author"], d["Title_en"] or d["Title"], d),
         })
     return result
 
@@ -305,7 +315,11 @@ def fetch_works():
         order = get_prop(props, "Order", "number")
         text = build_link(url, name) if url else (name or "")
         result.append({"category": category, "title": name, "url": url, "text": text,
-                       "image": image, "description": description, "order": order})
+                       "image": image, "description": description, "order": order,
+                       "category_en": get_prop(props, "Category_en", "rich_text"),
+                       "title_en": get_prop(props, "Name_en", "rich_text"),
+                       "url_en": get_prop(props, "URL_en", "rich_text"),
+                       "description_en": get_prop(props, "Description_en", "rich_text")})
     # Order が小さいものから。未設定のものは後ろに、新しく作ったものから並べる
     numbered = sorted((w for w in result if w["order"] is not None), key=lambda w: w["order"])
     rest = [w for w in reversed(result) if w["order"] is None]

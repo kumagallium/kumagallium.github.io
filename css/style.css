@@ -169,6 +169,19 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
 .site-nav a:hover { background: var(--surface-hover); color: var(--text); text-decoration: none; }
 .site-nav a.is-active { color: var(--accent-text); background: var(--accent-soft); }
 
+/* 日英切り替え。テーマ切り替えと同じ大きさの四角に言語の略号を出す */
+.lang-toggle {
+  flex: none;
+  height: 36px; min-width: 36px; padding: 0 8px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--bg-elevated);
+  color: var(--text-secondary); cursor: pointer;
+  font: 700 12px/1 inherit; letter-spacing: .04em;
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+.lang-toggle:hover { background: var(--surface-hover); color: var(--text); border-color: var(--border-strong); }
+/* テーマ切り替えとは 1 組に見えるよう詰める */
+.lang-toggle + .theme-toggle { margin-left: -10px; }
+
 .theme-toggle {
   flex: none;
   width: 36px; height: 36px; border-radius: 10px;
@@ -636,7 +649,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.35; font-weight: 700; letter-spacing:
   .affil-list li { grid-template-columns: 1fr; gap: 0; }
   /* ナビはヘッダー直下から降りてくるパネルにする */
   .nav-toggle { display: grid; }
-  .theme-toggle { margin-left: auto; }
+  .lang-toggle { margin-left: auto; }
 
   .site-nav {
     position: fixed; top: 60px; left: 0; right: 0; z-index: 45;

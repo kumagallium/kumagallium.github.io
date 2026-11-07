@@ -26,6 +26,18 @@
         }
       } catch (e) { /* localStorage が使えない環境は既定のライトのまま */ }
     })();
+    // 言語: ?lang= → 保存済みの選択 → ブラウザの言語（日本語以外は英語）の順で決める
+    (function () {
+      var lang = 'ja';
+      try {
+        var q = new URLSearchParams(location.search).get('lang');
+        var saved = q === 'en' || q === 'ja' ? q : localStorage.getItem('lang');
+        if (saved === 'en' || saved === 'ja') lang = saved;
+        else if (!/^ja\b/i.test(navigator.language || 'ja')) lang = 'en';
+      } catch (e) { /* 判定できなければ日本語 */ }
+      document.documentElement.lang = lang;
+      if (lang === 'en') document.title = 'Masaya Kumagai | Portfolio';
+    })();
   </script>
 </head>
 
@@ -64,7 +76,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#top">熊谷 将也<small>Kumagai Masaya</small></a>
+    <a class="brand" href="#top" data-en="Masaya Kumagai&lt;small&gt;熊谷 将也&lt;/small&gt;">熊谷 将也<small>Kumagai Masaya</small></a>
     <nav class="site-nav" id="nav">
       <a href="#activity">Activity</a>
       <a href="#works">Works</a>
@@ -75,13 +87,17 @@
       <a href="#articles">Articles</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="テーマを切り替える" title="テーマを切り替える">
+    <!-- 日英切り替え。押すと ?lang= を付けて読み込み直す -->
+    <button class="lang-toggle" id="lang-toggle" type="button" lang="en"
+            aria-label="Switch to English" title="Switch to English">EN</button>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="テーマを切り替える" title="テーマを切り替える"
+            data-en-aria-label="Toggle theme" data-en-title="Toggle theme">
       <svg class="i-sun"><use href="#i-sun"/></svg>
       <svg class="i-moon"><use href="#i-moon"/></svg>
     </button>
     <!-- 狭い画面ではナビをこのボタンから開く（広い画面では非表示） -->
     <button class="nav-toggle" id="nav-toggle" type="button"
-            aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+            aria-label="メニューを開く" data-en-aria-label="Open menu" aria-expanded="false" aria-controls="nav">
       <svg class="i-open"><use href="#i-menu"/></svg>
       <svg class="i-shut"><use href="#i-close"/></svg>
     </button>
@@ -97,13 +113,13 @@
       <div class="hero-grid">
         <img class="avatar" id="avatar" alt="" src="./images/periodictable.jpg" width="116" height="116">
         <div>
-          <h1>熊谷 将也</h1>
-          <p class="name-en">Kumagai Masaya</p>
+          <h1 data-en="Masaya Kumagai">熊谷 将也</h1>
+          <p class="name-en" data-en="熊谷 将也">Kumagai Masaya</p>
           <!-- 日本語は HTML の改行がそのまま半角スペースになるので 1 行で書く。
                複合語の途中で折り返らないよう、意味のまとまりを .nb で囲む -->
-          <p class="tagline">材料科学と情報科学の境界で研究しています。実験データの<span class="nb">構造化</span>・<span class="nb">機械学習応用</span>から、<span class="nb">研究の来歴（Provenance）</span>を<span class="nb">扱うツールの OSS 開発まで。</span></p>
+          <p class="tagline" data-en="I work at the boundary of materials science and information science — from structuring experimental data and applying machine learning to building open-source tools for research provenance.">材料科学と情報科学の境界で研究しています。実験データの<span class="nb">構造化</span>・<span class="nb">機械学習応用</span>から、<span class="nb">研究の来歴（Provenance）</span>を<span class="nb">扱うツールの OSS 開発まで。</span></p>
           <div class="topics-wrap" id="topics-wrap">
-            <div class="topics-label">主な研究テーマ<span>業績・OSS から自動集計</span></div>
+            <div class="topics-label" data-en="Research themes&lt;span&gt;Auto-extracted from publications and OSS&lt;/span&gt;">主な研究テーマ<span>業績・OSS から自動集計</span></div>
             <div class="topics" id="topics"></div>
           </div>
           <ul class="affil-list" id="affiliations"></ul>
@@ -120,45 +136,45 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Research output</div>
-        <h2>年別の研究アウトプット</h2>
-        <p>論文・学会発表・記事・受賞を年ごとに積み上げて表示しています。</p>
+        <h2 data-en="Research output by year">年別の研究アウトプット</h2>
+        <p data-en="Papers, presentations, articles and awards, stacked by year.">論文・学会発表・記事・受賞を年ごとに積み上げて表示しています。</p>
       </div>
 
       <div class="chart-grid">
         <div class="card chart-card">
-          <h3>年別アウトプット</h3>
-          <p class="chart-note">クリックで種別の表示/ 非表示を切り替えられます</p>
+          <h3 data-en="Output by year">年別アウトプット</h3>
+          <p class="chart-note" data-en="Click a legend item to show or hide it">クリックで種別の表示/ 非表示を切り替えられます</p>
           <div class="chart-box"><canvas id="chart-output"></canvas></div>
         </div>
         <div class="card chart-card">
-          <h3>学会発表の内訳</h3>
-          <p class="chart-note">国内 / 国際 × 口頭 / ポスター</p>
+          <h3 data-en="Presentations breakdown">学会発表の内訳</h3>
+          <p class="chart-note" data-en="Domestic / international × oral / poster">国内 / 国際 × 口頭 / ポスター</p>
           <div class="chart-box is-short"><canvas id="chart-pres"></canvas></div>
         </div>
       </div>
 
       <div class="chart-grid" style="margin-top:16px;grid-template-columns:1fr 1fr">
         <div class="card chart-card">
-          <h3>参加学会</h3>
-          <p class="chart-note" id="venue-note">学会コミュニティ別の発表数</p>
+          <h3 data-en="Conferences">参加学会</h3>
+          <p class="chart-note" id="venue-note" data-en="Presentations by conference community">学会コミュニティ別の発表数</p>
           <div class="chart-box is-tall"><canvas id="chart-venue"></canvas></div>
         </div>
         <div class="card chart-card">
-          <h3>投稿先</h3>
-          <p class="chart-note" id="journal-note">掲載誌・会議録別の論文数</p>
+          <h3 data-en="Journals">投稿先</h3>
+          <p class="chart-note" id="journal-note" data-en="Papers by journal or proceedings">掲載誌・会議録別の論文数</p>
           <div class="chart-box is-tall"><canvas id="chart-journal"></canvas></div>
         </div>
       </div>
 
       <div class="chart-grid" style="margin-top:16px">
         <div class="card chart-card">
-          <h3>学会発表の推移（国内 / 国際）</h3>
-          <p class="chart-note">発表の場が国内から国際へどう広がったか</p>
+          <h3 data-en="Presentations over time (domestic / international)">学会発表の推移（国内 / 国際）</h3>
+          <p class="chart-note" data-en="How the venues spread from domestic to international">発表の場が国内から国際へどう広がったか</p>
           <div class="chart-box is-short"><canvas id="chart-pres-year"></canvas></div>
         </div>
         <div class="card chart-card">
-          <h3>OSS の使用言語</h3>
-          <p class="chart-note">公開リポジトリの主要言語</p>
+          <h3 data-en="OSS languages">OSS の使用言語</h3>
+          <p class="chart-note" data-en="Main language of public repositories">公開リポジトリの主要言語</p>
           <div class="chart-box is-short"><canvas id="chart-lang"></canvas></div>
         </div>
       </div>
@@ -170,8 +186,8 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Works</div>
-        <h2>制作物</h2>
-        <p>つくったアプリ・データベース・Web サイトと、書いている場所。</p>
+        <h2 data-en="Things I've made">制作物</h2>
+        <p data-en="Apps, databases and websites I've built, and where I write.">つくったアプリ・データベース・Web サイトと、書いている場所。</p>
       </div>
       <div class="works-grid" id="works-grid"></div>
     </div>
@@ -182,22 +198,22 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Open source</div>
-        <h2>GitHub アクティビティ</h2>
-        <p id="gh-summary">公開リポジトリとコントリビューションの推移。データは GitHub API から毎日自動更新しています。</p>
+        <h2 data-en="GitHub activity">GitHub アクティビティ</h2>
+        <p id="gh-summary" data-en="Public repositories and contributions over time, updated daily from the GitHub API.">公開リポジトリとコントリビューションの推移。データは GitHub API から毎日自動更新しています。</p>
       </div>
 
       <!-- ヒートマップは 53 週分の横幅が要るので、カラムに入れず全幅で置く -->
       <div class="card chart-card">
-        <h3>直近 1 年の活動</h3>
-        <p class="chart-note">日別コントリビューション</p>
+        <h3 data-en="Activity in the past year">直近 1 年の活動</h3>
+        <p class="chart-note" data-en="Daily contributions">日別コントリビューション</p>
         <div id="heatmap-wrap">
           <div id="heatmap"></div>
           <div class="heat-legend">
-            <span>少</span>
+            <span data-en="Less">少</span>
             <i style="background:var(--heat-0)"></i><i style="background:var(--heat-1)"></i>
             <i style="background:var(--heat-2)"></i><i style="background:var(--heat-3)"></i>
             <i style="background:var(--heat-4)"></i>
-            <span>多</span>
+            <span data-en="More">多</span>
           </div>
           <div class="heat-stats" id="heat-stats"></div>
         </div>
@@ -205,15 +221,15 @@
 
       <div class="card chart-card" style="margin-top:16px">
         <div class="card-head">
-          <h3>年別コントリビューション</h3>
+          <h3 data-en="Contributions by year">年別コントリビューション</h3>
           <button class="scale-toggle" id="gh-scale-toggle" type="button"
-                  title="目盛りを対数 / 線形で切り替える">対数目盛</button>
+                  title="目盛りを対数 / 線形で切り替える" data-en-title="Switch between log and linear scale">対数目盛</button>
         </div>
-        <p class="chart-note">コミット / プルリクエスト / Issue。年ごとの桁が違うので既定は対数目盛</p>
+        <p class="chart-note" data-en="Commits / pull requests / issues. Log scale by default, since the yearly counts differ by orders of magnitude">コミット / プルリクエスト / Issue。年ごとの桁が違うので既定は対数目盛</p>
         <div class="chart-box is-short"><canvas id="chart-gh-year"></canvas></div>
       </div>
 
-      <h3 style="margin:34px 0 14px;font-size:15px">公開リポジトリ</h3>
+      <h3 style="margin:34px 0 14px;font-size:15px" data-en="Public repositories">公開リポジトリ</h3>
       <div class="repo-grid" id="repos"></div>
     </div>
   </section>
@@ -223,15 +239,15 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Career</div>
-        <h2>経歴と受賞</h2>
+        <h2 data-en="Career and awards">経歴と受賞</h2>
       </div>
       <div class="chart-grid" style="grid-template-columns:1fr 1fr">
         <div>
-          <h3 style="font-size:14.5px;margin-bottom:14px">年表</h3>
+          <h3 style="font-size:14.5px;margin-bottom:14px" data-en="Timeline">年表</h3>
           <div class="timeline" id="timeline"></div>
         </div>
         <div>
-          <h3 style="font-size:14.5px;margin-bottom:14px">略歴</h3>
+          <h3 style="font-size:14.5px;margin-bottom:14px" data-en="Biography">略歴</h3>
           <div class="card chart-card prose bio-sticky" id="bio"></div>
         </div>
       </div>
@@ -243,7 +259,7 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Publications</div>
-        <h2>論文 <span id="count-pub" style="color:var(--text-muted);font-weight:600;font-size:16px"></span></h2>
+        <h2><span data-en="Publications">論文</span> <span id="count-pub" style="color:var(--text-muted);font-weight:600;font-size:16px"></span></h2>
       </div>
       <div id="list-pub"></div>
     </div>
@@ -254,19 +270,19 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Presentations</div>
-        <h2>学会発表 <span id="count-pres" style="color:var(--text-muted);font-weight:600;font-size:16px"></span></h2>
+        <h2><span data-en="Presentations">学会発表</span> <span id="count-pres" style="color:var(--text-muted);font-weight:600;font-size:16px"></span></h2>
       </div>
       <div class="filter-row" id="filter-pres"></div>
       <div class="legend entry">
-        <span><i class="bar" style="background:var(--c-pres)"></i>国内</span>
-        <span><i class="bar" style="background:var(--c-pub)"></i>国際</span>
-        <span><span class="badge is-form-oral">口頭</span></span>
-        <span><span class="badge is-form-poster">ポスター</span></span>
+        <span><i class="bar" style="background:var(--c-pres)"></i><span data-en="Domestic">国内</span></span>
+        <span><i class="bar" style="background:var(--c-pub)"></i><span data-en="International">国際</span></span>
+        <span><span class="badge is-form-oral" data-en="Oral">口頭</span></span>
+        <span><span class="badge is-form-poster" data-en="Poster">ポスター</span></span>
       </div>
       <div id="list-pres"></div>
       <div class="note">
-        <h4>※著作権に係る注意事項</h4>
-        <div>情報処理学会に投稿された論文の著作権について: 論文の著作権は情報処理学会に帰属します. 論文は著作権者である情報処理学会の許可のもとに掲載するものです. ご利用に当たっては「著作権法」ならびに「情報処理学会倫理綱領」に従うことをお願い致します.</div>
+        <h4 data-en="Copyright notice">※著作権に係る注意事項</h4>
+        <div data-only="ja">情報処理学会に投稿された論文の著作権について: 論文の著作権は情報処理学会に帰属します. 論文は著作権者である情報処理学会の許可のもとに掲載するものです. ご利用に当たっては「著作権法」ならびに「情報処理学会倫理綱領」に従うことをお願い致します.</div>
         <div style="margin-top:6px">About the copyright of the paper submitted to the Information Processing Society: The copyright of the paper is retained by the Information Processing Society of Japan (IPSJ). The paper is published on this web site with the agreement of the author(s) and the IPSJ. Please be complied with Copyright Law of Japan and the Code of Ethics of the IPSJ if any users wish to reproduce, make derivative work, distribute or make available to the public any part or whole thereof.</div>
       </div>
     </div>
@@ -277,7 +293,7 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Articles &amp; Awards</div>
-        <h2>記事・受賞・その他</h2>
+        <h2 data-en="Articles, awards and more">記事・受賞・その他</h2>
       </div>
       <div class="chart-grid" style="grid-template-columns:1fr 1fr">
         <div>
@@ -299,7 +315,7 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Contact</div>
-        <h2>連絡先</h2>
+        <h2 data-en="Contact">連絡先</h2>
       </div>
       <div class="contact-grid" id="contact-list"></div>
     </div>
