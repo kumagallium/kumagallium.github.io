@@ -299,8 +299,12 @@ def fetch_works():
         url = get_prop(props, "URL", "url")
         name = get_prop(props, "Name", "title")
         category = get_prop(props, "Category", "select")
+        # ギャラリー表示用。Image はリポジトリ内の相対パス（images/works/...）か https の URL
+        image = get_prop(props, "Image", "rich_text")
+        description = get_prop(props, "Description", "rich_text")
         text = build_link(url, name) if url else (name or "")
-        result.append({"category": category, "title": name, "url": url, "text": text})
+        result.append({"category": category, "title": name, "url": url, "text": text,
+                       "image": image, "description": description})
     return result
 
 

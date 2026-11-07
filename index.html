@@ -67,11 +67,12 @@
     <a class="brand" href="#top">熊谷 将也<small>Kumagai Masaya</small></a>
     <nav class="site-nav" id="nav">
       <a href="#activity">Activity</a>
+      <a href="#works">Works</a>
       <a href="#oss">OSS</a>
       <a href="#career">Career</a>
       <a href="#publications">Publications</a>
       <a href="#presentations">Presentations</a>
-      <a href="#works">Works</a>
+      <a href="#articles">Articles</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="テーマを切り替える" title="テーマを切り替える">
@@ -161,6 +162,18 @@
           <div class="chart-box is-short"><canvas id="chart-lang"></canvas></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ WORKS（制作物のギャラリー） ============ -->
+  <section class="section" id="works">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Works</div>
+        <h2>制作物</h2>
+        <p>つくったアプリ・Web サイト・データベース。</p>
+      </div>
+      <div class="works-grid" id="works-grid"></div>
     </div>
   </section>
 
@@ -260,17 +273,15 @@
   </section>
 
   <!-- ============ WORKS / ARTICLES / OTHERS ============ -->
-  <section class="section" id="works">
+  <section class="section" id="articles">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Works &amp; Articles</div>
-        <h2>制作物・記事・その他</h2>
+        <div class="eyebrow">Articles &amp; Awards</div>
+        <h2>記事・受賞・その他</h2>
       </div>
       <div class="chart-grid" style="grid-template-columns:1fr 1fr">
         <div>
-          <h3 style="font-size:14.5px;margin-bottom:12px">Works</h3>
-          <div id="list-works" class="entry-list"></div>
-          <h3 style="font-size:14.5px;margin:26px 0 12px">Others</h3>
+          <h3 style="font-size:14.5px;margin-bottom:12px">Others</h3>
           <div id="list-others" class="entry-list"></div>
         </div>
         <div>

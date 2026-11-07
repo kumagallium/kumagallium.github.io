@@ -665,10 +665,42 @@ function renderLists() {
       ? items.map(i => entryHtml(i, { color })).join('')
       : '<p class="empty">準備中</p>';
   };
-  simple('#list-works', n['Works'] || [], 'var(--c-oss)');
+  renderWorks(n['Works'] || []);
   simple('#list-others', n['Others'] || [], 'var(--text-muted)');
   simple('#list-art', n['Articles'] || [], 'var(--c-art)');
   simple('#list-award', n['Awards'] || [], 'var(--c-award)');
+}
+
+/* --- 制作物ギャラリー ---------------------------------------------------- */
+// 属性値に入れるので引用符まで逃がす
+const escapeAttr = s => escapeHtml(s).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+// 画像はリポジトリ内の相対パスか https のみ通す（javascript: などを弾く）
+const safeImage = s => (s && (/^https:\/\//i.test(s) || /^(\.\/)?images\/[\w\-./]+$/.test(s))) ? s : '';
+const safeUrl = s => (s && /^https?:\/\//i.test(s)) ? s : '';
+
+function renderWorks(items) {
+  const el = $('#works-grid');
+  if (!items.length) { el.innerHTML = '<p class="empty">準備中</p>'; return; }
+  // Notion は作成順（古い順）で来るので、新しいものを先頭にする
+  el.innerHTML = [...items].reverse().map((w, i) => {
+    const url = safeUrl(w.url);
+    const img = safeImage(w.image);
+    const name = w.title || '';
+    // 画像が無いものは名前の頭文字と色面で表紙を作る（色は並び順で回す）
+    const cover = img
+      ? `<img src="${escapeAttr(img)}" alt="" loading="lazy" width="1200" height="675">`
+      : `<span class="work-fallback is-c${i % 4}">${escapeHtml(name)}</span>`;
+    const tag = url ? 'a' : 'div';
+    const attrs = url ? ` href="${escapeAttr(url)}" target="_blank" rel="noopener noreferrer"` : '';
+    return `<${tag} class="card work"${attrs}>
+      <div class="work-cover">${cover}</div>
+      <div class="work-body">
+        ${w.category ? `<div class="work-cat">${escapeHtml(w.category)}</div>` : ''}
+        <div class="work-name">${escapeHtml(name)}</div>
+        ${w.description ? `<p class="work-desc">${escapeHtml(w.description)}</p>` : ''}
+      </div>
+    </${tag}>`;
+  }).join('');
 }
 
 /* --- 連絡先 ------------------------------------------------------------- */

@@ -6,7 +6,7 @@
     },
     {
       "category": "所属",
-      "text": "2017年6月〜\n<a href=\"https://research.sakura.ad.jp/about/\" target='_blank'>さくらインターネット研究所 研究員</a></li>"
+      "text": "2017年6月〜\n<a href=\"https://research.sakura.ad.jp/members\" target='_blank'>さくらインターネット研究所 研究員</a></li>"
     },
     {
       "category": "所属",
@@ -14,11 +14,11 @@
     },
     {
       "category": "所属",
-      "text": "2020年4月〜2024年3月\n<a href=\"http://www.energy.kyoto-u.ac.jp/jp/socio-environmental/\" target='_blank'>京都大学 特定助教</a>"
+      "text": "2020年4月〜2024年3月\n<a href=\"https://www.rri.kyoto-u.ac.jp/ndp-lab/members.html\" target='_blank'>京都大学 特定助教</a>"
     },
     {
       "category": "所属",
-      "text": "2020年6月〜\n大阪大学 招へい研究員"
+      "text": "2020年6月〜2020年3月\n大阪大学 招へい研究員"
     },
     {
       "category": "所属",
@@ -1641,25 +1641,41 @@
       "category": "材料科学のためのWebサイト",
       "title": "E4M",
       "url": "https://e4m.jp/",
-      "text": "<a href=https://e4m.jp/ target='_blank'>E4M</a>"
+      "text": "<a href=https://e4m.jp/ target='_blank'>E4M</a>",
+      "image": "images/works/e4m.jpg",
+      "description": "科学研究に役立つツール群を開発・キュレーションするオープンソースプロジェクト"
     },
     {
       "category": "Blog",
       "title": "クマガリウムぶろぐ",
       "url": "https://kumagallium.hatenablog.com/",
-      "text": "<a href=https://kumagallium.hatenablog.com/ target='_blank'>クマガリウムぶろぐ</a>"
+      "text": "<a href=https://kumagallium.hatenablog.com/ target='_blank'>クマガリウムぶろぐ</a>",
+      "image": null,
+      "description": null
     },
     {
       "category": "実験的物性値データベース",
       "title": "Starrydata2",
       "url": "https://www.starrydata2.org/",
-      "text": "<a href=https://www.starrydata2.org/ target='_blank'>Starrydata2</a>"
+      "text": "<a href=https://www.starrydata2.org/ target='_blank'>Starrydata2</a>",
+      "image": null,
+      "description": null
     },
     {
       "category": "Qiita",
       "title": "M_Kumagai",
       "url": "https://qiita.com/M_Kumagai",
-      "text": "<a href=https://qiita.com/M_Kumagai target='_blank'>M_Kumagai</a>"
+      "text": "<a href=https://qiita.com/M_Kumagai target='_blank'>M_Kumagai</a>",
+      "image": null,
+      "description": null
+    },
+    {
+      "category": "iPhone・iPad アプリ",
+      "title": "おうち上映会",
+      "url": "https://apps.apple.com/jp/app/id6815565930",
+      "text": "<a href=https://apps.apple.com/jp/app/id6815565930 target='_blank'>おうち上映会</a>",
+      "image": "images/works/ouchi-theater.jpg",
+      "description": "撮りためた子どもや旅行の動画を選んで、つづけて上映できるアプリ（2026）"
     }
   ]
 }
