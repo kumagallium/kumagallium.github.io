@@ -1665,13 +1665,22 @@
       "order": 3
     },
     {
+      "category": "材料科学のためのWebサイト",
+      "title": "E4M",
+      "url": "https://e4m.jp/",
+      "text": "<a href=https://e4m.jp/ target='_blank'>E4M</a>",
+      "image": "images/works/e4m.jpg",
+      "description": "科学研究に役立つツール群を開発・キュレーションするオープンソースプロジェクト",
+      "order": 4
+    },
+    {
       "category": "iPhone・iPad アプリ",
       "title": "おうち上映会",
       "url": "https://apps.apple.com/jp/app/id6815565930",
       "text": "<a href=https://apps.apple.com/jp/app/id6815565930 target='_blank'>おうち上映会</a>",
       "image": "images/works/ouchi-theater.jpg",
       "description": "撮りためた子どもや旅行の動画を選んで、つづけて上映できるアプリ（2026）",
-      "order": 4
+      "order": 5
     },
     {
       "category": "ブログ（日本語）",
@@ -1680,7 +1689,7 @@
       "text": "<a href=https://note.com/kumagallium target='_blank'>note</a>",
       "image": "images/works/note.jpg",
       "description": "日々考えていることや、作ったものについて書いています",
-      "order": 5
+      "order": 6
     },
     {
       "category": "ブログ（英語）",
@@ -1689,15 +1698,6 @@
       "text": "<a href=https://dev.to/kumagallium target='_blank'>DEV Community</a>",
       "image": "images/works/devto.jpg",
       "description": "Graphium などの開発の記録を英語で書いています",
-      "order": 6
-    },
-    {
-      "category": "材料科学のためのWebサイト",
-      "title": "E4M",
-      "url": "https://e4m.jp/",
-      "text": "<a href=https://e4m.jp/ target='_blank'>E4M</a>",
-      "image": "images/works/e4m.jpg",
-      "description": "科学研究に役立つツール群を開発・キュレーションするオープンソースプロジェクト",
       "order": 7
     }
   ]
