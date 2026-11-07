@@ -681,8 +681,8 @@ const safeUrl = s => (s && /^https?:\/\//i.test(s)) ? s : '';
 function renderWorks(items) {
   const el = $('#works-grid');
   if (!items.length) { el.innerHTML = '<p class="empty">準備中</p>'; return; }
-  // Notion は作成順（古い順）で来るので、新しいものを先頭にする
-  el.innerHTML = [...items].reverse().map((w, i) => {
+  // 並び順は fetch_notion.py で決めている（Notion の Order 列 → 未設定は新しい順）
+  el.innerHTML = items.map((w, i) => {
     const url = safeUrl(w.url);
     const img = safeImage(w.image);
     const name = w.title || '';
