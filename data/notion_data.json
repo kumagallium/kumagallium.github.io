@@ -1638,28 +1638,67 @@
   ],
   "Works": [
     {
+      "category": "実験的物性値データベース",
+      "title": "Starrydata2",
+      "url": "https://starrydata.nims.go.jp/starrydata2/",
+      "text": "<a href=https://starrydata.nims.go.jp/starrydata2/ target='_blank'>Starrydata2</a>",
+      "image": "images/works/starrydata2.jpg",
+      "description": "論文のグラフから実験データを集めて共有する、材料科学のオープンデータベース",
+      "order": 1
+    },
+    {
+      "category": "ノートアプリ（OSS）",
+      "title": "Graphium",
+      "url": "https://kumagallium.github.io/Graphium/?intro=1",
+      "text": "<a href=https://kumagallium.github.io/Graphium/?intro=1 target='_blank'>Graphium</a>",
+      "image": "images/works/graphium.jpg",
+      "description": "書いた記録と AI の答えが出典まで辿れる、AI 時代のノートアプリ",
+      "order": 2
+    },
+    {
+      "category": "データ基盤（OSS）",
+      "title": "Asterism",
+      "url": "https://github.com/kumagallium/asterism",
+      "text": "<a href=https://github.com/kumagallium/asterism target='_blank'>Asterism</a>",
+      "image": "images/works/asterism.jpg",
+      "description": "散らばったデータを共有オントロジーで繋ぎ、出典まで辿れる事実として AI に渡す",
+      "order": 3
+    },
+    {
       "category": "材料科学のためのWebサイト",
       "title": "E4M",
       "url": "https://e4m.jp/",
-      "text": "<a href=https://e4m.jp/ target='_blank'>E4M</a>"
+      "text": "<a href=https://e4m.jp/ target='_blank'>E4M</a>",
+      "image": "images/works/e4m.jpg",
+      "description": "科学研究に役立つツール群を開発・キュレーションするオープンソースプロジェクト",
+      "order": 4
     },
     {
-      "category": "Blog",
-      "title": "クマガリウムぶろぐ",
-      "url": "https://kumagallium.hatenablog.com/",
-      "text": "<a href=https://kumagallium.hatenablog.com/ target='_blank'>クマガリウムぶろぐ</a>"
+      "category": "iPhone・iPad アプリ",
+      "title": "おうち上映会",
+      "url": "https://apps.apple.com/jp/app/id6815565930",
+      "text": "<a href=https://apps.apple.com/jp/app/id6815565930 target='_blank'>おうち上映会</a>",
+      "image": "images/works/ouchi-theater.jpg",
+      "description": "撮りためた子どもや旅行の動画を選んで、つづけて上映できるアプリ（2026）",
+      "order": 5
     },
     {
-      "category": "実験的物性値データベース",
-      "title": "Starrydata2",
-      "url": "https://www.starrydata2.org/",
-      "text": "<a href=https://www.starrydata2.org/ target='_blank'>Starrydata2</a>"
+      "category": "ブログ（日本語）",
+      "title": "note",
+      "url": "https://note.com/kumagallium",
+      "text": "<a href=https://note.com/kumagallium target='_blank'>note</a>",
+      "image": "images/works/note.jpg",
+      "description": "日々考えていることや、作ったものについて書いています",
+      "order": 6
     },
     {
-      "category": "Qiita",
-      "title": "M_Kumagai",
-      "url": "https://qiita.com/M_Kumagai",
-      "text": "<a href=https://qiita.com/M_Kumagai target='_blank'>M_Kumagai</a>"
+      "category": "ブログ（英語）",
+      "title": "DEV Community",
+      "url": "https://dev.to/kumagallium",
+      "text": "<a href=https://dev.to/kumagallium target='_blank'>DEV Community</a>",
+      "image": "images/works/devto.jpg",
+      "description": "Graphium などの開発の記録を英語で書いています",
+      "order": 7
     }
   ]
 }
