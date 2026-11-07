@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T03:24:56+00:00",
+  "generated_at": "2026-11-07T04:54:07+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -7,47 +7,10 @@
     "html_url": "https://github.com/kumagallium",
     "bio": null,
     "followers": 6,
-    "public_repos": 29,
+    "public_repos": 30,
     "created_at": "2013-07-17T01:29:55Z"
   },
   "repos": [
-    {
-      "name": "Graphium",
-      "description": "Block-based note editor with PROV-DM provenance tracking — built on BlockNote.js",
-      "html_url": "https://github.com/kumagallium/Graphium",
-      "homepage": "https://kumagallium.github.io/Graphium/?intro=1",
-      "language": "TypeScript",
-      "stars": 1,
-      "forks": 0,
-      "topics": [
-        "blocknote",
-        "knowledge-management",
-        "local-first",
-        "note-taking",
-        "notes-app",
-        "pkm",
-        "prov-dm",
-        "provenance",
-        "research-tools",
-        "second-brain",
-        "tauri",
-        "zettelkasten"
-      ],
-      "created_at": "2026-03-23",
-      "pushed_at": "2026-09-09"
-    },
-    {
-      "name": "asterism",
-      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
-      "html_url": "https://github.com/kumagallium/asterism",
-      "homepage": "https://kumagallium.github.io/asterism/",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-05-27",
-      "pushed_at": "2026-09-09"
-    },
     {
       "name": "starrydata-stats",
       "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
@@ -66,19 +29,68 @@
         "thermoelectrics"
       ],
       "created_at": "2026-07-20",
-      "pushed_at": "2026-09-08"
+      "pushed_at": "2026-11-07"
     },
     {
-      "name": "PROVision",
-      "description": "Provenance for AI-generated figures. W3C PROV graph that crosses notes, data, and images — queryable by SPARQL/MCP.",
-      "html_url": "https://github.com/kumagallium/PROVision",
-      "homepage": null,
+      "name": "Graphium",
+      "description": "Block-based note editor with PROV-DM provenance tracking — built on BlockNote.js",
+      "html_url": "https://github.com/kumagallium/Graphium",
+      "homepage": "https://kumagallium.github.io/Graphium/?intro=1",
       "language": "TypeScript",
+      "stars": 3,
+      "forks": 1,
+      "topics": [
+        "blocknote",
+        "knowledge-management",
+        "local-first",
+        "note-taking",
+        "notes-app",
+        "pkm",
+        "prov-dm",
+        "provenance",
+        "research-tools",
+        "second-brain",
+        "tauri",
+        "zettelkasten"
+      ],
+      "created_at": "2026-03-23",
+      "pushed_at": "2026-11-06"
+    },
+    {
+      "name": "asterism",
+      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
+      "html_url": "https://github.com/kumagallium/asterism",
+      "homepage": "https://kumagallium.github.io/asterism/",
+      "language": "Python",
       "stars": 0,
       "forks": 0,
       "topics": [],
-      "created_at": "2026-08-20",
-      "pushed_at": "2026-09-03"
+      "created_at": "2026-05-27",
+      "pushed_at": "2026-11-06"
+    },
+    {
+      "name": "ouchi-theater-support",
+      "description": "おうち上映会 / Ouchi Theater — Privacy policy and support",
+      "html_url": "https://github.com/kumagallium/ouchi-theater-support",
+      "homepage": null,
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-10-29",
+      "pushed_at": "2026-11-05"
+    },
+    {
+      "name": "personal_gpt",
+      "description": null,
+      "html_url": "https://github.com/kumagallium/personal_gpt",
+      "homepage": null,
+      "language": "Vue",
+      "stars": 2,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2023-02-05",
+      "pushed_at": "2026-11-05"
     },
     {
       "name": "octivity",
@@ -101,31 +113,7 @@
         "vite"
       ],
       "created_at": "2026-08-28",
-      "pushed_at": "2026-09-01"
-    },
-    {
-      "name": "Crucible",
-      "description": "Self-hosted deployment platform for MCP servers — paste a GitHub URL to auto-build, deploy, and connect. Works with private repos.",
-      "html_url": "https://github.com/kumagallium/Crucible",
-      "homepage": "https://kumagallium.github.io/Crucible/",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-03-14",
-      "pushed_at": "2026-08-27"
-    },
-    {
-      "name": "geo-logo",
-      "description": "円と直線だけでロゴを構成的に設計する Web アプリ。完成ロゴと設計図を同一の幾何データから出力する。",
-      "html_url": "https://github.com/kumagallium/geo-logo",
-      "homepage": null,
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-08-13",
-      "pushed_at": "2026-08-20"
+      "pushed_at": "2026-11-01"
     },
     {
       "name": "Crucible-Agent",
@@ -137,7 +125,31 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-03-17",
-      "pushed_at": "2026-08-13"
+      "pushed_at": "2026-10-30"
+    },
+    {
+      "name": "Crucible",
+      "description": "Self-hosted deployment platform for MCP servers — paste a GitHub URL to auto-build, deploy, and connect. Works with private repos.",
+      "html_url": "https://github.com/kumagallium/Crucible",
+      "homepage": "https://kumagallium.github.io/Crucible/",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-03-14",
+      "pushed_at": "2026-10-30"
+    },
+    {
+      "name": "vue_photo_organizer",
+      "description": null,
+      "html_url": "https://github.com/kumagallium/vue_photo_organizer",
+      "homepage": null,
+      "language": "Vue",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2021-11-23",
+      "pushed_at": "2026-10-30"
     },
     {
       "name": "e4m-mcp",
@@ -149,7 +161,55 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-03-11",
-      "pushed_at": "2026-04-01"
+      "pushed_at": "2026-10-30"
+    },
+    {
+      "name": "PROVision",
+      "description": "Provenance for AI-generated figures. W3C PROV graph that crosses notes, data, and images — queryable by SPARQL/MCP.",
+      "html_url": "https://github.com/kumagallium/PROVision",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-08-20",
+      "pushed_at": "2026-10-30"
+    },
+    {
+      "name": "labmine-api",
+      "description": null,
+      "html_url": "https://github.com/kumagallium/labmine-api",
+      "homepage": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2021-09-30",
+      "pushed_at": "2026-10-30"
+    },
+    {
+      "name": "labmine-front",
+      "description": null,
+      "html_url": "https://github.com/kumagallium/labmine-front",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2021-09-29",
+      "pushed_at": "2026-10-30"
+    },
+    {
+      "name": "geo-logo",
+      "description": "円と直線だけでロゴを構成的に設計する Web アプリ。完成ロゴと設計図を同一の幾何データから出力する。",
+      "html_url": "https://github.com/kumagallium/geo-logo",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-08-13",
+      "pushed_at": "2026-10-30"
     },
     {
       "name": "matprov-schema",
@@ -236,18 +296,6 @@
       "pushed_at": "2023-05-18"
     },
     {
-      "name": "personal_gpt",
-      "description": null,
-      "html_url": "https://github.com/kumagallium/personal_gpt",
-      "homepage": null,
-      "language": "Vue",
-      "stars": 2,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2023-02-05",
-      "pushed_at": "2023-02-06"
-    },
-    {
       "name": "cgal_docker",
       "description": null,
       "html_url": "https://github.com/kumagallium/cgal_docker",
@@ -270,42 +318,6 @@
       "topics": [],
       "created_at": "2021-10-05",
       "pushed_at": "2022-05-18"
-    },
-    {
-      "name": "labmine-api",
-      "description": null,
-      "html_url": "https://github.com/kumagallium/labmine-api",
-      "homepage": null,
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2021-09-30",
-      "pushed_at": "2022-05-15"
-    },
-    {
-      "name": "labmine-front",
-      "description": null,
-      "html_url": "https://github.com/kumagallium/labmine-front",
-      "homepage": null,
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2021-09-29",
-      "pushed_at": "2022-05-15"
-    },
-    {
-      "name": "vue_photo_organizer",
-      "description": null,
-      "html_url": "https://github.com/kumagallium/vue_photo_organizer",
-      "homepage": null,
-      "language": "Vue",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2021-11-23",
-      "pushed_at": "2022-01-16"
     }
   ],
   "languages": [
@@ -314,16 +326,20 @@
       "count": 7
     },
     {
-      "name": "TypeScript",
-      "count": 4
+      "name": "HTML",
+      "count": 5
     },
     {
-      "name": "HTML",
+      "name": "TypeScript",
       "count": 4
     },
     {
       "name": "Vue",
       "count": 2
+    },
+    {
+      "name": "JavaScript",
+      "count": 1
     },
     {
       "name": "Dockerfile",
@@ -335,10 +351,6 @@
     },
     {
       "name": "C++",
-      "count": 1
-    },
-    {
-      "name": "JavaScript",
       "count": 1
     }
   ],
@@ -463,251 +475,15 @@
       },
       {
         "year": 2026,
-        "commits": 3108,
-        "pull_requests": 1364,
+        "commits": 5996,
+        "pull_requests": 2169,
         "issues": 4,
         "reviews": 0,
-        "repositories": 9,
-        "total": 4485
+        "repositories": 10,
+        "total": 8179
       }
     ],
     "calendar": [
-      {
-        "date": "2025-09-10",
-        "count": 0
-      },
-      {
-        "date": "2025-09-11",
-        "count": 0
-      },
-      {
-        "date": "2025-09-12",
-        "count": 0
-      },
-      {
-        "date": "2025-09-13",
-        "count": 0
-      },
-      {
-        "date": "2025-09-14",
-        "count": 0
-      },
-      {
-        "date": "2025-09-15",
-        "count": 0
-      },
-      {
-        "date": "2025-09-16",
-        "count": 0
-      },
-      {
-        "date": "2025-09-17",
-        "count": 0
-      },
-      {
-        "date": "2025-09-18",
-        "count": 0
-      },
-      {
-        "date": "2025-09-19",
-        "count": 0
-      },
-      {
-        "date": "2025-09-20",
-        "count": 0
-      },
-      {
-        "date": "2025-09-21",
-        "count": 0
-      },
-      {
-        "date": "2025-09-22",
-        "count": 0
-      },
-      {
-        "date": "2025-09-23",
-        "count": 0
-      },
-      {
-        "date": "2025-09-24",
-        "count": 0
-      },
-      {
-        "date": "2025-09-25",
-        "count": 0
-      },
-      {
-        "date": "2025-09-26",
-        "count": 0
-      },
-      {
-        "date": "2025-09-27",
-        "count": 0
-      },
-      {
-        "date": "2025-09-28",
-        "count": 0
-      },
-      {
-        "date": "2025-09-29",
-        "count": 0
-      },
-      {
-        "date": "2025-09-30",
-        "count": 0
-      },
-      {
-        "date": "2025-10-01",
-        "count": 0
-      },
-      {
-        "date": "2025-10-02",
-        "count": 0
-      },
-      {
-        "date": "2025-10-03",
-        "count": 0
-      },
-      {
-        "date": "2025-10-04",
-        "count": 0
-      },
-      {
-        "date": "2025-10-05",
-        "count": 0
-      },
-      {
-        "date": "2025-10-06",
-        "count": 0
-      },
-      {
-        "date": "2025-10-07",
-        "count": 0
-      },
-      {
-        "date": "2025-10-08",
-        "count": 0
-      },
-      {
-        "date": "2025-10-09",
-        "count": 0
-      },
-      {
-        "date": "2025-10-10",
-        "count": 0
-      },
-      {
-        "date": "2025-10-11",
-        "count": 0
-      },
-      {
-        "date": "2025-10-12",
-        "count": 0
-      },
-      {
-        "date": "2025-10-13",
-        "count": 0
-      },
-      {
-        "date": "2025-10-14",
-        "count": 0
-      },
-      {
-        "date": "2025-10-15",
-        "count": 0
-      },
-      {
-        "date": "2025-10-16",
-        "count": 0
-      },
-      {
-        "date": "2025-10-17",
-        "count": 0
-      },
-      {
-        "date": "2025-10-18",
-        "count": 0
-      },
-      {
-        "date": "2025-10-19",
-        "count": 0
-      },
-      {
-        "date": "2025-10-20",
-        "count": 0
-      },
-      {
-        "date": "2025-10-21",
-        "count": 0
-      },
-      {
-        "date": "2025-10-22",
-        "count": 0
-      },
-      {
-        "date": "2025-10-23",
-        "count": 0
-      },
-      {
-        "date": "2025-10-24",
-        "count": 0
-      },
-      {
-        "date": "2025-10-25",
-        "count": 0
-      },
-      {
-        "date": "2025-10-26",
-        "count": 0
-      },
-      {
-        "date": "2025-10-27",
-        "count": 0
-      },
-      {
-        "date": "2025-10-28",
-        "count": 0
-      },
-      {
-        "date": "2025-10-29",
-        "count": 0
-      },
-      {
-        "date": "2025-10-30",
-        "count": 0
-      },
-      {
-        "date": "2025-10-31",
-        "count": 0
-      },
-      {
-        "date": "2025-11-01",
-        "count": 0
-      },
-      {
-        "date": "2025-11-02",
-        "count": 0
-      },
-      {
-        "date": "2025-11-03",
-        "count": 0
-      },
-      {
-        "date": "2025-11-04",
-        "count": 0
-      },
-      {
-        "date": "2025-11-05",
-        "count": 0
-      },
-      {
-        "date": "2025-11-06",
-        "count": 0
-      },
-      {
-        "date": "2025-11-07",
-        "count": 0
-      },
       {
         "date": "2025-11-08",
         "count": 0
@@ -1906,7 +1682,7 @@
       },
       {
         "date": "2026-09-03",
-        "count": 74
+        "count": 82
       },
       {
         "date": "2026-09-04",
@@ -1922,7 +1698,7 @@
       },
       {
         "date": "2026-09-07",
-        "count": 30
+        "count": 40
       },
       {
         "date": "2026-09-08",
@@ -1930,13 +1706,249 @@
       },
       {
         "date": "2026-09-09",
-        "count": 16
+        "count": 32
+      },
+      {
+        "date": "2026-09-10",
+        "count": 1
+      },
+      {
+        "date": "2026-09-11",
+        "count": 30
+      },
+      {
+        "date": "2026-09-12",
+        "count": 0
+      },
+      {
+        "date": "2026-09-13",
+        "count": 0
+      },
+      {
+        "date": "2026-09-14",
+        "count": 17
+      },
+      {
+        "date": "2026-09-15",
+        "count": 93
+      },
+      {
+        "date": "2026-09-16",
+        "count": 132
+      },
+      {
+        "date": "2026-09-17",
+        "count": 116
+      },
+      {
+        "date": "2026-09-18",
+        "count": 90
+      },
+      {
+        "date": "2026-09-19",
+        "count": 0
+      },
+      {
+        "date": "2026-09-20",
+        "count": 0
+      },
+      {
+        "date": "2026-09-21",
+        "count": 0
+      },
+      {
+        "date": "2026-09-22",
+        "count": 0
+      },
+      {
+        "date": "2026-09-23",
+        "count": 31
+      },
+      {
+        "date": "2026-09-24",
+        "count": 71
+      },
+      {
+        "date": "2026-09-25",
+        "count": 246
+      },
+      {
+        "date": "2026-09-26",
+        "count": 0
+      },
+      {
+        "date": "2026-09-27",
+        "count": 63
+      },
+      {
+        "date": "2026-09-28",
+        "count": 22
+      },
+      {
+        "date": "2026-09-29",
+        "count": 173
+      },
+      {
+        "date": "2026-09-30",
+        "count": 125
+      },
+      {
+        "date": "2026-10-01",
+        "count": 92
+      },
+      {
+        "date": "2026-10-02",
+        "count": 32
+      },
+      {
+        "date": "2026-10-03",
+        "count": 0
+      },
+      {
+        "date": "2026-10-04",
+        "count": 0
+      },
+      {
+        "date": "2026-10-05",
+        "count": 69
+      },
+      {
+        "date": "2026-10-06",
+        "count": 5
+      },
+      {
+        "date": "2026-10-07",
+        "count": 104
+      },
+      {
+        "date": "2026-10-08",
+        "count": 22
+      },
+      {
+        "date": "2026-10-09",
+        "count": 133
+      },
+      {
+        "date": "2026-10-10",
+        "count": 6
+      },
+      {
+        "date": "2026-10-11",
+        "count": 0
+      },
+      {
+        "date": "2026-10-12",
+        "count": 0
+      },
+      {
+        "date": "2026-10-13",
+        "count": 32
+      },
+      {
+        "date": "2026-10-14",
+        "count": 93
+      },
+      {
+        "date": "2026-10-15",
+        "count": 0
+      },
+      {
+        "date": "2026-10-16",
+        "count": 0
+      },
+      {
+        "date": "2026-10-17",
+        "count": 0
+      },
+      {
+        "date": "2026-10-18",
+        "count": 0
+      },
+      {
+        "date": "2026-10-19",
+        "count": 140
+      },
+      {
+        "date": "2026-10-20",
+        "count": 179
+      },
+      {
+        "date": "2026-10-21",
+        "count": 166
+      },
+      {
+        "date": "2026-10-22",
+        "count": 236
+      },
+      {
+        "date": "2026-10-23",
+        "count": 159
+      },
+      {
+        "date": "2026-10-24",
+        "count": 3
+      },
+      {
+        "date": "2026-10-25",
+        "count": 0
+      },
+      {
+        "date": "2026-10-26",
+        "count": 51
+      },
+      {
+        "date": "2026-10-27",
+        "count": 80
+      },
+      {
+        "date": "2026-10-28",
+        "count": 128
+      },
+      {
+        "date": "2026-10-29",
+        "count": 58
+      },
+      {
+        "date": "2026-10-30",
+        "count": 223
+      },
+      {
+        "date": "2026-10-31",
+        "count": 0
+      },
+      {
+        "date": "2026-11-01",
+        "count": 0
+      },
+      {
+        "date": "2026-11-02",
+        "count": 22
+      },
+      {
+        "date": "2026-11-03",
+        "count": 24
+      },
+      {
+        "date": "2026-11-04",
+        "count": 108
+      },
+      {
+        "date": "2026-11-05",
+        "count": 140
+      },
+      {
+        "date": "2026-11-06",
+        "count": 145
+      },
+      {
+        "date": "2026-11-07",
+        "count": 0
       }
     ]
   },
   "totals": {
-    "repos": 22,
-    "stars": 4,
-    "contributions": 4809
+    "repos": 23,
+    "stars": 6,
+    "contributions": 8503
   }
 }
