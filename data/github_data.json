@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T05:59:24+00:00",
+  "generated_at": "2026-11-13T05:24:20+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -11,6 +11,18 @@
     "created_at": "2013-07-17T01:29:55Z"
   },
   "repos": [
+    {
+      "name": "asterism",
+      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
+      "html_url": "https://github.com/kumagallium/asterism",
+      "homepage": "https://kumagallium.github.io/asterism/",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-05-27",
+      "pushed_at": "2026-11-13"
+    },
     {
       "name": "Graphium",
       "description": "Block-based note editor with PROV-DM provenance tracking — built on BlockNote.js",
@@ -34,19 +46,31 @@
         "zettelkasten"
       ],
       "created_at": "2026-03-23",
-      "pushed_at": "2026-11-12"
+      "pushed_at": "2026-11-13"
     },
     {
-      "name": "asterism",
-      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
-      "html_url": "https://github.com/kumagallium/asterism",
-      "homepage": "https://kumagallium.github.io/asterism/",
-      "language": "Python",
+      "name": "PROVision",
+      "description": "Provenance for AI-generated figures. W3C PROV graph that crosses notes, data, and images — queryable by SPARQL/MCP.",
+      "html_url": "https://github.com/kumagallium/PROVision",
+      "homepage": null,
+      "language": "TypeScript",
       "stars": 0,
       "forks": 0,
       "topics": [],
-      "created_at": "2026-05-27",
-      "pushed_at": "2026-11-11"
+      "created_at": "2026-08-20",
+      "pushed_at": "2026-11-12"
+    },
+    {
+      "name": "geo-logo",
+      "description": "円と直線だけでロゴを構成的に設計する Web アプリ。完成ロゴと設計図を同一の幾何データから出力する。",
+      "html_url": "https://github.com/kumagallium/geo-logo",
+      "homepage": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-08-13",
+      "pushed_at": "2026-11-12"
     },
     {
       "name": "e4m-mcp",
@@ -164,18 +188,6 @@
       "pushed_at": "2026-10-30"
     },
     {
-      "name": "PROVision",
-      "description": "Provenance for AI-generated figures. W3C PROV graph that crosses notes, data, and images — queryable by SPARQL/MCP.",
-      "html_url": "https://github.com/kumagallium/PROVision",
-      "homepage": null,
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-08-20",
-      "pushed_at": "2026-10-30"
-    },
-    {
       "name": "labmine-api",
       "description": null,
       "html_url": "https://github.com/kumagallium/labmine-api",
@@ -197,18 +209,6 @@
       "forks": 0,
       "topics": [],
       "created_at": "2021-09-29",
-      "pushed_at": "2026-10-30"
-    },
-    {
-      "name": "geo-logo",
-      "description": "円と直線だけでロゴを構成的に設計する Web アプリ。完成ロゴと設計図を同一の幾何データから出力する。",
-      "html_url": "https://github.com/kumagallium/geo-logo",
-      "homepage": null,
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-08-13",
       "pushed_at": "2026-10-30"
     },
     {
@@ -475,19 +475,15 @@
       },
       {
         "year": 2026,
-        "commits": 6303,
-        "pull_requests": 2276,
+        "commits": 6330,
+        "pull_requests": 2285,
         "issues": 4,
         "reviews": 0,
         "repositories": 10,
-        "total": 8593
+        "total": 8629
       }
     ],
     "calendar": [
-      {
-        "date": "2025-11-13",
-        "count": 0
-      },
       {
         "date": "2025-11-14",
         "count": 0
@@ -1942,13 +1938,17 @@
       },
       {
         "date": "2026-11-12",
-        "count": 30
+        "count": 58
+      },
+      {
+        "date": "2026-11-13",
+        "count": 8
       }
     ]
   },
   "totals": {
     "repos": 23,
     "stars": 7,
-    "contributions": 8917
+    "contributions": 8953
   }
 }
