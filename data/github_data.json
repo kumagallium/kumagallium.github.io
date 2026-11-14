@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T05:24:20+00:00",
+  "generated_at": "2026-11-14T05:13:17+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -21,6 +21,18 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-05-27",
+      "pushed_at": "2026-11-14"
+    },
+    {
+      "name": "e4m-mcp",
+      "description": "材料科学に特化した MCP サーバー群 / MCP servers for materials science",
+      "html_url": "https://github.com/kumagallium/e4m-mcp",
+      "homepage": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-03-11",
       "pushed_at": "2026-11-13"
     },
     {
@@ -58,7 +70,7 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-08-20",
-      "pushed_at": "2026-11-12"
+      "pushed_at": "2026-11-13"
     },
     {
       "name": "geo-logo",
@@ -70,19 +82,7 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-08-13",
-      "pushed_at": "2026-11-12"
-    },
-    {
-      "name": "e4m-mcp",
-      "description": "材料科学に特化した MCP サーバー群 / MCP servers for materials science",
-      "html_url": "https://github.com/kumagallium/e4m-mcp",
-      "homepage": null,
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-03-11",
-      "pushed_at": "2026-11-11"
+      "pushed_at": "2026-11-13"
     },
     {
       "name": "starrydata-stats",
@@ -475,19 +475,15 @@
       },
       {
         "year": 2026,
-        "commits": 6330,
-        "pull_requests": 2285,
+        "commits": 6356,
+        "pull_requests": 2293,
         "issues": 4,
         "reviews": 0,
         "repositories": 10,
-        "total": 8629
+        "total": 8663
       }
     ],
     "calendar": [
-      {
-        "date": "2025-11-14",
-        "count": 0
-      },
       {
         "date": "2025-11-15",
         "count": 0
@@ -1938,17 +1934,21 @@
       },
       {
         "date": "2026-11-12",
-        "count": 58
+        "count": 61
       },
       {
         "date": "2026-11-13",
-        "count": 8
+        "count": 33
+      },
+      {
+        "date": "2026-11-14",
+        "count": 6
       }
     ]
   },
   "totals": {
     "repos": 23,
     "stars": 7,
-    "contributions": 8953
+    "contributions": 8987
   }
 }
