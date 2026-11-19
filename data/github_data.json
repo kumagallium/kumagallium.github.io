@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T06:10:39+00:00",
+  "generated_at": "2026-11-19T06:12:08+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -11,6 +11,18 @@
     "created_at": "2013-07-17T01:29:55Z"
   },
   "repos": [
+    {
+      "name": "asterism",
+      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
+      "html_url": "https://github.com/kumagallium/asterism",
+      "homepage": "https://kumagallium.github.io/asterism/",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-05-27",
+      "pushed_at": "2026-11-19"
+    },
     {
       "name": "Graphium",
       "description": "Your memory, for every AI. A local-first notebook that Claude, ChatGPT and other MCP clients can read and write, with every line traceable to its source (PROV-DM).",
@@ -37,19 +49,27 @@
         "zettelkasten"
       ],
       "created_at": "2026-03-23",
-      "pushed_at": "2026-11-18"
+      "pushed_at": "2026-11-19"
     },
     {
-      "name": "asterism",
-      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
-      "html_url": "https://github.com/kumagallium/asterism",
-      "homepage": "https://kumagallium.github.io/asterism/",
-      "language": "Python",
+      "name": "starrydata-stats",
+      "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
+      "html_url": "https://github.com/kumagallium/starrydata-stats",
+      "homepage": "https://kumagallium.github.io/starrydata-stats/",
+      "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "topics": [],
-      "created_at": "2026-05-27",
-      "pushed_at": "2026-11-18"
+      "topics": [
+        "dashboard",
+        "data-visualization",
+        "dataset",
+        "materials-informatics",
+        "materials-science",
+        "starrydata",
+        "thermoelectrics"
+      ],
+      "created_at": "2026-07-20",
+      "pushed_at": "2026-11-19"
     },
     {
       "name": "ouchi-theater-support",
@@ -98,26 +118,6 @@
       "topics": [],
       "created_at": "2026-08-13",
       "pushed_at": "2026-11-13"
-    },
-    {
-      "name": "starrydata-stats",
-      "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
-      "html_url": "https://github.com/kumagallium/starrydata-stats",
-      "homepage": "https://kumagallium.github.io/starrydata-stats/",
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "topics": [
-        "dashboard",
-        "data-visualization",
-        "dataset",
-        "materials-informatics",
-        "materials-science",
-        "starrydata",
-        "thermoelectrics"
-      ],
-      "created_at": "2026-07-20",
-      "pushed_at": "2026-11-07"
     },
     {
       "name": "personal_gpt",
@@ -478,19 +478,15 @@
       },
       {
         "year": 2026,
-        "commits": 6708,
-        "pull_requests": 2392,
+        "commits": 6925,
+        "pull_requests": 2443,
         "issues": 4,
         "reviews": 0,
         "repositories": 10,
-        "total": 9114
+        "total": 9382
       }
     ],
     "calendar": [
-      {
-        "date": "2025-11-19",
-        "count": 0
-      },
       {
         "date": "2025-11-20",
         "count": 0
@@ -1933,7 +1929,7 @@
       },
       {
         "date": "2026-11-15",
-        "count": 128
+        "count": 134
       },
       {
         "date": "2026-11-16",
@@ -1945,13 +1941,17 @@
       },
       {
         "date": "2026-11-18",
-        "count": 172
+        "count": 280
+      },
+      {
+        "date": "2026-11-19",
+        "count": 154
       }
     ]
   },
   "totals": {
     "repos": 23,
     "stars": 9,
-    "contributions": 9438
+    "contributions": 9706
   }
 }
