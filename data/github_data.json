@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T06:12:08+00:00",
+  "generated_at": "2026-11-20T05:57:50+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -11,18 +11,6 @@
     "created_at": "2013-07-17T01:29:55Z"
   },
   "repos": [
-    {
-      "name": "asterism",
-      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
-      "html_url": "https://github.com/kumagallium/asterism",
-      "homepage": "https://kumagallium.github.io/asterism/",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-05-27",
-      "pushed_at": "2026-11-19"
-    },
     {
       "name": "Graphium",
       "description": "Your memory, for every AI. A local-first notebook that Claude, ChatGPT and other MCP clients can read and write, with every line traceable to its source (PROV-DM).",
@@ -49,7 +37,19 @@
         "zettelkasten"
       ],
       "created_at": "2026-03-23",
-      "pushed_at": "2026-11-19"
+      "pushed_at": "2026-11-20"
+    },
+    {
+      "name": "asterism",
+      "description": "CSV -> RDF -> SPARQL/MCP. PROV-O first-class. Self-hostable, sovereignty-first.",
+      "html_url": "https://github.com/kumagallium/asterism",
+      "homepage": "https://kumagallium.github.io/asterism/",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-05-27",
+      "pushed_at": "2026-11-20"
     },
     {
       "name": "starrydata-stats",
@@ -69,7 +69,19 @@
         "thermoelectrics"
       ],
       "created_at": "2026-07-20",
-      "pushed_at": "2026-11-19"
+      "pushed_at": "2026-11-20"
+    },
+    {
+      "name": "e4m-mcp",
+      "description": "材料科学に特化した MCP サーバー群 / MCP servers for materials science",
+      "html_url": "https://github.com/kumagallium/e4m-mcp",
+      "homepage": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-03-11",
+      "pushed_at": "2026-11-20"
     },
     {
       "name": "ouchi-theater-support",
@@ -82,18 +94,6 @@
       "topics": [],
       "created_at": "2026-10-29",
       "pushed_at": "2026-11-18"
-    },
-    {
-      "name": "e4m-mcp",
-      "description": "材料科学に特化した MCP サーバー群 / MCP servers for materials science",
-      "html_url": "https://github.com/kumagallium/e4m-mcp",
-      "homepage": null,
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-03-11",
-      "pushed_at": "2026-11-13"
     },
     {
       "name": "PROVision",
@@ -478,19 +478,15 @@
       },
       {
         "year": 2026,
-        "commits": 6925,
-        "pull_requests": 2443,
+        "commits": 6974,
+        "pull_requests": 2459,
         "issues": 4,
         "reviews": 0,
         "repositories": 10,
-        "total": 9382
+        "total": 9447
       }
     ],
     "calendar": [
-      {
-        "date": "2025-11-20",
-        "count": 0
-      },
       {
         "date": "2025-11-21",
         "count": 0
@@ -1945,13 +1941,17 @@
       },
       {
         "date": "2026-11-19",
-        "count": 154
+        "count": 197
+      },
+      {
+        "date": "2026-11-20",
+        "count": 22
       }
     ]
   },
   "totals": {
     "repos": 23,
     "stars": 9,
-    "contributions": 9706
+    "contributions": 9771
   }
 }
