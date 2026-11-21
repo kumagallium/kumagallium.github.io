@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T05:57:50+00:00",
+  "generated_at": "2026-11-21T05:52:26+00:00",
   "user": {
     "login": "kumagallium",
     "name": "kumagallium",
@@ -11,6 +11,38 @@
     "created_at": "2013-07-17T01:29:55Z"
   },
   "repos": [
+    {
+      "name": "Crucible",
+      "description": "Self-hosted deployment platform for MCP servers — paste a GitHub URL to auto-build, deploy, and connect. Works with private repos.",
+      "html_url": "https://github.com/kumagallium/Crucible",
+      "homepage": "https://kumagallium.github.io/Crucible/",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "topics": [],
+      "created_at": "2026-03-14",
+      "pushed_at": "2026-11-21"
+    },
+    {
+      "name": "starrydata-stats",
+      "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
+      "html_url": "https://github.com/kumagallium/starrydata-stats",
+      "homepage": "https://kumagallium.github.io/starrydata-stats/",
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "topics": [
+        "dashboard",
+        "data-visualization",
+        "dataset",
+        "materials-informatics",
+        "materials-science",
+        "starrydata",
+        "thermoelectrics"
+      ],
+      "created_at": "2026-07-20",
+      "pushed_at": "2026-11-21"
+    },
     {
       "name": "Graphium",
       "description": "Your memory, for every AI. A local-first notebook that Claude, ChatGPT and other MCP clients can read and write, with every line traceable to its source (PROV-DM).",
@@ -49,26 +81,6 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-05-27",
-      "pushed_at": "2026-11-20"
-    },
-    {
-      "name": "starrydata-stats",
-      "description": "Aggregation toolkit and auto-updating bilingual dashboard for the Starrydata materials-science dataset",
-      "html_url": "https://github.com/kumagallium/starrydata-stats",
-      "homepage": "https://kumagallium.github.io/starrydata-stats/",
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "topics": [
-        "dashboard",
-        "data-visualization",
-        "dataset",
-        "materials-informatics",
-        "materials-science",
-        "starrydata",
-        "thermoelectrics"
-      ],
-      "created_at": "2026-07-20",
       "pushed_at": "2026-11-20"
     },
     {
@@ -164,18 +176,6 @@
       "forks": 0,
       "topics": [],
       "created_at": "2026-03-17",
-      "pushed_at": "2026-10-30"
-    },
-    {
-      "name": "Crucible",
-      "description": "Self-hosted deployment platform for MCP servers — paste a GitHub URL to auto-build, deploy, and connect. Works with private repos.",
-      "html_url": "https://github.com/kumagallium/Crucible",
-      "homepage": "https://kumagallium.github.io/Crucible/",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "created_at": "2026-03-14",
       "pushed_at": "2026-10-30"
     },
     {
@@ -478,19 +478,15 @@
       },
       {
         "year": 2026,
-        "commits": 6974,
-        "pull_requests": 2459,
+        "commits": 6998,
+        "pull_requests": 2467,
         "issues": 4,
         "reviews": 0,
         "repositories": 10,
-        "total": 9447
+        "total": 9479
       }
     ],
     "calendar": [
-      {
-        "date": "2025-11-21",
-        "count": 0
-      },
       {
         "date": "2025-11-22",
         "count": 0
@@ -1941,17 +1937,21 @@
       },
       {
         "date": "2026-11-19",
-        "count": 197
+        "count": 199
       },
       {
         "date": "2026-11-20",
-        "count": 22
+        "count": 50
+      },
+      {
+        "date": "2026-11-21",
+        "count": 2
       }
     ]
   },
   "totals": {
     "repos": 23,
     "stars": 9,
-    "contributions": 9771
+    "contributions": 9803
   }
 }
